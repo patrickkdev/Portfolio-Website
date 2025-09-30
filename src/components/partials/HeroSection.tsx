@@ -14,7 +14,7 @@ const HeroSection = () => {
       <div className="flex flex-col items-center">
         <div className="overflow-hidden rounded-full">
           <Image
-            className="contrast-[1.20] saturate-[.80]"
+            className="aspect-square object-cover"
             src="/images/avatar/me.png"
             width={200}
             height={200}
