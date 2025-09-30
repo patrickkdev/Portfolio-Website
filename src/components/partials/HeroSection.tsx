@@ -11,10 +11,10 @@ const HeroSection = () => {
   return (
     <div className="hero relative -mt-16 flex items-center justify-center">
       <HeroBackground />
-      <div className="flex flex-col items-center">
-        <div className="overflow-hidden rounded-full">
+      <div className="flex w-full flex-col items-center">
+        <div className="overflow-hidden">
           <Image
-            className="aspect-square object-cover"
+            className="aspect-square rounded-xl object-cover"
             src="/images/avatar/me.png"
             width={200}
             height={200}
@@ -26,43 +26,45 @@ const HeroSection = () => {
           {' '}
           <Typed
             strings={[
-              'Eu sou Desenvolvedor Full-stack',
-              'Eu sou Admin. de Sistemas',
-              'Eu transformo ideias em código que funciona',
-              'Eu faço a web se mover mais rápido',
-              'Eu conecto tecnologia e negócios',
-              'Resolver problemas complexos é meu hobby',
-              'Eu escrevo código limpo e funcional',
-              'Eu crio experiências digitais memoráveis',
+              'Desenvolvedor Full-stack',
+              'Admin. de Sistemas',
+              'Transformo ideias em software que funciona',
+              'Crio experiências digitais memoráveis',
+              'Faço a web se mover mais rápido',
+              'Conecto negócios a tecnologias modernas',
+              'Resolver problemas com código é meu hobby',
+              'Automatizo processos para otimizar produtividade',
+              'Escrevo código limpo e funcional',
             ]}
             typeSpeed={60}
             backSpeed={30}
+            backDelay={1200}
             loop
           />
         </div>
-        <div className="mt-4  flex gap-5">
+        <div className="m-8 flex gap-5">
           <Link href="https://www.github.com">
-            <a className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
+            <a className="text-primary-500 transition-colors duration-150 hover:text-primary-500">
               <FiGithub size={25} />
             </a>
           </Link>
           <Link href="https://wa.me/5531996442788?text=Olá Patrick!">
-            <a className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
+            <a className="text-primary-500 transition-colors duration-150 hover:text-primary-500">
               <BsWhatsapp size={25} />
             </a>
           </Link>
           <Link href="https://discord.com/users/patrickkdev">
-            <a className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
+            <a className="text-primary-500 transition-colors duration-150 hover:text-primary-500">
               <BsDiscord size={25} />
             </a>
           </Link>
           <Link href="https://www.linkedin.com/in/patrickkdev/">
-            <a className="text-gray-700 transition-colors duration-150 hover:text-primary-500">
+            <a className="text-primary-500 transition-colors duration-150 hover:text-primary-500">
               <FiLinkedin size={25} />
             </a>
           </Link>
         </div>
-        <Button className="mt-5 px-8">Vamos Conversar</Button>
+        <Button className="px-8">Vamos Conversar</Button>
       </div>
 
       <div className="absolute bottom-0 mb-10 flex flex-col items-center">
