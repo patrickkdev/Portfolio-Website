@@ -19,7 +19,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <SectionTitle>Avaliações de Clientes</SectionTitle>
+      {/*<SectionTitle>Avaliações de Clientes</SectionTitle>
       <div className="mt-16">
         <Slider {...reviewSettings}>
           {reviews.map((review, index) => (
@@ -39,7 +39,7 @@ const Testimonial = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      </div>*/}
     </>
   );
 };
