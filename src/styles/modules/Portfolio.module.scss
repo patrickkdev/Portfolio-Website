@@ -6,7 +6,7 @@
   }
 
   &-category {
-    @apply inline-block max-w-min -translate-y-full transform whitespace-nowrap rounded-b-lg bg-primary-500 px-4 py-2 text-sm text-white opacity-90 transition-all duration-300 ease-out;
+    @apply inline-block max-w-min transform whitespace-nowrap rounded-b-lg bg-primary-400 px-4 py-2 text-sm text-white transition-all duration-300 ease-out;
   }
 
   &-title {
@@ -14,17 +14,13 @@
   }
 
   &-link {
-    @apply mt-auto flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 opacity-0 transition-opacity duration-700;
+    @apply mt-auto flex h-10 w-10 items-center justify-center rounded-full bg-primary-400 opacity-0 transition-opacity duration-700;
   }
 
   &-overlay {
-    @apply absolute top-0 left-0 flex h-full w-full flex-col bg-indigo-overlay px-8 pb-8 text-left opacity-0 transition-opacity duration-500;
+    @apply absolute top-0 left-0 flex h-full w-full flex-col bg-black/50 px-8 pb-8 text-left opacity-0 transition-opacity duration-500;
 
     &:hover {
-      .portfolio-category {
-        @apply translate-y-0 opacity-100;
-      }
-
       .portfolio-title {
         @apply translate-y-0 opacity-100;
       }

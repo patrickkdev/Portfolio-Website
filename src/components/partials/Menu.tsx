@@ -29,7 +29,7 @@ const Menu = () => {
                 }
               )}
             >
-              Serviços
+              Trabalhos Recentes
             </Link>
           </li>
           <li>

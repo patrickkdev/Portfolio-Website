@@ -3,844 +3,124 @@ import { Work } from '@/types';
 export const works: Work[] = [
   {
     id: 1,
-    title: 'Personal Portfolio Website',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/portfolio-website.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
+    title: 'Sistema Imobiliário Web',
+    category: 'Aplicação Web Full-stack',
+    thumbnailUrl: '/images/works/sistema-sinaionline-property-page.png',
+    description: `Versão web do sistema Sinaionline para imobiliárias. Desenvolvido por mim, do zero, cobrindo todo o ciclo: design, frontend, backend, integrações com terceiros e parte do banco de dados. Também sou responsável pela hospedagem da aplicação e administração do servidor Linux onde ela está hospedada.
+
+    O sistema permite gerenciar imóveis, clientes, funcionários e leads, alimenta sites imobiliários com dados via API JSON segura usando tokens de API, e recebe leads de várias fontes, como o site da imobiliária, portais integrados e chatbots.`,
+    publishedAt: '30 de Julho de 2024',
+    images: ['/images/works/sistema-sinaionline-metrics-charts.png', '/images/works/sistema-sinaionline-picture-manager.png', '/images/works/sistema-sinaionline-pipeline.png', '/images/works/sistema-sinaionline-property-page.png'],
     featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
+      'Painel administrativo avançado e intuitivo',
+      'Organização de itens com suporte a drag-and-drop',
+      'Gestão integrada de leads, clientes, imóveis, blogs e funcionários de plantão',
+      'Preenchimento inteligente de formulários com sugestões baseadas em IA',
+      'Criação e pré-visualização de Landing Pages de imóveis com templates',
+      'Sistema de fila para envio de e-mails em massa de forma controlada respeito limites de servidores SMTP',
+      'Métricas detalhadas de visualizações de imóveis com gráficos intuitivos',
+      'Layout responsivo',
+      'Renderização no servidor (Server-Side Rendering)',
+      'API JSON segura com autenticação por Token (fornece dados de imóveis e permite inserção de leads por ',
     ],
     attributes: [
       {
-        name: 'Client',
-        value: 'Pofology',
+        name: 'Cliente',
+        value: 'Sinaionline Sistemas',
       },
       {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
+        name: 'Stack',
+        value: 'Golang, Templ, HTMX, JS, CSS e MySQL',
+      }
     ],
   },
-
   {
     id: 2,
-    title: 'Social Media App (Instagram Clone)',
-    category: 'Mobile App',
-    thumbnailUrl: '/images/works/social-media-app.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
+    title: 'Site da Imobiliária Casa Imóveis',
+    category: 'Site institucional com catálogo de imóveis',
+    thumbnailUrl: '/images/works/casaimoveis-website.png',
+    description: `Site institucional moderno com catálogo de imóveis: apresenta os imóveis de forma atrativa, prioriza a experiência do usuário e reforça a identidade visual da marca.
+      Integra-se ao sistema imobiliário para exibir imóveis atualizados em tempo real, garantindo agilidade na gestão e consistência das informações.`,
+    publishedAt: '09 de Novembro de 2024',
+    images: ['/images/works/casaimoveis-website.png'],
     featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
+      'SEO aprimorado para ranqueamento no Google',
+      'Sistema de busca de imóveis com filtros dinâmicos por tipo, preço e localização',
+      'Galeria de fotos imersiva com visualização em grid ou tela cheia com zoom',
+      'Botões de compartilhamento direto para redes sociais',
+      'Contador de visualizações individuais por imóvel',
+      'Layout 100% responsivo, otimizado para todos os dispositivos',
+      'Formulário de contato com envio direto de mensagens de interesse',
+      'Integração com Google Maps para exibição da localização da imobiliária e dos imóveis',
     ],
     attributes: [
       {
-        name: 'Client',
-        value: 'Pofology',
+        name: 'Cliente',
+        value: 'Sinaionline Sistemas',
       },
       {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
+        name: 'Stack',
+        value: 'React.js, Next.js, Typescript e CSS',
       },
     ],
   },
   {
     id: 3,
-    title: 'Marketplace Website (Ebay Clone)',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/marketplace-website.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
+    title: 'Site da Imobiliária Imoveis de Ubatuba',
+    category: 'Site institucional com catálogo de imóveis',
+    thumbnailUrl: '/images/works/imoveis-de-ubatuba-website-2.png',
+    description: `Site institucional moderno com catálogo de imóveis: apresenta os imóveis de forma atrativa, prioriza a experiência do usuário e reforça a identidade visual da marca.
+      Integra-se ao sistema imobiliário para exibir imóveis atualizados em tempo real, garantindo agilidade na gestão e consistência das informações.`,
+    publishedAt: '16 de Setembro de 2024',
+    images: ['/images/works/imoveis-de-ubatuba-website.png', '/images/works/imoveis-de-ubatuba-website-2.png'],
     featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
+      'SEO aprimorado para ranqueamento no Google',
+      'Sistema de busca de imóveis com filtros dinâmicos por tipo, preço e localização',
+      'Galeria de fotos imersiva com visualização em grid ou tela cheia com zoom',
+      'Botões de compartilhamento direto para redes sociais',
+      'Contador de visualizações individuais por imóvel',
+      'Layout 100% responsivo, otimizado para todos os dispositivos',
+      'Formulário de contato com envio direto de mensagens de interesse',
+      'Integração com Google Maps para exibição da localização da imobiliária e dos imóveis',
     ],
     attributes: [
       {
-        name: 'Client',
-        value: 'Pofology',
+        name: 'Cliente',
+        value: 'Sinaionline Sistemas',
       },
       {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
+        name: 'Stack',
+        value: 'React.js, Next.js, Typescript e CSS',
       },
     ],
   },
-
   {
     id: 4,
-    title: 'Garments Management System',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/garments-management-system.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
+    title: 'Site da Imobiliária Mangabeiras',
+    category: 'Site institucional com catálogo de imóveis',
+    thumbnailUrl: '/images/works/mangabeirasimoveis-website.png',
+    description: `Site institucional moderno com catálogo de imóveis: apresenta os imóveis de forma atrativa, prioriza a experiência do usuário e reforça a identidade visual da marca.
+      Integra-se ao sistema imobiliário para exibir imóveis atualizados em tempo real, garantindo agilidade na gestão e consistência das informações.`,
+    publishedAt: '22 de Maio de 2025',
+    images: ['/images/works/mangabeirasimoveis-website.png'],
     featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
+      'SEO aprimorado para ranqueamento no Google',
+      'Sistema de busca de imóveis com filtros dinâmicos por tipo, preço e localização',
+      'Galeria de fotos imersiva com visualização em grid ou tela cheia com zoom',
+      'Botões de compartilhamento direto para redes sociais',
+      'Contador de visualizações individuais por imóvel',
+      'Layout 100% responsivo, otimizado para todos os dispositivos',
+      'Formulário de contato com envio direto de mensagens de interesse',
+      'Integração com Google Maps para exibição da localização da imobiliária e dos imóveis',
     ],
     attributes: [
       {
-        name: 'Client',
-        value: 'Pofology',
+        name: 'Cliente',
+        value: 'Sinaionline Sistemas',
       },
       {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    title: 'POS System & Inventory Management',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/point-of-sale.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: 'Multi Vendor Ecommerce System',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/ecommerce.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 7,
-    title: 'Digital Ecommerce Website Design',
-    category: 'UI/UX Design',
-    thumbnailUrl: '/images/works/ecommerce-website-design.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 8,
-    title: 'Digital Marketing App & Website',
-    category: 'Mobile App',
-    thumbnailUrl: '/images/works/digital-marketing-app.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 9,
-    title: 'Food Delivery System & Ecommerce',
-    category: 'Mobile App',
-    thumbnailUrl: '/images/works/food-delivery-app.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 10,
-    title: 'Project Management System',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/project-management-system.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 11,
-    title: 'Learning Management System',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/learning-management-system.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
-      },
-    ],
-  },
-  {
-    id: 12,
-    title: 'ERP System & Inventory Management',
-    category: 'Web Development',
-    thumbnailUrl: '/images/works/erp-system.png',
-    description: `Cras id dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
-    Vivamus laoreet. Praesent turpis. Nunc nulla.Praesent nec nisl a purus blandit viverra. Nullam dictum felis
-    eu pede mollis pretium. Curabitur vestibulum aliquam leo. Sed libero. Praesent metus tellus, elementum eu,
-    semper a, adipiscing nec Vestibulum ullamcorper mauris at ligula. Phasellus consectetuer vestibulum elit.
-    Sed a libero. Vivamus consectetuer hendrerit lacus. Quisque ut nisi.Cum sociis natoque penatibus`,
-    publishedAt: '01 July 2022',
-    images: ['/images/works/work-01.png', '/images/works/work-02.png', '/images/works/work-03.png'],
-    previewUrl: 'https://pofology.bdlancers.com/',
-    featureList: [
-      '100% Fluid Responsive – Fits any device perfectly',
-      'Tested on real devices',
-      'Flexible Layout',
-      `
-        Use our demo layout or create your own visually different experience using page Vcamp and feature-rich
-        backend`,
-      'Unlimited Sidebars',
-      'Retina Optimized',
-      'Advanced Admin Panel',
-      'Demo Import, Content and Sliders',
-      'Social Links',
-      'Bottom Footer Widgets',
-      'Clean &amp; Commented Code',
-      'Advanced Typography',
-      'Google Fonts – 600+ Font families available',
-      'Custom Font Support',
-      'Custom Page Templates',
-      'Pixel Perfect Design',
-      'Quick &amp; Easy Installation &amp; Setup',
-      'Custom CSS Ready',
-      'HTML5 &amp; CSS3',
-      'Easy Customization With Variable Content Sections',
-      'Custom Build Theme &amp; Page Options',
-      'SEO Ready',
-    ],
-    attributes: [
-      {
-        name: 'Client',
-        value: 'Pofology',
-      },
-      {
-        name: 'Start Date',
-        value: '01 July 2022',
-      },
-      {
-        name: 'End Date',
-        value: '01 October 2022',
-      },
-      {
-        name: 'Category',
-        value: 'Web Development',
-      },
-      {
-        name: 'Skills',
-        value: 'Typescript, Next.js & Tailwind CSS',
-      },
-      {
-        name: 'Current Version',
-        value: '3.0.0',
-      },
-      {
-        name: 'Lisence',
-        value: 'MIT',
+        name: 'Stack',
+        value: 'React.js, Next.js, Typescript e CSS',
       },
     ],
   },

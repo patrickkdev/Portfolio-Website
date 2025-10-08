@@ -1,9 +1,7 @@
-import classNames from 'classnames';
-import Image from 'next/image';
 import React from 'react';
 import SectionTitle from '@/components/shared/SectionTitle';
+import PicBackgroundCard from '@/components/shared/PicBackgroundCard';
 import { services } from '@/data/services';
-import PicBackgroundCard from '../shared/PicBackgroundCard';
 
 const ServiceSection = () => {
   return (

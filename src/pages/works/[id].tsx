@@ -7,14 +7,13 @@ import Link from 'next/link';
 import Slider, { Settings } from 'react-slick';
 import { ComponentClass } from 'react';
 
-const SliderTyped = Slider as unknown as ComponentClass<Settings>;
-
 const settings: Settings = {
   dots: false,
   infinite: false,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
+  autoplaySpeed: 3000,
   arrows: true,
 };
 
@@ -40,35 +39,37 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           </p>
         </div>
         <div className="mt-10">
-          <SliderTyped {...settings}>
-            <>
-              {work.images.map((image, index) => (
-                <div className="overflow-hidden rounded-xl" key={index}>
-                  <Image
-                    src={image}
-                    height={720}
-                    width={1280}
-                    alt={work.title}
-                    sizes="100vw"
-                    style={{
-                      width: '100%',
-                      height: 'auto'
-                    }} />
-                </div>
-              ))}
-            </>
-          </SliderTyped>
-          <div className="mt-6 flex justify-center">
-            <Link href={work.previewUrl} className="btn">
-              Live Preview
-            </Link>
-          </div>
+          <Slider {...settings}>
+            {work.images.map((image, index) => (
+              <div className="overflow-hidden rounded-xl" key={index}>
+                <Image
+                  src={image}
+                  height={720}
+                  width={1280}
+                  alt={work.title}
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto'
+                  }} />
+              </div>
+            ))}
+          </Slider>
+          {
+            work.previewUrl && (
+              <div className="mt-6 flex justify-center">
+                <Link href={work.previewUrl} className="btn">
+                  Live Preview
+                </Link>
+              </div>
+            )
+          }
         </div>
 
         <div className="my-10">
-          <h3 className="text-xl font-semibold">Summary</h3>
+          <h3 className="text-xl font-semibold">Descrição</h3>
           <p className="mt-4">{work.description}</p>
-          <h3 className="mt-10 text-xl font-semibold">Feature List</h3>
+          <h3 className="mt-10 text-xl font-semibold">Lista de Recursos</h3>
           <ul className="mt-4 list-disc pl-4">
             {work.featureList.map((feature, index) => (
               <li key={index}>{feature}</li>
@@ -90,14 +91,14 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
         </div>
 
         <div className="mb-10 flex h-48 flex-col items-center justify-center">
-          <h2 className="text-4xl font-semibold">Want to Build a project like this?</h2>
-          <p className="mt-4">I can design and develop beautiful websites, apps for you</p>
+          <h2 className="text-4xl font-semibold">Quer construir um projeto assim?</h2>
+          <p className="mt-4">Eu posso projetar e desenvolver belos sites, aplicativos e automações para você</p>
           <Link
             href="/contact"
             className="mt-5 rounded-full bg-primary-500 px-8 py-2 font-semibold tracking-wide text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-200">
-            
-              Start a project
-            
+
+              Entre em contato
+
           </Link>
         </div>
       </div>

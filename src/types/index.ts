@@ -29,7 +29,7 @@ export type Work = {
   thumbnailUrl: string;
   description?: string;
   images: string[];
-  previewUrl: string;
+  previewUrl?: string;
   publishedAt: string;
   featureList: string[];
   attributes: {
