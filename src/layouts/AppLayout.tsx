@@ -11,12 +11,13 @@ interface Props {
 }
 
 const AppLayout: React.FC<Props> = ({ children, title }) => {
-  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Pofology';
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Patrick Ferreira';
   const pageTitle = title ? `${title} - Patrick Ferreira` : appName;
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
+        <link rel="icon" href="/images/avatar/me.png" />
       </Head>
       <div className="flex min-h-screen flex-col">
         <ScrollToTop

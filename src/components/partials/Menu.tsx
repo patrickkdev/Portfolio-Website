@@ -32,7 +32,7 @@ const Menu = () => {
               Trabalhos Recentes
             </Link>
           </li>
-          <li>
+          {/*<li>
             <Link
               href="/blog"
               className={classNames(
@@ -44,7 +44,7 @@ const Menu = () => {
             >
               Blog
             </Link>
-          </li>
+          </li>*/}
           <li>
             <Link
               href="/contact"
