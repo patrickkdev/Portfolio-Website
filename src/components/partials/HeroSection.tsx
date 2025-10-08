@@ -41,31 +41,30 @@ const HeroSection = () => {
           <Link
             href="https://www.github.com"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
-          >
+            legacyBehavior>
             <FiGithub size={25} />
           </Link>
           <Link
             href="https://wa.me/5531996442788?text=Olá Patrick!"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
-          >
+            legacyBehavior>
             <BsWhatsapp size={25} />
           </Link>
           <Link
             href="https://discord.com/users/patrickkdev"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
-          >
+            legacyBehavior>
             <BsDiscord size={25} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/patrickkdev/"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
-          >
+            legacyBehavior>
             <FiLinkedin size={25} />
           </Link>
         </div>
         <Button className="px-8">Vamos Conversar</Button>
       </div>
-
       <div className="absolute bottom-0 mb-10 flex flex-col items-center">
         <p className="mb-3 text-sm">Role para baixo</p>
         <div className="relative flex h-7 w-5 justify-center rounded-full border-2 border-gray-600 dark:border-gray-100">

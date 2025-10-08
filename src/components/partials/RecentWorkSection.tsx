@@ -17,10 +17,9 @@ const RecentWorkSection = () => {
             </a>
           ))}
       </div>
-
       <div className="mt-10 flex justify-center">
-        <Link href={'/works'}>
-          <a className="btn">Ver todos</a>
+        <Link href={'/works'} className="btn">
+          Ver todos
         </Link>
       </div>
     </>

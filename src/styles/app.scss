@@ -1,12 +1,12 @@
-@import '~tailwindcss/base';
-@import '~tailwindcss/components';
-@import '~tailwindcss/utilities';
+@use '~tailwindcss/base';
+@use '~tailwindcss/components';
+@use '~tailwindcss/utilities';
 
-@import 'partials/fonts';
-@import 'partials/header';
-@import 'partials/vendor';
-@import 'partials/utils';
-@import 'partials/components';
+@use 'partials/fonts';
+@use 'partials/header';
+@use 'partials/vendor';
+@use 'partials/utils';
+@use 'partials/components' as components2;
 
 body {
   @apply bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-100;
