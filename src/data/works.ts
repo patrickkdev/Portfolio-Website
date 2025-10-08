@@ -17,11 +17,11 @@ export const works: Work[] = [
       'Gestão integrada de leads, clientes, imóveis, blogs e funcionários de plantão',
       'Preenchimento inteligente de formulários com sugestões baseadas em IA',
       'Criação e pré-visualização de Landing Pages de imóveis com templates',
-      'Sistema de fila para envio de e-mails em massa de forma controlada respeito limites de servidores SMTP',
+      'Sistema de fila para envio de e-mails em massa respeitando limites especificos de cada servidor SMTP',
       'Métricas detalhadas de visualizações de imóveis com gráficos intuitivos',
       'Layout responsivo',
       'Renderização no servidor (Server-Side Rendering)',
-      'API JSON segura com autenticação por Token (fornece dados de imóveis e permite inserção de leads por ',
+      'API JSON segura com autenticação por Token (fornece dados de imóveis, permite inserção de leads por serviços externos, etc)',
     ],
     attributes: [
       {

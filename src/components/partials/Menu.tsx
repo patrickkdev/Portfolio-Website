@@ -124,9 +124,9 @@ const Menu = () => {
                       { 'text-primary-500': router.asPath == '/works' }
                     )}
                   >
-                    Serviços
+                    Trabalhos Recentes
                   </Link>
-                  <Link
+                  {/*<Link
                     href="/blog"
                     className={classNames(
                       { 'text-primary-500': router.asPath == '/blog' },
@@ -134,7 +134,7 @@ const Menu = () => {
                     )}
                   >
                     Blog
-                  </Link>
+                  </Link>*/}
                   <Link
                     href="/contact"
                     className={classNames(
