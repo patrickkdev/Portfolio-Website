@@ -5,6 +5,7 @@ import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Slider, { Settings } from 'react-slick';
+import { ComponentClass } from 'react';
 
 const SliderTyped = Slider as unknown as ComponentClass<Settings>;
 
