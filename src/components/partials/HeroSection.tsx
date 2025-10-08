@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import React from 'react';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
@@ -19,7 +19,10 @@ const HeroSection = () => {
             width={200}
             height={200}
             alt="avatar"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
         <h1 className="mt-4 text-3xl font-bold ">Patrick Ferreira</h1>
         <div className="mt-2 flex gap-1">
