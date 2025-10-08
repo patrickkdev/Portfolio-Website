@@ -23,9 +23,7 @@ const Portfolio = ({ imageUrl, category, title, href }: Props) => {
           {title}
         </Link>
         <Link href={href} className={styles['portfolio-link']}>
-
           <LinkIcon className="h-5 text-white" />
-
         </Link>
       </div>
     </div>

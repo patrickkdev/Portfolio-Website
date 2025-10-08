@@ -1,5 +1,5 @@
 import { Theme, useTheme } from '@/hooks/use-theme';
-import { Dialog, Switch, Transition } from '@headlessui/react';
+import { Dialog, Switch, Transition, TransitionChild } from '@headlessui/react';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -15,10 +15,8 @@ const Menu = () => {
     <header className="header text-gray-700 dark:text-gray-200">
       <div className="mx-auto flex h-16 max-w-7xl items-center p-4 md:px-6">
         <Link href="/" className="text-3xl  font-bold">
-
           <span>Patrick Ferreira</span>
           <span className="text-primary-500">.</span>
-
         </Link>
         <ul className="ml-auto hidden items-center md:flex">
           <li>
@@ -29,10 +27,9 @@ const Menu = () => {
                 {
                   'text-primary-500': router.asPath == '/works',
                 }
-              )}>
-              
-                Serviços
-              
+              )}
+            >
+              Serviços
             </Link>
           </li>
           <li>
@@ -43,10 +40,9 @@ const Menu = () => {
                 {
                   'text-primary-500': router.asPath == '/blog',
                 }
-              )}>
-              
-                Blog
-              
+              )}
+            >
+              Blog
             </Link>
           </li>
           <li>
@@ -57,10 +53,9 @@ const Menu = () => {
                 {
                   'text-primary-500': router.asPath == '/contact',
                 }
-              )}>
-              
-                Contato
-              
+              )}
+            >
+              Contato
             </Link>
           </li>
         </ul>
@@ -80,9 +75,9 @@ const Menu = () => {
         </button>
       </div>
       {/* Mobile menu */}
-      <Transition.Root show={sidebarOpen} as={Fragment}>
+      <Transition show={sidebarOpen} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 z-40 flex md:hidden" onClose={setSidebarOpen}>
-          <Transition.Child
+          <TransitionChild
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
             enterFrom="opacity-0"
@@ -90,10 +85,8 @@ const Menu = () => {
             leave="transition-opacity ease-linear duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-          >
-            <Dialog.Overlay className="fixed inset-0 bg-gray-600 bg-opacity-75" />
-          </Transition.Child>
-          <Transition.Child
+          ></TransitionChild>
+          <TransitionChild
             as={Fragment}
             enter="transition ease-in-out duration-300 transform origin-right"
             enterFrom="-translate-x-full"
@@ -103,7 +96,7 @@ const Menu = () => {
             leaveTo="-translate-x-full"
           >
             <div className="relative flex h-full w-full max-w-xs flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
-              <Transition.Child
+              <TransitionChild
                 as={Fragment}
                 enter="ease-in-out duration-300"
                 enterFrom="opacity-0"
@@ -112,7 +105,7 @@ const Menu = () => {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="absolute top-0 right-0 -mr-12 pt-2">
+                <div className="absolute right-0 top-0 -mr-12 pt-2">
                   <button
                     type="button"
                     className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -121,14 +114,12 @@ const Menu = () => {
                     <span className="text-white">&#10006;</span>
                   </button>
                 </div>
-              </Transition.Child>
+              </TransitionChild>
               <div className="flex h-full flex-col overflow-y-auto">
                 <div className="border-b px-2 pb-4 dark:border-gray-700">
                   <Link href="/" className="text-3xl  font-bold">
-
                     <span>Pofology</span>
                     <span className="text-primary-500">.</span>
-
                   </Link>
                 </div>
                 <nav className="mt-4 space-y-1 px-2">
@@ -137,40 +128,37 @@ const Menu = () => {
                     className={classNames(
                       'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600',
                       { 'text-primary-500': router.asPath == '/works' }
-                    )}>
-                    
-                      Serviços
-                    
+                    )}
+                  >
+                    Serviços
                   </Link>
                   <Link
                     href="/blog"
                     className={classNames(
                       { 'text-primary-500': router.asPath == '/blog' },
                       'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600'
-                    )}>
-                    
-                      Blog
-                    
+                    )}
+                  >
+                    Blog
                   </Link>
                   <Link
                     href="/contact"
                     className={classNames(
                       { 'text-primary-500': router.asPath == '/contact' },
                       'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600 '
-                    )}>
-                    
-                      Contato
-                    
+                    )}
+                  >
+                    Contato
                   </Link>
                 </nav>
               </div>
             </div>
-          </Transition.Child>
+          </TransitionChild>
           <div className="w-14 flex-shrink-0" aria-hidden="true">
             {/* Dummy element to force sidebar to shrink to fit close icon */}
           </div>
         </Dialog>
-      </Transition.Root>
+      </Transition>
     </header>
   );
 };

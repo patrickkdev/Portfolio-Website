@@ -35,24 +35,16 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
           ></article>
           <div className="mt-10  flex">
             <Link href="#">
-
               <FiTwitter className="mr-3" />
-
             </Link>
             <Link href="#">
-
               <FiFacebook className="mx-3" />
-
             </Link>
             <Link href="#">
-
               <FiLinkedin className="mx-3" />
-
             </Link>
             <Link href="#">
-
               <FiMail className="mx-3" />
-
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-8">
