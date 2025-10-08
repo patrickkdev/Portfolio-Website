@@ -26,15 +26,10 @@ const HeroSection = () => {
           {' '}
           <Typed
             strings={[
-              'Desenvolvedor Full-stack',
-              'Admin. de Sistemas',
-              'Transformo ideias em software que funciona',
-              'Crio experiências digitais memoráveis',
-              'Faço a web se mover mais rápido',
+              'Desenvolvedor Full-stack e Admin. de Sistemas',
+              'Crio sites, sistemas, APIs e scripts de automação',
               'Conecto negócios a tecnologias modernas',
-              'Resolver problemas com código é meu hobby',
-              'Automatizo processos para otimizar produtividade',
-              'Escrevo código limpo e funcional',
+              'Integro plataformas, serviços e IA',
             ]}
             typeSpeed={60}
             backSpeed={30}

@@ -2,6 +2,7 @@ import Portfolio from '@/components/shared/Portfolio';
 import SectionTitle from '@/components/shared/SectionTitle';
 import { works } from '@/data/works';
 import Link from 'next/link';
+import PicBackgroundCard from '../shared/PicBackgroundCard';
 
 const RecentWorkSection = () => {
   return (
@@ -11,13 +12,9 @@ const RecentWorkSection = () => {
         {works
           .filter((_, index) => index < 6)
           .map((work) => (
-            <Portfolio
-              key={work.id}
-              imageUrl={work.thumbnailUrl}
-              category={work.category}
-              title={work.title}
-              href={`/works/${work.id}`}
-            />
+            <a key={work.id} href={`/works/${work.id}`}>
+              <PicBackgroundCard key={work.id} image={work.thumbnailUrl} name={work.title} />
+            </a>
           ))}
       </div>
 
