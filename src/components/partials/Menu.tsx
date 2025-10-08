@@ -75,10 +75,10 @@ const Menu = () => {
         </button>
       </div>
       {/* Mobile menu */}
-      <Transition show={sidebarOpen} as={Fragment}>
+      <Transition show={sidebarOpen} as={'div'}>
         <Dialog as="div" className="fixed inset-0 z-40 flex md:hidden" onClose={setSidebarOpen}>
           <TransitionChild
-            as={Fragment}
+            as={'div'}
             enter="transition-opacity ease-linear duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -87,7 +87,7 @@ const Menu = () => {
             leaveTo="opacity-0"
           ></TransitionChild>
           <TransitionChild
-            as={Fragment}
+            as={'div'}
             enter="transition ease-in-out duration-300 transform origin-right"
             enterFrom="-translate-x-full"
             enterTo="translate-x-0"
@@ -95,9 +95,9 @@ const Menu = () => {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex h-full w-full max-w-xs flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
+            <div className="relative flex h-full w-full min-w-[16rem] flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
               <TransitionChild
-                as={Fragment}
+                as={'div'}
                 enter="ease-in-out duration-300"
                 enterFrom="opacity-0"
                 enterTo="opacity-100"
@@ -116,12 +116,6 @@ const Menu = () => {
                 </div>
               </TransitionChild>
               <div className="flex h-full flex-col overflow-y-auto">
-                <div className="border-b px-2 pb-4 dark:border-gray-700">
-                  <Link href="/" className="text-3xl  font-bold">
-                    <span>Pofology</span>
-                    <span className="text-primary-500">.</span>
-                  </Link>
-                </div>
                 <nav className="mt-4 space-y-1 px-2">
                   <Link
                     href="/works"
