@@ -41,11 +41,13 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
         </div>
         <div className="mt-10">
           <SliderTyped {...settings}>
-            {work.images.map((image, index) => (
-              <div className="overflow-hidden rounded-xl" key={index}>
-                <Image src={image} height={720} width={1280} layout="responsive" alt={work.title} />
-              </div>
-            ))}
+            <>
+              {work.images.map((image, index) => (
+                <div className="overflow-hidden rounded-xl" key={index}>
+                  <Image src={image} height={720} width={1280} layout="responsive" alt={work.title} />
+                </div>
+              ))}
+            </>
           </SliderTyped>
           <div className="mt-6 flex justify-center">
             <Link href={work.previewUrl}>
