@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Slider, { Settings } from 'react-slick';
 
+const SliderTyped = Slider as unknown as ComponentClass<Settings>;
+
 const settings: Settings = {
   dots: false,
   infinite: false,
@@ -37,13 +39,13 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
           </p>
         </div>
         <div className="mt-10">
-          <Slider {...settings}>
+          <SliderTyped {...settings}>
             {work.images.map((image, index) => (
               <div className="overflow-hidden rounded-xl" key={index}>
                 <Image src={image} height={720} width={1280} layout="responsive" alt={work.title} />
               </div>
             ))}
-          </Slider>
+          </SliderTyped>
           <div className="mt-6 flex justify-center">
             <Link href={work.previewUrl}>
               <a className="btn">Live Preview</a>
