@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import styles from '@/styles/modules/Portfolio.module.scss';
 import Link from 'next/link';
 import { FiLink as LinkIcon } from 'react-icons/fi';
@@ -23,8 +23,8 @@ const Portfolio = ({ imageUrl, category, title, href }: Props) => {
         alt={title}
         sizes="100vw"
         style={{
-          width: "100%",
-          height: "auto"
+          width: '100%',
+          height: 'auto'
         }} />
       <div className={styles['portfolio-overlay']}>
         <span className={styles['portfolio-category']}>{category}</span>

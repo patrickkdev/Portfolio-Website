@@ -1,6 +1,6 @@
 import AppLayout from '@/layouts/AppLayout';
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 import CommentBox from '@/components/partials/CommentBox';
@@ -34,8 +34,8 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
               alt={post.title}
               sizes="100vw"
               style={{
-                width: "100%",
-                height: "auto"
+                width: '100%',
+                height: 'auto'
               }} />
           </div>
           <article

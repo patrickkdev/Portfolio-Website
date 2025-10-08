@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 import React from 'react';
 import styles from '@/styles/modules/Post.module.scss';
 import Link from 'next/link';
@@ -22,8 +22,8 @@ const Post = ({ thumbnailUrl, title, publishedAt, href }: Props) => {
           alt={title}
           sizes="100vw"
           style={{
-            width: "100%",
-            height: "auto"
+            width: '100%',
+            height: 'auto'
           }} />
       </Link>
       <div className="p-6">

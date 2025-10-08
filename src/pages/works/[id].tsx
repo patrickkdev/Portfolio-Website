@@ -2,7 +2,7 @@ import { works } from '@/data/works';
 import AppLayout from '@/layouts/AppLayout';
 import { Work } from '@/types';
 import { GetServerSideProps } from 'next';
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import Slider, { Settings } from 'react-slick';
 import { ComponentClass } from 'react';
@@ -51,8 +51,8 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
                     alt={work.title}
                     sizes="100vw"
                     style={{
-                      width: "100%",
-                      height: "auto"
+                      width: '100%',
+                      height: 'auto'
                     }} />
                 </div>
               ))}
