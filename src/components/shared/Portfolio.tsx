@@ -24,7 +24,8 @@ const Portfolio = ({ imageUrl, category, title, href }: Props) => {
         sizes="100vw"
         style={{
           width: '100%',
-          height: 'auto'
+          height: 'auto',
+          filter: 'saturate(1.1) brightness(0.9) contrast(1.2)'
         }} />
       <div className={styles['portfolio-overlay']}>
         <span className={styles['portfolio-category']}>{category}</span>

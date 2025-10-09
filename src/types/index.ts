@@ -57,3 +57,16 @@ export type Review = {
   };
   comment: string;
 };
+
+export type Skill = {
+  name: string;
+  description: string;
+  progress: number;
+};
+
+export type ContactFormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
