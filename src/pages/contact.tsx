@@ -14,11 +14,11 @@ const Contact = (props: Props) => {
     <AppLayout title="contact">
       <PageTitle
         breadcrumb={[
-          { label: 'Home', path: '/' },
-          { label: 'Contact', path: '' },
+          { label: 'Início', path: '/' },
+          { label: 'Contato', path: '' },
         ]}
       >
-        Contact
+        Contato
       </PageTitle>
       <div className="container py-10">
         <div className="grid gap-6 md:grid-cols-3">

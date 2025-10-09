@@ -9,7 +9,7 @@ const Blog = () => {
     <AppLayout title="Blog">
       <PageTitle
         breadcrumb={[
-          { label: 'Home', path: '/' },
+          { label: 'Início', path: '/' },
           { label: 'Blog', path: '' },
         ]}
       >
