@@ -5,9 +5,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const body: ContactFormData = req.body;
   const telegramUrl = `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`;
 
-  console.log(process.env.TELEGRAM_BOT_TOKEN);
-  console.log(process.env.TELEGRAM_CHAT_ID);
-
   if (!body.name || !body.email || !body.subject || !body.message) {
     res.status(400).json({ message: 'Dados inválidos' });
     return;
