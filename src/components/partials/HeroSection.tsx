@@ -42,7 +42,7 @@ const HeroSection = () => {
         </div>
         <div className="m-8 flex gap-5">
           <Link
-            href="https://www.github.com"
+            href="https://www.github.com/patrickkdev"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
           >
             <FiGithub size={25} />

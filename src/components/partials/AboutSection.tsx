@@ -64,7 +64,7 @@ const AboutSection = () => {
             <HiOutlineUsers size={50} />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">500+</h2>
+            <h2 className="text-3xl font-bold">400+</h2>
             <p className="mt-1">Clientes satisfeitos</p>
           </div>
         </div>
