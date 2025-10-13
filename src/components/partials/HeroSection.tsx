@@ -29,10 +29,13 @@ const HeroSection = () => {
           {' '}
           <ReactTyped
             strings={[
-              'Desenvolvedor Full-stack e Admin. de Sistemas',
-              'Crio sites, sistemas, APIs e scripts de automação',
-              'Conecto negócios a tecnologias modernas',
-              'Integro plataformas, serviços e IA',
+              'Desenvolvedor Full-Stack',
+              'Crio sistemas, APIs, sites, aplicativos e automações',
+              'Usando Golang, JS/TS, HTML, CSS, Node e React',
+              'Escrevo código limpo, bem estruturado e fácil de manter',
+              'Integro sistemas com APIs de pagamento, IA e outras soluções',
+              'Configuro e mantenho servidores, DNS e deploys automatizados',
+              'Crio automações para agilizar processos e reduzir erros',
             ]}
             typeSpeed={60}
             backSpeed={30}

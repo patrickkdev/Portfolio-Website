@@ -14,12 +14,7 @@ const AboutSection = () => {
         {/* Bio */}
         <div className="">
           <p className="text-justify">
-            Sou entusiasta da criação de solucões digitais que funcionam de
-            verdade. Vivo em Nova Lima, Minas Gerais, e transformo ideias em
-            sistemas, websites e aplicativos personalizados, combinando design
-            elegante, performance e tecnologia de ponta. Trabalho principalmente
-            com React no front-end, Go no back-end e SQL para bancos de
-            dados, mantendo codigo limpo, legivel e bem estruturado.
+            Desenvolvedor full-stack atuando em Nova Lima, Minas Gerais, especializado na criação de sistemas, sites e aplicativos sob medida. Tenho experiência com Golang, HTML, CSS, JS/TS, React e Node, além de bancos de dados SQL. Busco manter o código limpo, bem estruturado e de fácil manutenção. Meus principais valores são responsabilidade, honestidade, respeito e transparência; acredito que diálogo claro e alinhamento de expectativas garantem projetos bem-sucedidos e parcerias duradouras.
           </p>
           <a download href="/Patrick_Ferreira.pdf" className="btn mt-5">Baixar CV</a>
         </div>
