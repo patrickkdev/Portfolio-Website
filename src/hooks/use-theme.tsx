@@ -44,11 +44,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     // Always listen for system preference changes
     const handleChange = (event: MediaQueryListEvent) => {
-      // Only react to changes if the user hasn't saved a preference
-      const userHasSavedTheme = localStorage.getItem('theme') !== null;
-      if (!userHasSavedTheme) {
-        applyTheme(event.matches ? Theme.DARK : Theme.LIGHT);
-      }
+      applyTheme(event.matches ? Theme.DARK : Theme.LIGHT);
     };
 
     mediaQuery.addEventListener('change', handleChange);

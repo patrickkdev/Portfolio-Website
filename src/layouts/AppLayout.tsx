@@ -18,6 +18,19 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href="/images/avatar/me.png" />
+        <link rel="canonical" href="https://patrick.makztech.com" />
+
+        {/* Meta tags */}
+        <meta name="description" content="Patrick Ferreira - Portfólio" />
+        <meta name="keywords" content="Patrick Ferreira, Developer, Desenvolvedor, Web, Automação, Automation, Full-stack, Front-end, Back-end, Golang, Node.js, TypeScript, React, Software, Engineer" />
+        <meta name="author" content="Patrick Ferreira" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content="Patrick Ferreira - Portfólio" />
+        <meta property="og:image" content="/images/open_graph.png" />
+        <meta property="og:url" content="https://patrick.makztech.com" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
