@@ -52,16 +52,16 @@ const HeroBackground = () => {
         className="absolute top-96 left-1/4 hidden animate-spin text-gray-600 dark:text-gray-300 sm:inline-block"
       />
       <ul className={styles.circles}>
-        <li className="bg-gray-100 dark:bg-gray-800"></li>
+        <li className="bg-gray-200 dark:bg-gray-700"></li>
+        <li className="bg-gray-200 dark:bg-gray-700"></li>
         <li className="bg-gray-200 dark:bg-gray-700"></li>
         <li className="bg-gray-300 dark:bg-gray-600"></li>
         <li className="bg-gray-400 dark:bg-gray-500"></li>
         <li className="bg-gray-500 dark:bg-gray-400"></li>
         <li className="bg-gray-600 dark:bg-gray-300"></li>
         <li className="bg-gray-700 dark:bg-gray-200"></li>
-        <li className="bg-gray-800 dark:bg-gray-100"></li>
-        <li className="bg-primary-100 dark:bg-primary-500"></li>
-        <li className="bg-primary-200 dark:bg-primary-600"></li>
+        <li className="bg-gray-700 dark:bg-gray-200"></li>
+        <li className="bg-gray-700 dark:bg-gray-200"></li>
       </ul>
     </>
   );

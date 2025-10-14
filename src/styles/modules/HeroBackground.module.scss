@@ -16,6 +16,7 @@
   height: 20px;
   animation: animate 25s ease-in infinite;
   bottom: -150px;
+  @apply shadow-2xl;
 }
 
 .circles li:nth-child(1) {
@@ -64,8 +65,8 @@
 
 .circles li:nth-child(7) {
   left: 35%;
-  width: 150px;
-  height: 150px;
+  width: 90px;
+  height: 90px;
   animation-delay: 7s;
 }
 
