@@ -31,6 +31,9 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
         <meta property="og:image" content="/images/open_graph.png" />
         <meta property="og:url" content="https://patrick.makztech.com" />
         <meta property="og:type" content="website" />
+
+        {/* Umami Analytics */}
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="cd0ee4eb-5f13-4efd-9d72-316594d329cd"></script>
       </Head>
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
