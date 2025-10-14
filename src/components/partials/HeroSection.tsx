@@ -25,7 +25,7 @@ const HeroSection = () => {
             }} />
         </div>
         <h1 className="mt-4 text-3xl font-bold text-center">Patrick Ferreira</h1>
-        <div className="mt-2 flex gap-1 text-center italic">
+        <div className="mt-4 flex gap-1 text-center italic size text-sm h-[2rem] justify-center items-center w-[280px] text-balance">
           {' '}
           <ReactTyped
             strings={[
@@ -36,11 +36,11 @@ const HeroSection = () => {
             ]}
             typeSpeed={60}
             backSpeed={30}
-            backDelay={1200}
+            backDelay={2000}
             loop
           />
         </div>
-        <div className="m-8 flex gap-5">
+        <div className="m-6 flex gap-5">
           <Link
             href="https://www.github.com/patrickkdev"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
