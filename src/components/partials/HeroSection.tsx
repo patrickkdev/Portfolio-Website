@@ -24,18 +24,15 @@ const HeroSection = () => {
               height: 'auto'
             }} />
         </div>
-        <h1 className="mt-4 text-3xl font-bold ">Patrick Ferreira</h1>
-        <div className="mt-2 flex gap-1">
+        <h1 className="mt-4 text-3xl font-bold text-center">Patrick Ferreira</h1>
+        <div className="mt-2 flex gap-1 text-center italic">
           {' '}
           <ReactTyped
             strings={[
               'Desenvolvedor Full-Stack',
               'Crio sistemas, APIs, sites, aplicativos e automações',
               'Usando Golang, JS/TS, HTML, CSS, Node e React',
-              'Escrevo código limpo, bem estruturado e fácil de manter',
-              'Integro sistemas com APIs de pagamento, IA e outras soluções',
-              'Configuro e mantenho servidores, DNS e deploys automatizados',
-              'Crio automações para agilizar processos e reduzir erros',
+              'Conecto sistemas com APIs de pagamento, IA e outros',
             ]}
             typeSpeed={60}
             backSpeed={30}
