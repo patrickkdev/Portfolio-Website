@@ -1,11 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { FiGithub, FiLinkedin } from 'react-icons/fi';
-import Button from '@/components/form/Button';
-import HeroBackground from './HeroBackground';
-import { ReactTyped } from 'react-typed';
-import { BsDiscord, BsWhatsapp } from 'react-icons/bs';
+import Button from '@/components/form/Button'
+import Image from 'next/image'
+import Link from 'next/link'
+import { BsDiscord, BsWhatsapp } from 'react-icons/bs'
+import { FiGithub, FiLinkedin } from 'react-icons/fi'
+import { ReactTyped } from 'react-typed'
+import HeroBackground from './HeroBackground'
 
 const HeroSection = () => {
   return (
@@ -29,7 +28,7 @@ const HeroSection = () => {
           {' '}
           <ReactTyped
             strings={[
-              'Desenvolvedor Full-stack',
+              'Desenvolvedor de software full-stack',
               'Crio sistemas, APIs, sites, aplicativos e automações',
               'Usando Golang, JS/TS, HTML, CSS, Node e React',
               'Conecto sistemas com APIs de pagamento, IA e outros',
