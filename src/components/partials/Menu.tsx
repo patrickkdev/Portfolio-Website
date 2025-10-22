@@ -29,7 +29,7 @@ const Menu = () => {
                 }
               )}
             >
-              Trabalhos Recentes
+              Trabalhos
             </Link>
           </li>
           {/*<li>
@@ -124,7 +124,7 @@ const Menu = () => {
                       { 'text-primary-500': router.asPath == '/works' }
                     )}
                   >
-                    Trabalhos Recentes
+                    Trabalhos
                   </Link>
                   {/*<Link
                     href="/blog"
