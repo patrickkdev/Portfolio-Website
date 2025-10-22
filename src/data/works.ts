@@ -70,7 +70,7 @@ Em uma entrevista técnica, posso demonstrar a arquitetura DDD, binário único 
     title: 'Sistema Imobiliário Web',
     category: 'Aplicação Web Full-stack',
     thumbnailUrl: '/images/works/sistema-sinaionline-property-page.png',
-    description: `Versão web do sistema Sinaionline para imobiliárias. Desenvolvido por mim, do zero, cobrindo todo o ciclo: design, frontend, backend, integrações com terceiros e parte do banco de dados. Também sou responsável pela hospedagem da aplicação e administração do servidor Linux onde ela está hospedada.\n\n    O sistema permite gerenciar imóveis, clientes, funcionários e leads, alimenta sites imobiliários com dados via API JSON segura usando tokens de API, e recebe leads de várias fontes, como o site da imobiliária, portais integrados e chatbots.`,
+    description: `Versão web do sistema Sinaionline para imobiliárias. Desenvolvido por mim, do zero, cobrindo todo o ciclo: design, frontend, backend, integrações com terceiros e parte do banco de dados. Também sou responsável pela hospedagem da aplicação e administração do servidor Linux onde ela está hospedada. O sistema permite gerenciar imóveis, clientes, funcionários e leads, alimenta sites imobiliários com dados via API JSON segura usando tokens de API, e recebe leads de várias fontes, como o site da imobiliária, portais integrados e chatbots.`,
     publishedAt: '30 de Julho de 2024',
     images: ['/images/works/sistema-sinaionline-metrics-charts.png', '/images/works/sistema-sinaionline-picture-manager.png', '/images/works/sistema-sinaionline-pipeline.png', '/images/works/sistema-sinaionline-property-page.png'],
     featureList: [
