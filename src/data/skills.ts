@@ -3,7 +3,7 @@ import { Skill } from '@/types';
 export const skills: Skill[] = [
   {
     name: 'Back-end',
-    description: 'Golang, Typescript, MySQL, PostgresSQL',
+    description: 'Golang, Node, Fiber, Echo, Express, SQL',
     progress: 80
   },
   {
@@ -12,9 +12,9 @@ export const skills: Skill[] = [
     progress: 80
   },
   {
-    name: 'Deploy e Infraestrutura',
-    description: 'Github Actions, Docker, Linux, Nginx',
-    progress: 80
+    name: 'Infraestrutura e CI/CD',
+    description: 'Linux, Docker, Github Actions, Nginx',
+    progress: 70
   },
   {
     name: 'Inglês',

@@ -59,8 +59,8 @@ const AboutSection = () => {
             <HiOutlineUsers size={50} />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">400+</h2>
-            <p className="mt-1">Clientes satisfeitos</p>
+            <h2 className="text-3xl font-bold">1</h2>
+            <p className="mt-1">SaasClientes satisfeitos (Inc. SaaS)</p>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ const AboutSection = () => {
             <HiOutlineChartBar size={50} />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">6+</h2>
+            <h2 className="text-3xl font-bold">4+</h2>
             <p className="mt-1">Anos de experiência</p>
           </div>
         </div>
