@@ -1,10 +1,10 @@
-import Button from '@/components/form/Button'
-import Image from 'next/image'
-import Link from 'next/link'
-import { BsDiscord, BsWhatsapp } from 'react-icons/bs'
-import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { ReactTyped } from 'react-typed'
-import HeroBackground from './HeroBackground'
+import Button from '@/components/form/Button';
+import Image from 'next/image';
+import Link from 'next/link';
+import { BsDiscord, BsWhatsapp } from 'react-icons/bs';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import { ReactTyped } from 'react-typed';
+import HeroBackground from './HeroBackground';
 
 const HeroSection = () => {
   return (
