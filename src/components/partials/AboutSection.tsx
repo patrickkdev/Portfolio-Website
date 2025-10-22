@@ -1,9 +1,8 @@
-import Button from '@/components/form/Button';
+import ProgressBar from '@/components/shared/ProgressBar';
 import SectionTitle from '@/components/shared/SectionTitle';
+import { skills } from '@/data/skills';
 import { FiCoffee } from 'react-icons/fi';
 import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
-import ProgressBar from '@/components/shared/ProgressBar';
-import { skills } from '@/data/skills';
 
 const AboutSection = () => {
   return (
@@ -59,8 +58,8 @@ const AboutSection = () => {
             <HiOutlineUsers size={50} />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">1</h2>
-            <p className="mt-1">SaasClientes satisfeitos (Inc. SaaS)</p>
+            <h2 className="text-3xl font-bold">400+</h2>
+            <p className="mt-1">Clientes satisfeitos (Inc. SaaS)</p>
           </div>
         </div>
 
