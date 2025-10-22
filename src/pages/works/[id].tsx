@@ -90,7 +90,7 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
             <tbody>
               {work.attributes.map((attribute, index) => (
                 <tr key={index}>
-                  <td className="w-48 px-4 py-2 font-semibold">{attribute.name}</td>
+                  <td className="px-4 py-2 font-semibold">{attribute.name}</td>
                   <td>{attribute.value}</td>
                 </tr>
               ))}
