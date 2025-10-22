@@ -1,10 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
 import styles from '@/styles/modules/Portfolio.module.scss';
+import classNames from 'classnames';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FiLink as LinkIcon } from 'react-icons/fi';
 import { UrlObject } from 'url';
-import classNames from 'classnames';
 
 type Props = {
   imageUrl: string;
@@ -15,7 +14,7 @@ type Props = {
 
 const Portfolio = ({ imageUrl, category, title, href }: Props) => {
   return (
-    <div className={classNames(styles['portfolio'], 'bg-white dark:bg-gray-700')}>
+    <div className={classNames(styles['portfolio'], 'bg-white dark:bg-gray-700 shadow-lg')}>
       <Image
         src={imageUrl}
         height={384}
@@ -24,8 +23,8 @@ const Portfolio = ({ imageUrl, category, title, href }: Props) => {
         sizes="100vw"
         style={{
           width: '100%',
-          height: 'auto',
-          filter: 'saturate(1.1) brightness(0.9) contrast(1.2)'
+          height: '100%',
+          filter: 'saturate(1.1) contrast(1.2)'
         }} />
       <div className={styles['portfolio-overlay']}>
         <span className={styles['portfolio-category']}>{category}</span>

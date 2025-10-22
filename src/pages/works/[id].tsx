@@ -4,8 +4,8 @@ import { Work } from '@/types';
 import { GetServerSideProps } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import Markdown from 'react-markdown';
 import Slider, { Settings } from 'react-slick';
-import { ComponentClass } from 'react';
 
 const settings: Settings = {
   dots: false,
@@ -59,16 +59,24 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
             work.previewUrl && (
               <div className="mt-6 flex justify-center">
                 <Link href={work.previewUrl} className="btn">
-                  Live Preview
+                  Acessar
                 </Link>
               </div>
             )
           }
         </div>
 
-        <div className="my-10">
+        <div className="my-10 whitespace-pre-line">
           <h3 className="text-xl font-semibold">Descrição</h3>
-          <p className="mt-4">{work.description}</p>
+          <Markdown
+            components={{
+              a: ({node, ...props}) => <a className="text-blue-500 hover:underline" {...props} />,
+              ul: ({node, ...props}) => <ul className="list-disc list-inside whitespace-normal" {...props} />,
+              li: ({node, ...props}) => <li {...props} />,
+            }}
+          >
+            {work.description}
+          </Markdown>
           <h3 className="mt-10 text-xl font-semibold">Lista de Recursos</h3>
           <ul className="mt-4 list-disc pl-4">
             {work.featureList.map((feature, index) => (

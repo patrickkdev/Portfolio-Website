@@ -5,19 +5,54 @@ export const works: Work[] = [
     id: 5,
     title: '2Gain - SaaS Financeiro',
     category: 'B2C SaaS',
-    thumbnailUrl: '/images/works/sistema-sinaionline-metrics-charts.png',
-    description: `Uma calculadora financeira SaaS B2C para traders, projetada para otimizar o gerenciamento de risco e a tomada de decisões, com mais de 400 clientes pagantes.\n\n**Problema**\n\nTraders de varejo frequentemente lutam com o gerenciamento de risco, tomando decisões baseadas em cálculos manuais complexos e propensos a erros. A falta de ferramentas acessíveis e intuitivas para calcular estratégias de recuperação progressiva resultava em perdas financeiras e decisões impulsivas. Era necessária uma solução que automatizasse esses cálculos, fornecendo dados claros e acionáveis para otimizar a tomada de decisões.\n\n**Solução & Meu Papel**\n\nComo único desenvolvedor, fui responsável por todo o ciclo de vida do 2Gain, desde a concepção do produto até o lançamento e vendas. Desenvolvi uma calculadora financeira SaaS que oferece um conjunto de ferramentas para gerenciamento de risco. A plataforma permite que os usuários simulem cenários e entendam o impacto de suas decisões, com uma interface limpa e de alta performance.\n\n**Tecnologia & Arquitetura**\n\nO backend foi construído em Golang e compilado em um único binário, que também serve o frontend — um SPA React (Vite) embarcado com \`go:embed\`. A arquitetura segue princípios de Domain-Driven Design (DDD), com um banco de dados SQL para persistência. A autenticação é baseada em cookies, e os pagamentos internacionais são processados via Stripe. O deploy é automatizado via GitHub Actions em um VPS com Dokploy (Docker).\n\n**Resultados-Kchave**\n\n*   Mais de 400 clientes pagantes ativos.\n*   Receita superior a R$100.000 entre 2020 e 2021.\n*   Validação de product-market fit com clientes em múltiplos países.\n*   Alta retenção de usuários devido à UX leve e à utilidade da ferramenta.\n\n**Lições & Próximos Passos**\n\n*   A simplicidade e o foco em um nicho específico foram cruciais para a rápida adoção.\n*   O próximo passo seria expandir o conjunto de ferramentas e explorar integrações com plataformas de trading.\n\n**Destaques Técnicos**\n\n*   **Binário Único:** Backend em Go e frontend SPA (React) compilados em um único executável para deploy simplificado.\n*   **Arquitetura DDD:** Código organizado e manutenível seguindo os princípios do Domain-Driven Design.\n*   **Autenticação Segura:** Sistema de autenticação customizado baseado em cookies (incluindo signup, login, recuperação de senha e verificação de e-mail).\n*   **Pagamentos Internacionais:** Integração com Stripe para processar pagamentos em múltiplas moedas.\n*   **Analytics Server-Side:** Coleta de métricas de uso salvas diretamente no banco de dados, sem depender de serviços de terceiros.\n*   **Internacionalização (i18n):** Suporte para três idiomas (pt/en/es) em toda a aplicação.\n*   **Deploy Automatizado:** Pipeline de CI/CD com GitHub Actions para deploy em um VPS via Docker.\n*   **Performance:** Frontend SPA leve e responsivo, servido diretamente pelo backend para baixa latência.\n`,
-    publishedAt: '22 de Outubro de 2025',
-    images: ['/images/works/sistema-sinaionline-metrics-charts.png'],
+    thumbnailUrl: '/images/works/2gain-sass.png',
+    previewUrl: 'https://2gain.makztech.com',
+    description: `
+Uma calculadora financeira criada para traders que querem dominar o gerenciamento de risco e tomar decisões mais inteligentes, ela mostra quanto investir em cada operação. No total, mais de 400 clientes confiaram nela para otimizar suas estratégias.
+
+**Problema**
+A maioria dos traders lida com o gerenciamento de risco de forma manual e imprecisa. Valores das operações são calculados “no olho”, o que abre espaço para erros, impulsividade e decisões ruins. Faltava uma ferramenta acessível, direta e confiável que automatizasse esse processo e mostrasse, de forma clara, como cada decisão afeta o resultado final.
+
+**Solução e Meu Papel**
+Como único desenvolvedor, além de pensar na ideia, cuidei do design, desenvolvimento e vendas. A interface foi pensada para ser leve e objetiva, e o trader entende rapidamente o impacto de cada operação e pode simular cenários em tempo real.
+
+**Tecnologia e Arquitetura**
+
+* Backend em Go com frontend SPA em React/Vite compilados em um único binário via [go:embed](https://pkg.go.dev/embed)
+* Arquitetura [DDD](https://github.com/patrickkdev/go-ddd-blueprint) para código modular e escalável
+* Banco de dados [PostgresSQL](https://www.postgresql.org) para persistência
+* Tradução completa (pt-BR, en, es) com [i18n](https://react.i18next.com/)
+* Integração com [Stripe](https://stripe.com) para pagamentos nacionais e internacionais
+* Deploy automatizado com Docker e [Dokploy](https://dokploy.com)
+
+**Resultados-Chave**
+
+* Product-market fit validado
+* Mais de 400 clientes pagantes
+* Faturamento superior a **120 mil reais** nos anos de 2020 e 2021
+
+**Destaques Técnicos**
+
+* **Binário Único:** Backend e frontend compilados juntos, simplificando deploy e manutenção
+* **Autenticação Segura:** Sistema próprio baseado em cookies, com recuperação de senha e verificação por e-mail
+* **Pagamentos Internacionais:** Integração direta com Stripe
+* **Métricas Internas:** Dados de uso capturados no back-end e armazenados no banco, sem dependência de terceiros
+* **Internacionalização:** Suporte completo a português, inglês e espanhol
+* **CI/CD Automatizado:** Deploy contínuo via GitHub, Docker e Dokploy
+* **Alta Performance:** SPA leve e rápida, servida diretamente pelo backend
+
+## Nota do Desenvolvedor
+Em uma entrevista técnica, posso demonstrar a arquitetura DDD, binário único com frontend e backend, internacionalização com i18n, integração com Stripe, autenticação segura e deploy automatizado.
+`,
+    publishedAt: '22 de Outubro de 2019',
+    images: ['/images/works/2gain-sass.png', '/images/works/2gain-sass-2.png'],
     featureList: [
-      'Calculadoras progressivas para gerenciamento de risco',
-      'Período de teste gratuito (free trial) para novos usuários',
-      'Sistema de autenticação seguro com login e recuperação de senha',
-      'Integração de pagamentos segura via Stripe',
-      'Suporte a múltiplos idiomas (inglês, espanhol e português)',
-      'Analytics de uso do lado do servidor',
-      'UX leve e performática como Single Page Application (SPA)',
-      'Deploy simplificado em um único binário executável',
+      'Teste gratuito para novos usuários',
+      'Autenticação segura com cookies, recuperação de senha e verificação por e-mail',
+      'Pagamentos nacionais e internacionais via Stripe',
+      'Suporte multilíngue: português, inglês e espanhol',
+      'SPA leve e rápida, garantindo excelente experiência do usuário',
+      'PWA, permitindo instalação em smartphones',
     ],
     attributes: [
       {
@@ -26,7 +61,7 @@ export const works: Work[] = [
       },
       {
         name: 'Stack',
-        value: 'Golang, React, Next.js/Vite, SQL, Stripe, Docker',
+        value: 'Golang, React, Vite, PostgreSQL, Stripe, i18n, Docker',
       },
     ],
   },
@@ -62,13 +97,13 @@ export const works: Work[] = [
     ],
   },
   {
-    id: 2,
-    title: 'Site da Imobiliária Casa Imóveis',
+    id: 3,
+    title: 'Site da Imobiliária Imoveis de Ubatuba',
     category: 'Site institucional com catálogo de imóveis',
-    thumbnailUrl: '/images/works/casaimoveis-website.png',
+    thumbnailUrl: '/images/works/imoveis-de-ubatuba-website-2.png',
     description: `Site institucional moderno com catálogo de imóveis: apresenta os imóveis de forma atrativa, prioriza a experiência do usuário e reforça a identidade visual da marca.\n      Integra-se ao sistema imobiliário para exibir imóveis atualizados em tempo real, garantindo agilidade na gestão e consistência das informações.`,
-    publishedAt: '09 de Novembro de 2024',
-    images: ['/images/works/casaimoveis-website.png'],
+    publishedAt: '16 de Setembro de 2024',
+    images: ['/images/works/imoveis-de-ubatuba-website.png', '/images/works/imoveis-de-ubatuba-website-2.png'],
     featureList: [
       'SEO aprimorado para ranqueamento no Google',
       'Sistema de busca de imóveis com filtros dinâmicos por tipo, preço e localização',
@@ -91,13 +126,13 @@ export const works: Work[] = [
     ],
   },
   {
-    id: 3,
-    title: 'Site da Imobiliária Imoveis de Ubatuba',
+    id: 2,
+    title: 'Site da Imobiliária Casa Imóveis',
     category: 'Site institucional com catálogo de imóveis',
-    thumbnailUrl: '/images/works/imoveis-de-ubatuba-website-2.png',
+    thumbnailUrl: '/images/works/casaimoveis-website.png',
     description: `Site institucional moderno com catálogo de imóveis: apresenta os imóveis de forma atrativa, prioriza a experiência do usuário e reforça a identidade visual da marca.\n      Integra-se ao sistema imobiliário para exibir imóveis atualizados em tempo real, garantindo agilidade na gestão e consistência das informações.`,
-    publishedAt: '16 de Setembro de 2024',
-    images: ['/images/works/imoveis-de-ubatuba-website.png', '/images/works/imoveis-de-ubatuba-website-2.png'],
+    publishedAt: '09 de Novembro de 2024',
+    images: ['/images/works/casaimoveis-website.png'],
     featureList: [
       'SEO aprimorado para ranqueamento no Google',
       'Sistema de busca de imóveis com filtros dinâmicos por tipo, preço e localização',
