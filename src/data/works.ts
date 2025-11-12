@@ -1,70 +1,70 @@
 import { Work } from '@/types';
 
 export const works: Work[] = [
-  {
-    id: 5,
-    title: '2Gain - SaaS Financeiro',
-    category: 'B2C SaaS',
-    thumbnailUrl: '/images/works/2gain-sass.png',
-    previewUrl: 'https://2gain.makztech.com',
-    description: `
-Uma calculadora financeira criada para traders que querem dominar o gerenciamento de risco e tomar decisões mais inteligentes, ela mostra quanto investir em cada operação. No total, mais de 400 clientes confiaram nela para otimizar suas estratégias.
+//   {
+//     id: 5,
+//     title: '2Gain - SaaS Financeiro',
+//     category: 'B2C SaaS',
+//     thumbnailUrl: '/images/works/2gain-sass.png',
+//     previewUrl: 'https://2gain.makztech.com',
+//     description: `
+// Uma calculadora financeira criada para traders que querem dominar o gerenciamento de risco e tomar decisões mais inteligentes, ela mostra quanto investir em cada operação. No total, mais de 400 clientes confiaram nela para otimizar suas estratégias.
 
-**Problema**
-A maioria dos traders lida com o gerenciamento de risco de forma manual e imprecisa. Valores das operações são calculados “no olho”, o que abre espaço para erros, impulsividade e decisões ruins. Faltava uma ferramenta acessível, direta e confiável que automatizasse esse processo e mostrasse, de forma clara, como cada decisão afeta o resultado final.
+// **Problema**
+// A maioria dos traders lida com o gerenciamento de risco de forma manual e imprecisa. Valores das operações são calculados “no olho”, o que abre espaço para erros, impulsividade e decisões ruins. Faltava uma ferramenta acessível, direta e confiável que automatizasse esse processo e mostrasse, de forma clara, como cada decisão afeta o resultado final.
 
-**Solução e Meu Papel**
-Como único desenvolvedor, além de pensar na ideia, cuidei do design, desenvolvimento e vendas. A interface foi pensada para ser leve e objetiva, e o trader entende rapidamente o impacto de cada operação e pode simular cenários em tempo real.
+// **Solução e Meu Papel**
+// Como único desenvolvedor, além de pensar na ideia, cuidei do design, desenvolvimento e vendas. A interface foi pensada para ser leve e objetiva, e o trader entende rapidamente o impacto de cada operação e pode simular cenários em tempo real.
 
-**Tecnologia e Arquitetura**
+// **Tecnologia e Arquitetura**
 
-* Backend em Go com frontend SPA em React/Vite compilados em um único binário via [go:embed](https://pkg.go.dev/embed)
-* Arquitetura [DDD](https://github.com/patrickkdev/go-ddd-blueprint) para código modular e escalável
-* Banco de dados [PostgresSQL](https://www.postgresql.org) para persistência
-* Tradução completa (pt-BR, en, es) com [i18n](https://react.i18next.com/)
-* Integração com [Stripe](https://stripe.com) para pagamentos nacionais e internacionais
-* Deploy automatizado com Docker e [Dokploy](https://dokploy.com)
+// * Backend em Go com frontend SPA em React/Vite compilados em um único binário via [go:embed](https://pkg.go.dev/embed)
+// * Arquitetura [DDD](https://github.com/patrickkdev/go-ddd-blueprint) para código modular e escalável
+// * Banco de dados [PostgresSQL](https://www.postgresql.org) para persistência
+// * Tradução completa (pt-BR, en, es) com [i18n](https://react.i18next.com/)
+// * Integração com [Stripe](https://stripe.com) para pagamentos nacionais e internacionais
+// * Deploy automatizado com Docker e [Dokploy](https://dokploy.com)
 
-**Resultados-Chave**
+// **Resultados-Chave**
 
-* Product-market fit validado
-* Mais de 400 clientes pagantes
-* Faturamento superior a **120 mil reais** nos anos de 2020 e 2021
+// * Product-market fit validado
+// * Mais de 400 clientes pagantes
+// * Faturamento superior a **120 mil reais** nos anos de 2020 e 2021
 
-**Destaques Técnicos**
+// **Destaques Técnicos**
 
-* **Binário Único:** Backend e frontend compilados juntos, simplificando deploy e manutenção
-* **Autenticação Segura:** Sistema próprio baseado em cookies, com recuperação de senha e verificação por e-mail
-* **Pagamentos Internacionais:** Integração direta com Stripe
-* **Métricas Internas:** Dados de uso capturados no back-end e armazenados no banco, sem dependência de terceiros
-* **Internacionalização:** Suporte completo a português, inglês e espanhol
-* **CI/CD Automatizado:** Deploy contínuo via GitHub, Docker e Dokploy
-* **Alta Performance:** SPA leve e rápida, servida diretamente pelo backend
+// * **Binário Único:** Backend e frontend compilados juntos, simplificando deploy e manutenção
+// * **Autenticação Segura:** Sistema próprio baseado em cookies, com recuperação de senha e verificação por e-mail
+// * **Pagamentos Internacionais:** Integração direta com Stripe
+// * **Métricas Internas:** Dados de uso capturados no back-end e armazenados no banco, sem dependência de terceiros
+// * **Internacionalização:** Suporte completo a português, inglês e espanhol
+// * **CI/CD Automatizado:** Deploy contínuo via GitHub, Docker e Dokploy
+// * **Alta Performance:** SPA leve e rápida, servida diretamente pelo backend
 
-## Nota do Desenvolvedor
-Em uma entrevista técnica, posso demonstrar a arquitetura DDD, binário único com frontend e backend, internacionalização com i18n, integração com Stripe, autenticação segura e deploy automatizado.
-`,
-    publishedAt: '22 de Outubro de 2019',
-    images: ['/images/works/2gain-sass.png', '/images/works/2gain-sass-2.png'],
-    featureList: [
-      'Teste gratuito para novos usuários',
-      'Autenticação segura com cookies, recuperação de senha e verificação por e-mail',
-      'Pagamentos nacionais e internacionais via Stripe',
-      'Suporte multilíngue: português, inglês e espanhol',
-      'SPA leve e rápida, garantindo excelente experiência do usuário',
-      'PWA, permitindo instalação em smartphones',
-    ],
-    attributes: [
-      {
-        name: 'Tipo',
-        value: 'Projeto Pessoal / SaaS',
-      },
-      {
-        name: 'Stack',
-        value: 'Golang, React, Vite, PostgreSQL, Stripe, i18n, Docker',
-      },
-    ],
-  },
+// ## Nota do Desenvolvedor
+// Em uma entrevista técnica, posso demonstrar a arquitetura DDD, binário único com frontend e backend, internacionalização com i18n, integração com Stripe, autenticação segura e deploy automatizado.
+// `,
+//     publishedAt: '22 de Outubro de 2019',
+//     images: ['/images/works/2gain-sass.png', '/images/works/2gain-sass-2.png'],
+//     featureList: [
+//       'Teste gratuito para novos usuários',
+//       'Autenticação segura com cookies, recuperação de senha e verificação por e-mail',
+//       'Pagamentos nacionais e internacionais via Stripe',
+//       'Suporte multilíngue: português, inglês e espanhol',
+//       'SPA leve e rápida, garantindo excelente experiência do usuário',
+//       'PWA, permitindo instalação em smartphones',
+//     ],
+//     attributes: [
+//       {
+//         name: 'Tipo',
+//         value: 'Projeto Pessoal / SaaS',
+//       },
+//       {
+//         name: 'Stack',
+//         value: 'Golang, React, Vite, PostgreSQL, Stripe, i18n, Docker',
+//       },
+//     ],
+//   },
   {
     id: 1,
     title: 'Sistema Imobiliário Web',
