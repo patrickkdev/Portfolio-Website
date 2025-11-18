@@ -11,10 +11,23 @@ const AboutSection = () => {
 
       <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
         {/* Bio */}
-        <div className="">
-          <p className="text-justify">
-            Desenvolvedor full-stack atuando em Nova Lima, Minas Gerais, especializado na criação de sistemas, sites e aplicativos sob medida. Busco manter o código limpo, bem estruturado e de fácil manutenção. Meus principais valores são responsabilidade, honestidade, respeito e transparência; acredito que diálogo claro e alinhamento de expectativas garantem projetos bem-sucedidos e parcerias duradouras.
-          </p>
+        <div>
+          <div className='text-sm text-gray-700'>
+            <p>
+              Sou um desenvolvedor full-stack especializado na criação de sistemas,
+              sites e aplicativos sob medida. Meu foco é entregar código limpo,
+              bem estruturado e de fácil manutenção.
+            </p>
+            <p className='mt-4'>
+              Meus principais valores são <strong>responsabilidade, honestidade e
+              transparência</strong>. Acredito que um diálogo claro garante projetos
+              bem-sucedidos e parcerias duradouras.
+            </p>
+            <p className='mt-4'>
+              Trabalho em horário comercial das 9h às 17h (GMT-3) e prefiro comunicação assíncrona
+              (e-mail, Telegram, Discord, etc).
+            </p>
+          </div>
           <a download href="/Patrick_Ferreira.pdf" className="btn mt-5">Baixar CV</a>
         </div>
 
