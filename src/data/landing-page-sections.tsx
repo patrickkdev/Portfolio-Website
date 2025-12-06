@@ -11,7 +11,7 @@ export const landingPageSections = [
     title: 'Como eu trabalho: Previsibilidade e Transparência',
     inverse: true,
     align: 'start',
-    left: <PlaceholderImage text='Workflow (ex: Kanban)' />,
+    left: <img className="rounded-md object-cover h-full object-center" src="/images/workflow.jpg" alt="Fluxo de Trabalho" />,
     right: (
       <div className='space-y-4 text-gray-700'>
         <ul className='list-inside list-disc space-y-2'>
@@ -116,7 +116,7 @@ export const landingPageSections = [
     title: 'Para Contratantes',
     inverse: true,
     align: 'start',
-    left: <PlaceholderImage text='Aperto de mão' />,
+    left: <img className="rounded-md object-cover h-full object-center" src="/images/handshake.jpg" alt="Aperto de mão" />,
     right: (
       <div className='space-y-4 text-gray-700'>
         <p className='text-lg font-medium'>

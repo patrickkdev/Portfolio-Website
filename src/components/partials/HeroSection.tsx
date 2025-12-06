@@ -21,7 +21,8 @@ const HeroSection = () => {
             style={{
               maxWidth: '100%',
               height: 'auto'
-            }} />
+            }}
+          />
         </div>
         <h1 className="mt-4 text-3xl font-bold text-center">Patrick Ferreira</h1>
         <div className="mt-4 flex gap-1 text-center italic size text-sm h-[2rem] justify-center items-center w-[280px] text-balance">
@@ -29,13 +30,17 @@ const HeroSection = () => {
           <ReactTyped
             strings={[
               'Desenvolvedor de software full-stack',
-              'Crio sistemas, APIs, sites, aplicativos e automações',
-              'Usando Golang, JS/TS, HTML, CSS, Node e React',
-              'Conecto sistemas com APIs de pagamento, IA e outros',
+              'Crio sistemas, APIs, sites, aplicativos e automações do zero',
+              'Usando Golang, Node, Typescript, HTML, CSS, React, SQL, etc',
+              'Conecto sistemas a praticamente qualquer API, incluindo pagamentos, IA e muito mais',
+              'Evito complexidade desnecessária e mantenho as soluções simples sempre que possível',
+              'Uso IA para criatividade e boilerplate, sempre com revisão e responsabilidade',
+              'Código limpo, testes e preocupação real com manutenção e boas práticas',
+              'Domino bem as tecnologias mais populares e aprendo o restante conforme a necessidade.'
             ]}
-            typeSpeed={60}
-            backSpeed={30}
-            backDelay={2000}
+            typeSpeed={40}
+            backSpeed={20}
+            backDelay={3000}
             loop
           />
         </div>
