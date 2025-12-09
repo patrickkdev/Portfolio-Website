@@ -69,7 +69,7 @@ Evito usar React quando o projeto é mais simples do que o framework pede — ne
       <ImageSplitFeatureSection
         eyebrow="Front-end"
         title="Templ, HTMX e Alpine.js"
-        description={`Essa dupla é minha favorita para sistemas internos, painéis administrativos e projetos que precisam entregar valor rápido.
+        description={`Esse é meu trio favorito para sistemas internos, painéis administrativos e projetos que precisam entregar valor rápido.
 
 O servidor renderiza tudo e o navegador atualiza só o que muda. Isso reduz a complexidade típica de frontends modernos e deixa o fluxo de desenvolvimento mais leve.
 

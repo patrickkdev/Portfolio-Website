@@ -26,11 +26,10 @@ const AboutSection = () => {
               bem-sucedidos e parcerias duradouras.
             </p>
           </div>
-          <a download href="/Patrick_Ferreira.pdf" className="btn mt-5">Baixar CV</a>
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-x-6">
+        <div className="grid grid-cols-2 gap-6">
           {
             skills.map((skill, index) => ({
               ...skill,
@@ -49,6 +48,7 @@ const AboutSection = () => {
             ))
           }
 
+          <a download href="/Patrick_Ferreira.pdf" className="btn mt-5 w-full max-w-sm">Baixar CV</a>
         </div>
       </div>
 
