@@ -6,33 +6,31 @@ import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi
 
 const AboutSection = () => {
   return (
-    <>
+    <div className="mx-auto max-w-6xl">
       <SectionTitle>Sobre Mim</SectionTitle>
 
-      <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:gap-8">
+      <div className="grid grid-cols-1 gap-6 py-6 lg:grid-cols-2 lg:gap-8">
         {/* Bio */}
         <div>
-          <div className='text-sm text-gray-700'>
+          <div className='space-y-4'>
             <p>
-              Sou um desenvolvedor full-stack especializado na criação de sistemas,
-              sites e aplicativos sob medida. Meu foco é entregar código limpo,
-              bem estruturado e de fácil manutenção.
+              Sou um desenvolvedor full-stack especializado na criação de bots, APIs, sites, sistemas
+              e aplicativos. Prezo por código limpo, bem estruturado e simples de manter, aplicando princípios como DDD (Domain-Driven Design)
             </p>
-            <p className='mt-4'>
+            <p>
+              Sou usuário avançado de Linux, com vivência em setup, troubleshooting e otimização.
+            </p>
+            <p>
               Meus principais valores são <strong>responsabilidade, honestidade e
               transparência</strong>. Acredito que um diálogo claro garante projetos
               bem-sucedidos e parcerias duradouras.
-            </p>
-            <p className='mt-4'>
-              Trabalho em horário comercial das 9h às 17h (GMT-3) e prefiro comunicação assíncrona
-              (e-mail, Telegram, Discord, etc).
             </p>
           </div>
           <a download href="/Patrick_Ferreira.pdf" className="btn mt-5">Baixar CV</a>
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-8">
+        <div className="grid grid-cols-2 gap-x-6">
           {
             skills.map((skill, index) => ({
               ...skill,
@@ -96,7 +94,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

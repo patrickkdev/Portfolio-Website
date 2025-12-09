@@ -1,14 +1,14 @@
+import AcademicCap from '@/components/icons/AcademicCap';
+import SectionTitle from '@/components/shared/SectionTitle';
 import { educations } from '@/data/educations';
 import { experiences } from '@/data/experiences';
 import styles from '@/styles/modules/ExperienceSection.module.scss';
 import classNames from 'classnames';
 import { FiBriefcase } from 'react-icons/fi';
-import AcademicCap from '@/components/icons/AcademicCap';
-import SectionTitle from '@/components/shared/SectionTitle';
 
 const ExperienceSection = () => {
   return (
-    <>
+    <div className='max-w-6xl mx-auto'>
       <SectionTitle>Experiências & Estudos</SectionTitle>
       <div className="py-15 mt-10 grid gap-8 md:grid-cols-2">
         {/* Experience */}
@@ -59,7 +59,7 @@ const ExperienceSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

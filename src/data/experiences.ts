@@ -12,14 +12,13 @@ Desenvolvi do zero e mantenho também a versão web do sistema que as imobiliár
 Atuo diariamente em todas as camadas do sistema, passando pelo frontend e backend, banco de dados, armazenamento de objetos, integrações com APIs de terceiros, gestão de domínios, DNS, SSL, deploy em servidores Linux, Nginx, Docker, etc.
       `,
   },
-
   {
     jobTitle: 'Programador de Sistemas',
     company: 'MyCore Tecnologia',
     startDate: 'Ago 2021',
     endDate: 'Dez 2023',
     description: `
-Como Programador de Sistemas na MyCore Tecnologia, atuei em várias frentes do desenvolvimento de produtos digitais.
+Como Programador de Sistemas na MyCore Tecnologia, atuei em várias frentes do desenvolvimento software.
 Desenvolvi sozinho todo o site institucional da empresa e produzi toda a documentação, desde o código até o conteúdo. Usei tecnologias modernas como Next.js, React e MUI. Também contribuí para o desenvolvimento de plataformas de agendamento, gestão de mandatos e outros sistemas dinâmicos, sempre buscando entregar interfaces intuitivas e uma experiência de uso fluida.
 Desenvolvi e mantive aplicativos mobile para Android e iOS usando React Native. As aplicações foram publicadas tanto na Play Store quanto na App Store e chegaram a ser utilizadas em produção.
 Também trabalhei junto à equipe de backend na manutenção e evolução de aplicações web e mobile existentes, garantindo estabilidade, correções rápidas e melhorias contínuas.`,

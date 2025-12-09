@@ -1,5 +1,5 @@
-import React from 'react';
 import DotBg from '@/components/partials/DotBg';
+import React from 'react';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
