@@ -19,10 +19,10 @@ const Home: NextPage = () => {
         <AboutSection />
       </section>
       <section className="container py-16">
-        <SkillsSection />
+        <WorkStyleSection />
       </section>
       <section className="container py-16">
-        <WorkStyleSection />
+        <SkillsSection />
       </section>
       {/**/}
       <section className="container py-16">
