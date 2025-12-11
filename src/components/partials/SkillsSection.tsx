@@ -21,7 +21,7 @@ Gosto de soluções diretas: um binário único, boa performance e um fluxo clar
 Evito camadas desnecessárias, abstrações que ninguém usa e arquiteturas que só complicam o projeto. Go funciona bem justamente porque não precisa de enfeites.
 
 Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de arquitetura DDD em Go que uso como base nos meus projetos:`}
-        image="/images/go-backend.jpg"
+        image="/images/go-backend.png"
         inverse={false}
         imageClassName='object-left'
       >
@@ -36,7 +36,7 @@ Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de ar
         description={`Tenho familiaridade com Node e seu ecossistema. Já desenvolvi bots, scrapers simples com Puppeteer, apps desktop com Electron e APIs com Express e Next.
       
       Hoje estou mais mergulhado no ecossistema Go, então estou um pouco enferrujado em alguns detalhes do desenvolvimento back-end com TS. Mesmo assim, consigo me virar e entender projetos existentes quando a stack pede TypeScript no servidor.`}
-        image="/images/node-backend.jpg"
+        image="/images/node.png"
         inverse={true}
         imageClassName='object-right'
       />
@@ -49,7 +49,7 @@ Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de ar
       É uma linguagem que não uso no dia a dia há algum tempo, já que meu foco atual está em linguagens compiladas e com tipagem forte.
 
       É uma habilidade que não está afiada, mas continua acessível quando necessário.`}
-        image="/images/python-backend.jpg"
+        image="/images/python.png"
         inverse={false}
       />
       
@@ -61,7 +61,7 @@ Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de ar
 Tenho experiência sólida com Next.js em apps SPA e SSR. Aproveito TS para manter tudo seguro, previsível e bem estruturado.
 
 Evito usar React quando o projeto é mais simples do que o framework pede — nem todo sistema precisa carregar um bundle pesado só para renderizar uma lista.`}
-        image="/images/react-ts.jpg"
+        image="/images/react-ts.png"
         inverse={true}
         imageClassName='object-left'
       />
@@ -74,7 +74,7 @@ Evito usar React quando o projeto é mais simples do que o framework pede — ne
 O servidor renderiza tudo e o navegador atualiza só o que muda. Isso reduz a complexidade típica de frontends modernos e deixa o fluxo de desenvolvimento mais leve.
 
 Evito usar SPA quando o projeto não ganha nada com isso. Em muitos casos, HTMX resolve mais rápido, com menos código e com performance excelente.`}
-        image="/images/templ-htmx-alpine.jpg"
+        image="/images/templ-htmx-alpine.png"
         inverse={false}
         imageClassName='object-left'
       />

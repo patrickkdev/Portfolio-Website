@@ -26,7 +26,7 @@ export default function FaqSection() {
   return (
     <section className='py-14'>
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
-        <div className='flex-1'>
+        <div className='flex-1 md:sticky md:top-10 md:self-start'>
           <div className="max-w-lg">
             <h3 className='font-semibold text-primary-500'>
                             Perguntas Frequentes
