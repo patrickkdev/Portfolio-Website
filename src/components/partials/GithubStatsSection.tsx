@@ -26,8 +26,11 @@ export default function GitHubStatsSection() {
     <div className="mx-auto w-full max-w-6xl rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
       <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-200 dark:border-zinc-800">
         <div className="flex items-center gap-2 text-sm font-medium">
-          <FiGithub className="h-4 w-4" />
-          GitHub (Atualizado agora)
+          <FiGithub className="h-5 w-5 mr-1" />
+          <div>
+            <p>GitHub</p>
+            <small className="opacity-50">atualizado agora</small>
+          </div>
         </div>
 
         <a

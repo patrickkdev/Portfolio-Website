@@ -8,7 +8,7 @@ import HeroBackground from './HeroBackground';
 
 const HeroSection = () => {
   return (
-    <div className="hero relative -mt-16 flex items-center justify-center">
+    <div className="hero relative flex items-center justify-center">
       <HeroBackground />
       <div className="flex w-full flex-col items-center">
         <div className="overflow-hidden">
@@ -68,7 +68,7 @@ const HeroSection = () => {
             <FiLinkedin size={25} />
           </Link>
         </div>
-        <Button className="px-8">Vamos Conversar</Button>
+        <Button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })} className="px-8">Vamos Conversar</Button>
       </div>
       <div className="absolute bottom-0 mb-10 flex flex-col items-center">
         <p className="mb-3 text-sm">Role para baixo</p>

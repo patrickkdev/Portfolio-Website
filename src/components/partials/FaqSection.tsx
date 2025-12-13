@@ -26,13 +26,13 @@ export default function FaqSection() {
   return (
     <section className='py-14'>
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
-        <div className='flex-1 md:sticky md:top-10 md:self-start'>
+        <div className='flex-1 md:sticky md:top-24 md:self-start'>
           <div className="max-w-lg">
             <h3 className='font-semibold text-primary-500'>
                             Perguntas Frequentes
             </h3>
             <p className='mt-3 text-primary text-3xl font-bold sm:text-4xl'>
-                          Tire todas as suas dúvidas antes de começarmos.
+                          Tire suas dúvidas antes de começarmos.
             </p>
           </div>
         </div>

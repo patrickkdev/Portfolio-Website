@@ -1,23 +1,69 @@
 import { Theme, useTheme } from '@/hooks/use-theme';
-import { Dialog, Switch, Transition, TransitionChild } from '@headlessui/react';
+import { Dialog, Transition, TransitionChild } from '@headlessui/react';
 import classNames from 'classnames';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 import { HiMenuAlt3 } from 'react-icons/hi';
 
 const Menu = () => {
-  const router = useRouter();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const router = useRouter();
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const [scrolled, setScrolled] = useState(false);
+  const [scrolledPastHero, setScrolledPastHero] = useState(false);
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 400) {
+        setScrolledPastHero(true);
+      } else {
+        setScrolledPastHero(false);
+      }
+
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header text-gray-700 dark:text-gray-200">
-      <div className="mx-auto flex h-16 max-w-7xl items-center p-4 md:px-6">
-        <Link href="/" className="text-3xl  font-bold">
-          <span>Patrick Ferreira</span>
-          <span className="text-primary-500">.</span>
+    // eslint-disable-next-line quotes
+    <header className={classNames("mx-auto w-full md:max-w-7xl header fixed left-0 right-0 md:top-1 z-30")}>
+      <div className={classNames('flex h-16 items-center p-2 md:pr-6 text-gray-700 dark:text-gray-200 md:rounded-lg transition-all duration-300 ease-out', { 'md:shadow-md backdrop-blur bg-white/80 dark:bg-gray-800/80 backdrop-opacity-70': scrolled })}>
+        <Link href="/" className="flex items-center gap-3 overflow-hidden">
+          <Image
+            src="/images/avatar/me.png"
+            width={50}
+            height={50}
+            alt="avatar"
+            className={classNames(
+              'aspect-square rounded object-cover transition-all duration-300 ease-out',
+              {
+                '-translate-x-6 opacity-0 w-0': !scrolledPastHero,
+                'translate-x-0 opacity-100 w-[50px]': scrolledPastHero
+              }
+            )}
+          />
+          <span
+            className={classNames(
+              'transition-all duration-300 ease-out text-2xl font-bold',
+              { 'translate-x-0': scrolledPastHero }
+            )}
+          >
+            Patrick Ferreira
+          </span>
         </Link>
+
         <ul className="ml-auto hidden items-center md:flex">
           <li>
             <Link

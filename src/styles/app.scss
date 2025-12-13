@@ -18,13 +18,14 @@ body {
 }
 
 .container {
-  @apply mx-auto max-w-xl px-6 md:max-w-4xl lg:max-w-7xl;
+  @apply mx-auto max-w-xl px-6 md:max-w-4xl lg:max-w-6xl;
 }
 
 .slick-prev:before,
 .slick-next:before {
   @apply text-gray-300;
 }
+
 .slick-dots {
   li {
     @apply m-0;

@@ -14,12 +14,12 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <AppLayout>
+    <AppLayout title='Patrick Ferreira - Desenvolvedor Full-stack'>
       <HeroSection />
       <section className="container py-16">
         <AboutSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-4">
         <GitHubStatsSection />
       </section>
       <section className="container py-16">
@@ -28,15 +28,12 @@ const Home: NextPage = () => {
       <section className="container py-16">
         <SkillsSection />
       </section>
-      <section className="container py-16">
-        <SkillsSection />
-      </section>
       {/**/}
       <section className="container py-16">
-        <ServiceSection />
+        <ExperienceSection />
       </section>
       <section className="container py-16">
-        <ExperienceSection />
+        <ServiceSection />
       </section>
       <section className="container py-16">
         <RecentWorkSection />
