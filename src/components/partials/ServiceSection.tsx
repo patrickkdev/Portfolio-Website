@@ -39,12 +39,6 @@ const ServiceSection = () => {
           </div>
         </div>
       </div>
-      {/* <SectionTitle>Serviços</SectionTitle>
-      <div className="mt-10 grid gap-8 md:grid-cols-3">
-        {services.map((service, index) => (
-          <PicBackgroundCard key={index} name={service.name} description={service.description} image={service.image} />
-        ))}
-      </div> */}
     </>
   );
 };

@@ -24,11 +24,9 @@ export default function WorkStyleSection() {
         title="Inteligência Artificial"
         description={`Uso ferramentas de IA como apoio técnico e criativo para acelerar tarefas, explorar alternativas, validar ideias e aumentar produtividade sempre com controle técnico e revisão humana.
 
-          Acredito que ignorar essas tecnologias é abrir mão de eficiência, competitividade e capacidade de escalar soluções em um mercado cada vez mais rápido e orientado por automação.
-          
           Além do uso interno, integro recursos de IA diretamente em aplicações reais, como geração de descrições de produtos, síntese de voz, geração de imagens e moderação de conteúdo.
         `}
-        image="/images/ai_cpu.jpg"
+        image="/images/ai_cpu_2.jpg"
         inverse={false}
         imageClassName='object-right'
       />

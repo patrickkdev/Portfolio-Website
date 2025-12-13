@@ -9,7 +9,7 @@ const AboutSection = () => {
     <div className="mx-auto max-w-6xl">
       <SectionTitle>Sobre Mim</SectionTitle>
 
-      <div className="grid grid-cols-1 gap-6 py-6 lg:grid-cols-2 lg:gap-8">
+      <div className="grid grid-cols-1 gap-x-4 py-6 lg:grid-cols-2 lg:gap-x-6">
         {/* Bio */}
         <div>
           <div className='space-y-4'>
@@ -31,7 +31,7 @@ const AboutSection = () => {
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-6 bg-white dark:bg-gray-700 rounded-2xl p-6 shadow-lg bg-white dark:bg-gray-700">
           {
             skills.map((skill, index) => ({
               ...skill,
@@ -50,12 +50,12 @@ const AboutSection = () => {
             ))
           }
 
-          <a download href="/Patrick_Ferreira.pdf" className="btn mt-5 w-full max-w-sm">Baixar CV</a>
         </div>
+        <a download href="/Patrick_Ferreira.pdf" className="btn mt-5 w-full max-w-sm">Baixar CV</a>
       </div>
 
       {/* Overview */}
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
         <div className="flex">
           <div className="mr-5 text-gray-300">
             <HiOutlineFire size={50} />
