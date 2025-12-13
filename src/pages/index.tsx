@@ -28,7 +28,6 @@ const Home: NextPage = () => {
       <section className="container py-16">
         <SkillsSection />
       </section>
-      {/**/}
       <section className="container py-16">
         <ExperienceSection />
       </section>

@@ -38,7 +38,7 @@ Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de ar
       Hoje estou mais mergulhado no ecossistema Go, então estou um pouco enferrujado em alguns detalhes do desenvolvimento back-end com TS. Mesmo assim, consigo me virar e entender projetos existentes quando a stack pede TypeScript no servidor.`}
         image="/images/node.png"
         inverse={true}
-        imageClassName='object-right'
+        imageClassName='object-left'
       />
 
       <ImageSplitFeatureSection
@@ -51,6 +51,7 @@ Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de ar
       É uma habilidade que não está afiada, mas continua acessível quando necessário.`}
         image="/images/python.png"
         inverse={false}
+        imageClassName='object-left'
       />
       
       <ImageSplitFeatureSection
