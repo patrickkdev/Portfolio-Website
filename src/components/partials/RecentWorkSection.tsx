@@ -1,30 +1,15 @@
-import Portfolio from '@/components/shared/Portfolio';
-import SectionTitle from '@/components/shared/SectionTitle';
 import { works } from '@/data/works';
-import Link from 'next/link';
+import BlogPostCard from '../shared/FeatureCard';
+import MasonryFeatureSection from '../shared/MansoryFeatureSection';
 
 const RecentWorkSection = () => {
   return (
     <>
-      <SectionTitle>Trabalhos</SectionTitle>
-      <div className="mt-10 grid gap-4 xs:grid-cols-2 md:grid-cols-3 md:gap-8">
-        {works
-          .filter((_, index: number) => index < 6)
-          .map((work) => (
-            <Portfolio
-              key={work.id}
-              imageUrl={work.thumbnailUrl}
-              category={work.category}
-              title={work.title}
-              href={`/works/${work.id}`}
-            />
-          ))}
-      </div>
-      <div className="mt-10 flex justify-center">
-        <Link href={'/works'} className="btn">
-          Ver todos
-        </Link>
-      </div>
+      <MasonryFeatureSection title="Trabalhos Recentes" eyebrow="Uma seleção de trabalhos recentes" description="Explore alguns dos meus projetos mais recentes, destacando minhas habilidades e experiência.">
+        {works.map((work) => (
+          <BlogPostCard key={work.id} title={work.title} excerpt={work.description || ''} reading={work.category} href={`/works/${work.id}`} />
+        ))}
+      </MasonryFeatureSection>
     </>
   );
 };
