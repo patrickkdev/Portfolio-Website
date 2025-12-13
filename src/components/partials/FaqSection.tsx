@@ -14,7 +14,7 @@ export default function FaqSection() {
       a:'Sim. Embora meu foco principal seja o desenvolvimento de projetos sob medida, estou aberto a avaliar propostas de emprego integral (CLT ou PJ), desde que a posição seja 100% home office.'
     },
     {
-      q:'Qual é o seu nível de inglês?',
+      q:'Qual é o seu nível de inglês? 🇬🇧🇺🇸',
       a:'Para o ambiente de desenvolvimento, minha proficiência em escuta, leitura e escrita é alta. Todo o código, documentação e commit messages são escritos em inglês, e busco ativamente conteúdo e fóruns no idioma. Minha comunicação falada (conversação) é limitada, mas para comunicação assíncrona, não há barreiras.'
     },
     {

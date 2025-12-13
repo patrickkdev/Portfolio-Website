@@ -14,16 +14,18 @@ const AboutSection = () => {
         <div>
           <div className='space-y-4'>
             <p>
-              Sou um desenvolvedor full-stack especializado na criação de bots, APIs, sites, sistemas
-              e aplicativos. Prezo por código limpo, bem estruturado e simples de manter, aplicando princípios como DDD (Domain-Driven Design)
+              Desenvolvedor full-stack especializado na criação de sites, sistemas, bots, APIs e aplicações, sempre priorizando código legível, bem estruturado
+              e fácil de manter.
             </p>
             <p>
-              Sou usuário avançado de Linux, com vivência em setup, troubleshooting e otimização.
+              Tenho experiência entregando projetos de ponta a ponta — <strong>da arquitetura ao deploy</strong>.
             </p>
             <p>
-              Meus principais valores são <strong>responsabilidade, honestidade e
-              transparência</strong>. Acredito que um diálogo claro garante projetos
-              bem-sucedidos e parcerias duradouras.
+              Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup,
+              troubleshooting e otimização.
+            </p>
+            <p>
+              Meus principais valores são <strong>responsabilidade e transparência</strong>.
             </p>
           </div>
         </div>

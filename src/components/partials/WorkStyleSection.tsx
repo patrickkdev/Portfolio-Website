@@ -5,31 +5,29 @@ export default function WorkStyleSection() {
     <div className="space-y-20">
       <div className='text-center space-y-4'>
         <h2 className="text-3xl font-bold text-primary">
-          Meu Estilo de Trabalho
+          Meu estilo de trabalho
         </h2>
-        <p className="text-primary opacity-80">
-          Clareza no processo, previsibilidade no ritmo e comunicação direta
-        </p>
       </div>
       <ImageSplitFeatureSection
-        title="Transparência, agilidade e comunicação clara"
+        title="Responsabilidade e transparência"
         description={`Você não precisa cobrar, insistir ou adivinhar o andamento do que está sendo feito. Meu foco é reduzir o atrito e facilitar sua vida.
             
-            Trabalho de segunda a sexta, das 9h às 17h (GMT-3). Nesse período costumo responder rápido. Fora dele, fico disponível apenas em situações importantes ou combinadas anteriormente, para manter o ritmo sustentável e previsível.
-            
-            As conversas são objetivas. Explico decisões, compartilho o andamento, aviso quando algo muda, quando existe risco de atraso ou quando surge uma solução melhor no caminho. Não prometo milagres, não escondo problemas e não deixo nada acumular.
+          As conversas são objetivas. Explico decisões, compartilho o andamento, aviso quando algo muda, quando existe risco de atraso ou quando surge uma solução melhor no caminho. Não prometo o que não posso entregar, não escondo problemas e não deixo nada acumular.
+          
+          Atuo de segunda a sexta, das 9h às 17h (GMT-3). Nesse período costumo responder rápido. Fora dele, fico disponível apenas em situações importantes ou combinadas anteriormente, para manter o ritmo sustentável e previsível.
             `}
         image="/images/workflow.jpg"
         inverse={true}
       >
       </ImageSplitFeatureSection>
       <ImageSplitFeatureSection
-        title="Inteligência Artificial no meu trabalho"
-        description={`IA faz parte do meu dia a dia tanto como ferramenta quanto como tecnologia integrada nos projetos que desenvolvo. Modelos como Gemini e ChatGPT me ajudam a acelerar tarefas repetitivas, revisar ideias, gerar rascunhos e explorar alternativas de solução sem perder o controle técnico. 
+        title="Inteligência Artificial"
+        description={`Uso ferramentas de IA como apoio técnico e criativo para acelerar tarefas, explorar alternativas, validar ideias e aumentar produtividade sempre com controle técnico e revisão humana.
 
-      Além do uso interno, também integro IA diretamente em aplicações reais: geração automática de textos, resumos, classificação de dados e assistentes especializados. Quando o projeto pede, configuro ainda recursos multimodais, como geração de imagens, síntese de voz, etc.
-
-      No fim, a IA entra como reforço, não substitui o olhar humano, mas serve como apoio técnico e criativo, sempre exigindo revisão manual.`}
+          Acredito que ignorar essas tecnologias é abrir mão de eficiência, competitividade e capacidade de escalar soluções em um mercado cada vez mais rápido e orientado por automação.
+          
+          Além do uso interno, integro recursos de IA diretamente em aplicações reais, como geração de descrições de produtos, síntese de voz, geração de imagens e moderação de conteúdo.
+        `}
         image="/images/ai_cpu.jpg"
         inverse={false}
         imageClassName='object-right'

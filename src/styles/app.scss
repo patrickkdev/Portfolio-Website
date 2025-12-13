@@ -45,3 +45,8 @@ body {
     }
   }
 }
+
+img {
+  // increase brightness on hover
+  @apply hover:contrast-[1.1] hover:brightness-[1.05] transition duration-300;
+}
