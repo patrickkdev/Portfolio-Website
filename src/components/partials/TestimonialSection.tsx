@@ -1,8 +1,4 @@
-import { reviews } from '@/data/reviews';
-import Image from 'next/image';
-import React from 'react';
-import Slider, { Settings } from 'react-slick';
-import SectionTitle from '../shared/SectionTitle';
+import { Settings } from 'react-slick';
 
 const reviewSettings: Settings = {
   dots: true,
@@ -32,7 +28,7 @@ const Testimonial = () => {
                 <p className="text-sm text-gray-400 dark:text-gray-200">
                   {review.author.designation} at {review.author.company}.
                 </p>
-                <div className="mt-6 max-w-2xl rounded-2xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-700 dark:text-gray-200">
+                <div className="mt-6 max-w-2xl rounded-xl bg-white p-8 text-gray-500 shadow-lg dark:bg-gray-700 dark:text-gray-200">
                   {review.comment}
                 </div>
               </div>

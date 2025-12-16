@@ -8,7 +8,7 @@ export default function PicBackgroundCard({
   image: string;
 }) {
   return (
-    <div className="relative min-h-[300px] overflow-hidden rounded-2xl shadow-md">
+    <div className="relative min-h-[300px] overflow-hidden rounded-xl shadow-md">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"

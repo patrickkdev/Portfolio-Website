@@ -1,5 +1,5 @@
 // Bento-style feature section
-export default function BentoFeatureSection({
+export default function Grid({
   children,
 }: {
   children: React.ReactNode[]

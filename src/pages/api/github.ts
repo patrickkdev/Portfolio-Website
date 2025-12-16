@@ -65,17 +65,14 @@ export default async function handler(
     );
 
     res.json({
-      public_repos: user.public_repos,
+      publicRepos: user.public_repos,
       followers: user.followers,
-      stars_received: stars,
-
-      total_commits: commits.total_count,
-      total_prs: prs.total_count,
-      total_issues: issues.total_count,
-      contributed_to: contributedRepos.size,
-
-      last_active_at:
-        events.find((e: any) => e.type === 'PushEvent')?.created_at ?? null,
+      starsReceived: stars,
+      totalCommits: commits.total_count,
+      totalPullRequests: prs.total_count,
+      totalIssues: issues.total_count,
+      contributedTo: contributedRepos.size,
+      lastPushedAt: events.find((e: any) => e.type === 'PushEvent')?.created_at ?? null,
     });
   } catch (err) {
     console.error(err);

@@ -14,12 +14,12 @@ const ExperienceSection = () => {
       <div className="grid gap-8 md:grid-cols-2">
         {/* Experience */}
         <div>
-          <div className="rounded-2xl bg-white py-8 shadow-lg dark:bg-gray-700 border border-gray-200 dark:border-gray-500 border border-primary-600 dark:border-primary-200">
+          <div className="rounded-xl bg-white py-8 shadow-lg dark:bg-gray-700 border border-gray-200 dark:border-gray-500 border border-primary-600 dark:border-primary-200">
             <ol className={classNames(styles['experience'])}>
               {experiences.map((experience, index) => (
                 <li key={index} className={styles['experience-item']}>
-                  <span className="absolute -left-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-white text-primary-500 ring-8 ring-white dark:bg-gray-700 dark:ring-gray-700">
-                    <FiBriefcase className="h-5" />
+                  <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-white ring-8 ring-white dark:bg-gray-700 dark:ring-gray-700">
+                    <FiBriefcase className="h-6" />
                   </span>
                   <time className="mb-2 block text-sm font-normal leading-none opacity-70">
                     {experience.startDate} - {experience.endDate}
@@ -48,12 +48,12 @@ const ExperienceSection = () => {
         </div>
         {/* Education */}
         <div>
-          <div className="rounded-2xl bg-white py-8 shadow-lg dark:bg-gray-700 border border-primary-600 dark:border-primary-200">
+          <div className="rounded-xl bg-white py-8 shadow-lg dark:bg-gray-700 border border-primary-600 dark:border-primary-200">
             <ol className={classNames(styles['education'])}>
               {educations.map((education, index) => (
                 <li key={index} className={styles['education-item']}>
-                  <span className="absolute -left-2.5 flex h-5 w-5 items-center justify-center rounded-full bg-white text-primary-500 ring-8 ring-white dark:bg-gray-700 dark:ring-gray-700">
-                    <AcademicCap className="h-5" />
+                  <span className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-white ring-8 ring-white dark:bg-gray-700 dark:ring-gray-700">
+                    <AcademicCap className="h-6" />
                   </span>
                   <h3 className="mb-1 flex items-center text-lg font-semibold">
                     {education.degree}

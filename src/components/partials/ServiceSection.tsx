@@ -6,7 +6,7 @@ const ServiceSection = () => {
         <p className="text-primary opacity-80">Onde entrego meus melhores resultados e quais tipos de projetos prefiro não assumir.</p>
       </header>
       <div className='grid gap-8 md:grid-cols-2'>
-        <div className='bg-white dark:bg-gray-700 rounded-2xl p-6 shadow-lg bg-white dark:bg-gray-700'>
+        <div className='bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg bg-white dark:bg-gray-700'>
           <div className='space-y-4'>
             <h4 className='font-semibold text-primary'>✅️ O que eu faço:</h4>
             <ul className='text-primary text-balance space-y-2 list-disc list-outside ml-5'>
@@ -17,7 +17,7 @@ const ServiceSection = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-white dark:bg-gray-700 rounded-2xl p-6 shadow-lg bg-white dark:bg-gray-700">
+        <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg bg-white dark:bg-gray-700">
           <div className='space-y-4'>
             <h4 className='font-semibold text-primary'>❌️ O que eu não faço:</h4>
             <p className='text-primary'>

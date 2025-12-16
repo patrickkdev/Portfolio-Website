@@ -1,4 +1,3 @@
-import { Url } from 'url';
 
 export type Experience = {
   jobTitle: string;
@@ -70,3 +69,14 @@ export type ContactFormData = {
   subject: string;
   message: string;
 };
+
+export interface GithubContributionData {
+  publicRepos: number;
+  followers: number;
+  starsReceived: number;
+  totalCommits: number;
+  totalPullRequests: number;
+  totalIssues: number;
+  contributedTo: number;
+  lastPushedAt: number
+}

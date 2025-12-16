@@ -1,5 +1,5 @@
 .portfolio {
-  @apply relative overflow-hidden rounded-2xl text-center shadow-lg;
+  @apply relative overflow-hidden rounded-xl text-center shadow-lg;
 
   &:hover .portfolio-overlay {
     @apply opacity-100;

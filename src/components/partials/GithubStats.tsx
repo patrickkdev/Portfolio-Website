@@ -1,21 +1,11 @@
+import { GithubContributionData } from '@/types';
 import React from 'react';
 import GitHubButton from 'react-github-btn';
 import { FiGithub } from 'react-icons/fi';
 import { Stat } from '../shared/Stat';
 
-type GitHubStats = {
-  public_repos: number;
-  followers: number;
-  stars_received: number;
-  total_commits: number;
-  total_prs: number;
-  total_issues: number;
-  contributed_to: number;
-  last_active_at: string | null;
-};
-
-export default function GitHubStatsSection() {
-  const [stats, setStats] = React.useState<GitHubStats | null>(null);
+export default function GitHubStats() {
+  const [stats, setStats] = React.useState<GithubContributionData | null>(null);
 
   React.useEffect(() => {
     fetch('/api/github')
@@ -37,21 +27,21 @@ export default function GitHubStatsSection() {
         <GitHubButton href="https://github.com/patrickkdev" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Follow @patrickkdev on GitHub">Follow @patrickkdev</GitHubButton>
       </div>
 
-      <div className="grid grid-cols-3 divide-x divide-y divide-zinc-200 dark:divide-zinc-800">
+      <div className="grid grid-cols-2 lg:grid-cols-3 divide-x divide-y">
         <Stat
           label="Última atividade"
           value={
-            stats?.last_active_at
-              ? new Date(stats.last_active_at).toLocaleDateString()
-              : '—'
+            stats?.lastPushedAt
+              ? new Date(stats.lastPushedAt).toLocaleDateString()
+              : undefined
           }
         />
-        <Stat label="Repos Públicos" value={stats?.public_repos} />
-        <Stat label="Pull Requests" value={stats?.total_prs} />
+        <Stat label="Commits" value={stats?.totalCommits} />
+        <Stat label="Repos Públicos" value={stats?.publicRepos} />
+        <Stat label="Pull Requests" value={stats?.totalPullRequests} />
 
-        <Stat label="Commits" value={stats?.total_commits} />
-        <Stat label="Issues" value={stats?.total_issues} />
-        <Stat label="Contribuições" value={stats?.contributed_to} />
+        <Stat label="Issues" value={stats?.totalIssues} />
+        <Stat label="Contribuições" value={stats?.contributedTo} />
       </div>
     </div>
   );

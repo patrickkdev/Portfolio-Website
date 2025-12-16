@@ -3,95 +3,93 @@ import SectionTitle from '@/components/shared/SectionTitle';
 import { skills } from '@/data/skills';
 import { FiCoffee } from 'react-icons/fi';
 import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
+import GitHubStats from './GithubStats';
 
 const AboutSection = () => {
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-6xl space-y-6">
       <SectionTitle>Sobre Mim</SectionTitle>
 
-      <div className="grid grid-cols-1 gap-8 lg:gap-6 py-6 lg:grid-cols-2 lg:gap-x-6">
-        {/* Bio */}
-        <div>
-          <div className='space-y-4'>
-            <p>
-              Desenvolvedor full-stack especializado na criação de sites, sistemas, bots, APIs e aplicações, sempre priorizando código legível, bem estruturado
-              e fácil de manter.
-            </p>
-            <p>
-              Tenho experiência entregando projetos de ponta a ponta — <strong>da arquitetura ao deploy</strong>.
-            </p>
-            <p>
-              Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup,
-              troubleshooting e otimização.
-            </p>
+      <div className="space-y-12">
+        <div className="grid grid-cols-1 gap-8 lg:gap-6 lg:grid-cols-2 lg:gap-x-6">
+          {/* Bio */}
+          <div>
+            <div className='space-y-4'>
+              <p>
+                Desenvolvedor full-stack especializado na criação de sites, sistemas, bots, APIs e aplicações, sempre priorizando código legível, bem estruturado
+                e fácil de manter.
+              </p>
+              <p>
+                Tenho experiência entregando projetos de ponta a ponta — <strong>da arquitetura ao deploy</strong>.
+              </p>
+              <p>
+                Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup,
+                troubleshooting e otimização.
+              </p>
+            </div>
           </div>
-        </div>
-
-        {/* Skills */}
-        <div className="grid grid-cols-2 gap-6 rounded-2xl lg:p-6 lg:shadow-lg lg:bg-white lg:dark:bg-gray-700">
-          {
-            skills.map((skill, index) => ({
-              ...skill,
-              color: index == 0 ? 'blue' : index == 1 ? 'green' : index == 2 ? 'red' : 'yellow' as 'red' | 'blue' | 'green' | 'yellow'
-            })).map((skill, index) => (
-              <div key={index}>
-                <div className="mb-3 flex justify-between">
-                  <div>
-                    <h6 className="font-semibold">{skill.name}</h6>
-                    <small className="opacity-80">{skill.description}</small>
+          {/* Skills */}
+          <div className="grid grid-cols-2 gap-6 rounded-xl lg:p-6 lg:shadow-lg lg:bg-white lg:dark:bg-gray-700">
+            {
+              skills.map((skill, index) => ({
+                ...skill,
+                color: index == 0 ? 'blue' : index == 1 ? 'green' : index == 2 ? 'red' : 'yellow' as 'red' | 'blue' | 'green' | 'yellow'
+              })).map((skill, index) => (
+                <div key={index}>
+                  <div className="mb-3 flex justify-between">
+                    <div>
+                      <h6 className="font-semibold">{skill.name}</h6>
+                      <small className="opacity-80">{skill.description}</small>
+                    </div>
+                    <p>{skill.progress}%</p>
                   </div>
-                  <p>{skill.progress}%</p>
+                  <ProgressBar color={skill.color} progress={skill.progress} />
                 </div>
-                <ProgressBar color={skill.color} progress={skill.progress} />
-              </div>
-            ))
-          }
-
+              ))
+            }
+          </div>
+          <a download href="/Patrick_Ferreira.pdf" className="btn w-full max-w-none lg:max-w-xs">Baixar CV</a>
         </div>
-        <a download href="/Patrick_Ferreira.pdf" className="btn w-full max-w-none lg:max-w-sm">Baixar CV</a>
-      </div>
-
-      {/* Overview */}
-      <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineFire size={50} />
+        {/* Overview */}
+        <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <HiOutlineFire size={50} />
+            </div>
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold">25+</h2>
+              <p className="mt-1">Projetos concluídos</p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-3xl font-bold">20+</h2>
-            <p className="mt-1">Projetos concluídos</p>
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <HiOutlineUsers size={50} />
+            </div>
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold">400+</h2>
+              <p className="mt-1">Clientes satisfeitos</p>
+            </div>
           </div>
-        </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineUsers size={50} />
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <HiOutlineChartBar size={50} />
+            </div>
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold">4+</h2>
+              <p className="mt-1">Anos de experiência</p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-3xl font-bold">400+</h2>
-            <p className="mt-1">Clientes satisfeitos (Inc. SaaS)</p>
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <HiOutlineChartBar size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">4+</h2>
-            <p className="mt-1">Anos de experiência</p>
-          </div>
-        </div>
-
-        <div className="flex">
-          <div className="mr-5 text-gray-300">
-            <FiCoffee size={50} />
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold">5+</h2>
-            <p className="mt-1">Xícaras de café/dia</p>
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
+              <FiCoffee size={50} />
+            </div>
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold">5+</h2>
+              <p className="mt-1">Xícaras de café/dia</p>
+            </div>
           </div>
         </div>
+        <GitHubStats />
       </div>
     </div>
   );
