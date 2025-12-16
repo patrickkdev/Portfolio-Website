@@ -7,7 +7,6 @@ import HeroSection from '@/components/partials/HeroSection';
 import RecentWorkSection from '@/components/partials/RecentWorkSection';
 import ServiceSection from '@/components/partials/ServiceSection';
 import SkillsSection from '@/components/partials/SkillsSection';
-import TestimonialSection from '@/components/partials/TestimonialSection';
 import WorkStyleSection from '@/components/partials/WorkStyleSection';
 import AppLayout from '@/layouts/AppLayout';
 import type { NextPage } from 'next';
@@ -37,9 +36,9 @@ const Home: NextPage = () => {
       <section className="container py-16">
         <RecentWorkSection />
       </section>
-      <section className="container py-16">
+      {/* <section className="container py-16">
         <TestimonialSection />
-      </section>
+      </section> */}
       <section className="container py-16">
         <FaqSection />
       </section>

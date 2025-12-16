@@ -34,6 +34,9 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
 
         {/* Umami Analytics */}
         <script defer src="https://cloud.umami.is/script.js" data-website-id="cd0ee4eb-5f13-4efd-9d72-316594d329cd"></script>
+
+        {/* GitHub Buttons */}
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
       </Head>
       <div className="flex min-h-screen flex-col">
         <ScrollToTop

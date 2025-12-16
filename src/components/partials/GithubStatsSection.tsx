@@ -1,4 +1,5 @@
 import React from 'react';
+import GitHubButton from 'react-github-btn';
 import { FiGithub } from 'react-icons/fi';
 import { Stat } from '../shared/Stat';
 
@@ -33,14 +34,7 @@ export default function GitHubStatsSection() {
           </div>
         </div>
 
-        <a
-          href="https://github.com/patrickkdev"
-          target="_blank"
-          rel="noreferrer"
-          className="text-xs text-zinc-500 hover:text-zinc-900"
-        >
-          Ver perfil →
-        </a>
+        <GitHubButton href="https://github.com/patrickkdev" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Follow @patrickkdev on GitHub">Follow @patrickkdev</GitHubButton>
       </div>
 
       <div className="grid grid-cols-3 divide-x divide-y divide-zinc-200 dark:divide-zinc-800">

@@ -3,11 +3,9 @@ import ImageSplitFeatureSection from './ImageSplitFeatureSection';
 export default function WorkStyleSection() {
   return (
     <div className="space-y-20">
-      <div className='text-center space-y-4'>
-        <h2 className="text-3xl font-bold text-primary">
-          Meu estilo de trabalho
-        </h2>
-      </div>
+      <header className="text-center space-y-4">
+        <h2 className="font-heading font-semibold text-5xl">Meu estilo de trabalho</h2>
+      </header>
       <ImageSplitFeatureSection
         title="Responsabilidade e transparência"
         description={`Você não precisa cobrar, insistir ou adivinhar o andamento do que está sendo feito. Meu foco é reduzir o atrito e facilitar sua vida.

@@ -1,30 +1,39 @@
+import Image from 'next/image';
 
 type Props = {
-  title: string;
-  excerpt: string;
-  reading: string;
-  href?: string;
+  imageSrc?: string;
+  excerpt?: string;
+  title?: string;
+  description?: string;
+  cta?: string;
+  href: string;
 };
 
 
-export default function BlogPostCard({ title, excerpt, reading, href }: Props) {
+export default function FeatureCard({ imageSrc, excerpt, title, description, cta, href }: Props) {
   return (
-    <a href={href}>
-      <article
-        className="mb-6 p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition-shadow duration-200 ease-out border border-transparent hover:border-slate-100"
-        style={{ breakInside: 'avoid' }}
-      >
-        <div className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 rounded">
-          <div className="h-36 rounded-lg mb-4 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 flex items-end">
-            {/* Image/block placeholder — keeps cards feeling like posts */}
-            <div className="px-4 pb-3">
-              <span className="inline-block text-xs font-medium uppercase tracking-wide text-slate-500 bg-white/60 backdrop-blur rounded-full px-2 py-1">{reading}</span>
-            </div>
-          </div>
-          <h3 className="text-lg font-semibold leading-tight text-slate-900 dark:text-slate-100 mb-2">{title}</h3>
-          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{excerpt}</p>
+    <a href={href} className="space-y-4">
+      {
+        imageSrc && 
+        <div className="overflow-hidden rounded-lg">
+          <Image src={imageSrc} alt={title || ''} width={400} height={200} className="hover:scale-105" />
         </div>
-      </article>
+      }
+      <div className="flex flex-col gap-2">
+        {
+          excerpt &&
+          <small className="text-xs font-medium text-primary-600">{excerpt}</small>
+        }
+        <h3 className="font-display text-xl font-semibold !leading-[1.25] max-sm:text-lg">{title}</h3>
+        {
+          description &&
+          <p className="text-sm text-primary opacity-80">{description?.substring(0, 100)}</p>
+        }
+        {
+          cta && 
+          <p className="link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-primary-600 hover:underline">{cta}</p>
+        }
+      </div>
     </a>
   );
 }

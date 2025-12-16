@@ -9,7 +9,7 @@ const AboutSection = () => {
     <div className="mx-auto max-w-6xl">
       <SectionTitle>Sobre Mim</SectionTitle>
 
-      <div className="grid grid-cols-1 gap-x-4 py-6 lg:grid-cols-2 lg:gap-x-6">
+      <div className="grid grid-cols-1 gap-8 lg:gap-6 py-6 lg:grid-cols-2 lg:gap-x-6">
         {/* Bio */}
         <div>
           <div className='space-y-4'>
@@ -24,14 +24,11 @@ const AboutSection = () => {
               Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup,
               troubleshooting e otimização.
             </p>
-            <p>
-              Meus principais valores são <strong>responsabilidade e transparência</strong>.
-            </p>
           </div>
         </div>
 
         {/* Skills */}
-        <div className="grid grid-cols-2 gap-6 bg-white dark:bg-gray-700 rounded-2xl p-6 shadow-lg bg-white dark:bg-gray-700">
+        <div className="grid grid-cols-2 gap-6 rounded-2xl lg:p-6 lg:shadow-lg lg:bg-white lg:dark:bg-gray-700">
           {
             skills.map((skill, index) => ({
               ...skill,
@@ -51,7 +48,7 @@ const AboutSection = () => {
           }
 
         </div>
-        <a download href="/Patrick_Ferreira.pdf" className="btn mt-5 w-full max-w-sm">Baixar CV</a>
+        <a download href="/Patrick_Ferreira.pdf" className="btn w-full max-w-none lg:max-w-sm">Baixar CV</a>
       </div>
 
       {/* Overview */}

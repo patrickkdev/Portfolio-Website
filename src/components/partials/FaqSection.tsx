@@ -11,7 +11,7 @@ export default function FaqSection() {
     },
     {
       q:'Você está aberto a propostas de emprego integral?',
-      a:'Sim. Embora meu foco principal seja o desenvolvimento de projetos sob medida, estou aberto a avaliar propostas de emprego integral (CLT ou PJ), desde que a posição seja 100% home office.'
+      a:'Sim. Estou sempre aberto a avaliar propostas de emprego integral (CLT ou PJ), desde que a posição seja 100% remota.'
     },
     {
       q:'Qual é o seu nível de inglês? 🇬🇧🇺🇸',

@@ -3,14 +3,10 @@ import ImageSplitFeatureSection from './ImageSplitFeatureSection';
 export default function SkillsSection() {
   return (
     <div className="space-y-20">
-      <div className='text-center space-y-4'>
-        <h2 className="text-3xl font-bold text-primary">
-          Minhas Competências Técnicas, sem Mistério
-        </h2>
-        <p className="text-primary opacity-80">
-          As ferramentas que escolho, por que escolho e o que consigo entregar com elas.
-        </p>
-      </div>
+      <header className="text-center space-y-4 max-w-3xl mx-auto">
+        <h2 className="font-heading font-semibold text-5xl">Minhas Competências Técnicas, sem Mistério</h2>
+        <p className="text-primary opacity-80">As ferramentas que escolho, por que escolho e o que consigo entregar com elas.</p>
+      </header>
       <ImageSplitFeatureSection
         eyebrow="Back-end"
         title="Go e Echo"
