@@ -27,7 +27,7 @@ export default function GitHubStats() {
         <GitHubButton href="https://github.com/patrickkdev" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Follow @patrickkdev on GitHub">Follow @patrickkdev</GitHubButton>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 divide-x divide-y">
+      <div className="grid grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-zinc-200 dark:divide-zinc-800">
         <Stat
           label="Última atividade"
           value={
