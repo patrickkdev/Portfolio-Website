@@ -9,14 +9,13 @@ type Props = {
   href: string;
 };
 
-
 export default function FeatureCard({ imageSrc, excerpt, title, description, cta, href }: Props) {
   return (
-    <a href={href} className="space-y-4">
+    <a href={href} className="group space-y-4">
       {
         imageSrc && 
         <div className="overflow-hidden rounded-lg">
-          <Image src={imageSrc} alt={title || ''} width={400} height={200} className="hover:scale-105" />
+          <Image src={imageSrc} alt={title || ''} width={400} height={200} className="group-hover:scale-105" />
         </div>
       }
       <div className="flex flex-col gap-2">
@@ -31,7 +30,7 @@ export default function FeatureCard({ imageSrc, excerpt, title, description, cta
         }
         {
           cta && 
-          <p className="link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-primary-600 hover:underline">{cta}</p>
+          <p className="link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-primary-600 group-hover:underline">{cta}</p>
         }
       </div>
     </a>

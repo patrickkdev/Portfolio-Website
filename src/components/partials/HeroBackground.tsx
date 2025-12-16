@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '@/styles/modules/HeroBackground.module.scss';
 import {
   FiBarChart2,
@@ -52,16 +51,15 @@ const HeroBackground = () => {
         className="absolute top-96 left-1/4 hidden animate-spin text-gray-600 dark:text-gray-300 sm:inline-block"
       />
       <ul className={styles.circles}>
-        <li className="bg-gray-300 dark:bg-gray-600"></li>
-        <li className="bg-gray-300 dark:bg-gray-600"></li>
-        <li className="bg-gray-300 dark:bg-gray-600"></li>
-        <li className="bg-gray-300 dark:bg-gray-600"></li>
-        <li className="bg-gray-400 dark:bg-gray-500"></li>
-        <li className="bg-gray-500 dark:bg-gray-400"></li>
-        <li className="bg-gray-600 dark:bg-gray-300"></li>
-        <li className="bg-gray-600 dark:bg-gray-300"></li>
-        <li className="bg-gray-600 dark:bg-gray-300"></li>
-        <li className="bg-gray-600 dark:bg-gray-300"></li>
+        <li className="bg-gray-300 dark:bg-gray-500"></li>
+        <li className="bg-gray-300 dark:bg-gray-500"></li>
+        <li className="bg-gray-300 dark:bg-gray-500"></li>
+        <li className="bg-gray-400 dark:bg-gray-400"></li>
+        <li className="bg-gray-400 dark:bg-gray-400"></li>
+        <li className="bg-gray-400 dark:bg-gray-400"></li>
+        <li className="bg-gray-500 dark:bg-gray-300"></li>
+        <li className="bg-gray-500 dark:bg-gray-300"></li>
+        <li className="bg-gray-500 dark:bg-gray-300"></li>
       </ul>
     </>
   );

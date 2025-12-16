@@ -13,6 +13,7 @@ const HeroSection = () => {
       <div className="flex w-full flex-col items-center">
         <div className="overflow-hidden">
           <Image
+            loading='eager'
             className="aspect-square rounded-xl object-cover"
             src="/images/avatar/me.png"
             width={200}
