@@ -24,7 +24,7 @@ export default function ImageSplitFeatureSection({
   return (
     <>
       <div
-        className={`mx-auto flex max-w-6xl flex-col gap-16 sm:gap-20
+        className={`mx-auto flex max-w-6xl flex-col gap-12 sm:gap-16
         lg:flex-row ${inverse ? 'lg:flex-row-reverse' : ''}`}
       >
         {/* Text */}
