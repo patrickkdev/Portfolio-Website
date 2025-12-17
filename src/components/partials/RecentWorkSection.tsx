@@ -10,7 +10,7 @@ const RecentWorkSection = () => {
         <h2 className="font-heading font-semibold text-5xl">Uma seleção de trabalhos recentes</h2>
       </header>
       <Grid>
-        {works.map((work) => (
+        {works.slice(0, 3).map((work) => (
           <FeatureCard
             key={work.id}
             title={work.title}

@@ -1,13 +1,12 @@
-import AppLayout from '@/layouts/AppLayout';
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 import CommentBox from '@/components/partials/CommentBox';
 import RecentComment from '@/components/partials/RecentComment';
+import { posts } from '@/data/posts';
+import AppLayout from '@/layouts/AppLayout';
 import { Post } from '@/types';
 import { GetServerSideProps } from 'next';
-import { posts } from '@/data/posts';
+import Link from 'next/link';
+import React from 'react';
+import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 
 type Props = {
   post: Post;
@@ -26,22 +25,9 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
           </p>
         </div>
         <div>
-          <div className="mt-10 overflow-hidden rounded-xl">
-            <Image
-              src={post.imageUrl}
-              height={720}
-              width={1280}
-              alt={post.title}
-              sizes="100vw"
-              style={{
-                width: '100%',
-                height: 'auto'
-              }} />
-          </div>
-          <article
-            className="prose mt-10 max-w-full dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          ></article>
+          <article className="prose mt-10 max-w-full dark:prose-invert">
+            {post.content}
+          </article>
           <div className="mt-10  flex">
             <Link href="#">
               <FiTwitter className="mr-3" />

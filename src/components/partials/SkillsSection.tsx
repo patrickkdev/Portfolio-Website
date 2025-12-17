@@ -1,6 +1,8 @@
+import ExternalLinks from '@/lib/api/external-links';
+import ExternalLink from '../shared/ExternalLinks';
 import ImageSplitFeatureSection from './ImageSplitFeatureSection';
 
-export default function SkillsSection() {
+export default function SkillsSection() {  
   return (
     <div className="space-y-20">
       <header className="text-center space-y-4 max-w-3xl mx-auto">
@@ -10,21 +12,41 @@ export default function SkillsSection() {
       <ImageSplitFeatureSection
         eyebrow="Back-end"
         title="Go e Echo"
-        description={`Go é minha escolha para criar APIs e serviços backend. Trabalho com Echo para construir servidores rápidos, seguros e de fácil manutenção.
+        description={<p className='mt-6 text-lg text-primary opacity-80 whitespace-pre-line'><ExternalLink href={ExternalLinks.golang}>Go</ExternalLink> é minha primeira escolha para criar APIs e serviços back-end. Uso o framework <ExternalLink href={ExternalLinks.labstackEcho}>Echo</ExternalLink> para construir servidores rápidos, seguros e de fácil manutenção. <br /><br />
 
-Gosto de soluções diretas: um binário único, boa performance e um fluxo claro de leitura. Essa abordagem reduz gargalos e deixa o deploy simples.
+Escolho Go por ser uma linguagem de tipagem forte, orientada à simplicidade, com excelente desempenho e foco em segurança. O fato de ser compilada também contribui para um processo de deploy mais direto e menos sujeito a variações de ambiente. <br /><br />
 
-Evito camadas desnecessárias, abstrações que ninguém usa e arquiteturas que só complicam o projeto. Go funciona bem justamente porque não precisa de enfeites.
-
-Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de arquitetura DDD em Go que uso como base nos meus projetos:`}
+Veja o <ExternalLink href={ExternalLinks.golangDDDBlueprint}>blueprint de arquitetura DDD em Go</ExternalLink> que uso como base nos meus projetos.</p>}
         image="/images/go-backend.png"
         inverse={false}
         imageClassName='object-left'
       >
-        <a href="https://github.com/patrickkdev/go-ddd-blueprint" target="_blank" className="block text-primary-400 underline" rel="noreferrer">
-          Clique aqui para ver o blueprint
-        </a>
       </ImageSplitFeatureSection>
+
+      <ImageSplitFeatureSection
+        eyebrow="Front-end"
+        title="React e Next.js"
+        description={<p className='mt-6 text-lg text-primary opacity-80 whitespace-pre-line'>Tenho experiência sólida com Next.js e React. <br /><br />
+        Escolho essa dupla quando o projeto precisa de interações ricas no navegador ou quando o time do cliente já trabalha nesse ecossistema.<br /><br />
+
+Evito usar React quando o projeto é mais simples, e uso algo como HTML, CSS, JS, <ExternalLink href={ExternalLinks.htmx}>HTMX</ExternalLink> e <ExternalLink href={ExternalLinks.alpinejs}>Alpine.js</ExternalLink> no lugar — nem todo sistema precisa carregar um bundle pesado.</p>}
+        image="/images/react-ts.png"
+        inverse={true}
+        imageClassName='object-left'
+      />
+
+      <ImageSplitFeatureSection
+        eyebrow="Front-end"
+        title="Templ, HTMX e Alpine.js"
+        description={`Esse é meu trio favorito para sistemas internos, painéis administrativos e projetos que precisam entregar valor rápido.
+
+O servidor renderiza tudo e o navegador atualiza só o que muda. Isso reduz a complexidade típica de frontends modernos e deixa o fluxo de desenvolvimento mais leve.
+
+Evito usar SPA quando o projeto não ganha nada com isso. Em muitos casos, HTMX resolve mais rápido, com menos código e com performance excelente.`}
+        image="/images/templ-htmx-alpine.png"
+        inverse={false}
+        imageClassName='object-left'
+      />
 
       <ImageSplitFeatureSection
         eyebrow="Back-end"
@@ -49,32 +71,7 @@ Se quiser ver como estruturo projetos mais robustos, mantenho um blueprint de ar
         inverse={false}
         imageClassName='object-left'
       />
-      
-      <ImageSplitFeatureSection
-        eyebrow="Front-end"
-        title="React e TypeScript"
-        description={`Uso React quando a interface exige estado complexo no cliente, interações ricas ou quando o time do cliente já trabalha nesse ecossistema.
 
-Tenho experiência sólida com Next.js em apps SPA e SSR. Aproveito TS para manter tudo seguro, previsível e bem estruturado.
-
-Evito usar React quando o projeto é mais simples do que o framework pede — nem todo sistema precisa carregar um bundle pesado só para renderizar uma lista.`}
-        image="/images/react-ts.png"
-        inverse={true}
-        imageClassName='object-left'
-      />
-
-      <ImageSplitFeatureSection
-        eyebrow="Front-end"
-        title="Templ, HTMX e Alpine.js"
-        description={`Esse é meu trio favorito para sistemas internos, painéis administrativos e projetos que precisam entregar valor rápido.
-
-O servidor renderiza tudo e o navegador atualiza só o que muda. Isso reduz a complexidade típica de frontends modernos e deixa o fluxo de desenvolvimento mais leve.
-
-Evito usar SPA quando o projeto não ganha nada com isso. Em muitos casos, HTMX resolve mais rápido, com menos código e com performance excelente.`}
-        image="/images/templ-htmx-alpine.png"
-        inverse={false}
-        imageClassName='object-left'
-      />
 
       <ImageSplitFeatureSection
         eyebrow="Armazenamento"

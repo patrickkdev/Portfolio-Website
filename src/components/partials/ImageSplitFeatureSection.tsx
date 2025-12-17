@@ -3,7 +3,7 @@ import React from 'react';
 interface ImageSplitFeatureSectionProps {
   eyebrow?: string;
   title: string;
-  description?: string;
+  description?: React.ReactNode;
   image: string;
   inverse?: boolean;
   children?: React.ReactNode;
@@ -38,9 +38,7 @@ export default function ImageSplitFeatureSection({
               {title}
             </h2>
 
-            {description && (
-              <p className="mt-6 text-lg/8 text-primary opacity-80 whitespace-pre-line">{description}</p>
-            )}
+            {description}
 
             {/* Extra content such as feature lists */}
             {children && (

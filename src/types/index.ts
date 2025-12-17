@@ -42,9 +42,9 @@ export type Post = {
   title: string;
   publishedAt: string;
   thumbnailUrl: string;
-  imageUrl: string;
   authorName: string;
-  content: string;
+  readingTime: number;
+  content: React.ReactNode;
 };
 
 export type Review = {

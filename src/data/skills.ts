@@ -12,13 +12,13 @@ export const skills: Skill[] = [
     progress: 80
   },
   {
-    name: 'Infraestrutura e CI/CD',
+    name: 'Infraestrutura e Deploy',
     description: 'Linux, Docker, Nginx ...',
     progress: 70
   },
   {
     name: 'Inglês',
     description: `Compreensão, leitura e escrita.`,
-    progress: 65
+    progress: 80
   }
 ];

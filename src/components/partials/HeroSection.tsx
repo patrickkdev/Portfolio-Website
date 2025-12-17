@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { BsDiscord, BsWhatsapp } from 'react-icons/bs';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { ReactTyped } from 'react-typed';
-import PulseIcon from '../icons/Pulse';
 import HeroBackground from './HeroBackground';
 
 const HeroSection = () => {
@@ -12,10 +11,10 @@ const HeroSection = () => {
     <div className="hero relative flex items-center justify-center">
       <HeroBackground />
       <div className="flex w-full flex-col items-center space-y-6">
-        <div className="rounded-full w-fit pl-2 pr-3 flex gap-[2px] text-center justify-center items-center">
+        {/* <div className="rounded-full w-fit pl-2 pr-3 flex gap-[2px] text-center justify-center items-center">
           <PulseIcon />
           <small>Disponível</small>
-        </div>
+        </div> */}
         <div className="overflow-hidden">
           <Image
             loading='eager'
