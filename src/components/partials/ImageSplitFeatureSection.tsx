@@ -29,7 +29,7 @@ export default function ImageSplitFeatureSection({
         <div className="lg:w-1/2">
           <div className="lg:max-w-lg">
             {eyebrow && (
-              <h3 className="font-semibold text-primary-500">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-primary-500">
                 {eyebrow}
               </h3>
             )}

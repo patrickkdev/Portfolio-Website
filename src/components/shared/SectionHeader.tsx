@@ -13,16 +13,16 @@ export default function SectionHeader({ eyebrow, title, subtitle, centered, clas
     <div className={classNames('max-w-3xl space-y-3', centered && 'mx-auto text-center', className)}>
       {
         eyebrow &&
-        <h3 className="text-primary-500 font-semibold">
+        <span className="text-sm font-semibold tracking-wide uppercase text-primary-500">
           {eyebrow}
-        </h3>
+        </span>
       }
-      <p className="text-3xl font-semibold sm:text-4xl">
+      <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
         {title}
-      </p>
+      </h2>
       {
         subtitle &&
-        <p className="opacity-80">
+        <p className="mt-4 text-lg leading-8 opacity-80">
           {subtitle}
         </p>
       }
