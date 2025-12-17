@@ -2,17 +2,23 @@ import CommentBox from '@/components/partials/CommentBox';
 import RecentComment from '@/components/partials/RecentComment';
 import { posts } from '@/data/posts';
 import AppLayout from '@/layouts/AppLayout';
-import { Post } from '@/types';
-import { GetServerSideProps } from 'next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { FiFacebook, FiLinkedin, FiMail, FiTwitter } from 'react-icons/fi';
 
-type Props = {
-  post: Post;
-};
+export default function BlogSingle() {
+  const { id } = useRouter().query;
 
-const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
+  const post = React.useMemo(() => {
+    if (id) {
+      const post = posts.find((post) => post.id === Number(id));
+      return post;
+    }
+  }, [id]);
+
+  if (!post) return null;
+
   return (
     <AppLayout title="Blog">
       <div className="container mb-10">
@@ -21,7 +27,6 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
           <p className="mt-4 flex items-center text-gray-400">
             <span>{post.publishedAt}</span>
             <span className="mx-2 h-1.5 w-1.5 rounded-full bg-primary-500"></span>
-            <span>{post.authorName}</span>
           </p>
         </div>
         <div>
@@ -56,20 +61,20 @@ const BlogSingle: React.FunctionComponent<Props> = ({ post }) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const id = context.params?.id as string;
-  const post = posts.find((post) => post.id === Number(id));
-  if (post) {
-    return {
-      props: {
-        post,
-      },
-    };
-  }
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const id = context.params?.id as string;
+//   const post = posts.find((post) => post.id === Number(id));
+//   if (post) {
+//     return {
+//       props: {
+//         post,
+//       },
+//     };
+//   }
 
-  return {
-    notFound: true,
-  };
-};
+//   return {
+//     notFound: true,
+//   };
+// };
 
-export default BlogSingle;
+// export default BlogSingle;

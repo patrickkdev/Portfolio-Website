@@ -1,4 +1,5 @@
 import AboutSection from '@/components/partials/AboutSection';
+import BlogSection from '@/components/partials/BlogSection';
 import ContactSection from '@/components/partials/ContactSection';
 import ExperienceSection from '@/components/partials/ExperienceSection';
 import FaqSection from '@/components/partials/FaqSection';
@@ -35,9 +36,9 @@ const Home: NextPage = () => {
       {/* <section className="container py-12 lg:py-16">
         <TestimonialSection />
       </section> */}
-      {/* <section className="container py-12 lg:py-16">
+      <section className="container py-12 lg:py-16">
         <BlogSection />
-      </section> */}
+      </section>
       <section className="container py-12 lg:py-16">
         <FaqSection />
       </section>

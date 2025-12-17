@@ -1,4 +1,8 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 import { posts } from '@/data/posts';
+import { ArrowRight } from 'lucide-react';
 import SectionHeader from '../shared/SectionHeader';
 
 const BlogSection = () => {
@@ -9,40 +13,48 @@ const BlogSection = () => {
         title="Artigos recentes" 
       />
 
-      <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="">
         {posts.slice(0, 3).map((post) => (
-          <article key={post.id} className="flex flex-col items-start justify-between group">
-            {/* Image Container */}
-            <div className="relative w-full overflow-hidden rounded-2xl bg-gray-100">
-              <img
-                src={post.thumbnailUrl || 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800'}
-                alt={post.title}
-                className="aspect-video w-full object-cover transition duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-            </div>
-
-            {/* Metadata & Title */}
-            <div className="max-w-xl">
-              <div className="mt-6 flex items-center gap-x-4 text-xs">
-                <time dateTime={post.publishedAt} className="text-gray-500">
+          <Link
+            key={post.id}
+            href={`/blog/${post.id}`}
+            className='group flex gap-6 border-t border-t-zinc-500 py-6 max-md:flex-col w-full'
+          >
+            <Image
+              height={384}
+              width={512}
+              src={post.thumbnailUrl}
+              alt={post.title}
+              className="w-72 max-md:w-full shrink-0 rounded-lg aspect-video object-cover"
+            />
+            <div className='flex w-full flex-col justify-evenly'>
+              <div>
+                <time
+                  dateTime={post.publishedAt}
+                  className='text-sm opacity-70'
+                >
                   {post.publishedAt}
                 </time>
-                <span className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-                  {post.readingTimeInMinutes} min
+                <p
+                  className='mt-3 line-clamp-2 text-lg font-semibold leading-[1.4]'
+                >
+                  {post.title}
+                </p>
+                <p className='mt-2 line-clamp-2 text-sm'>{post.description}</p>
+              </div>
+
+              <div
+                className='mt-4 flex justify-between gap-6 max-xs:flex-col-reverse xs:mt-6 xs:items-center'
+              >
+                <span className='link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-primary-500'>Ler
+                  <ArrowRight
+                    size={16}
+                    className='ml-1 inline-block transition-all duration-300 group-hover:ml-2'
+                  />
                 </span>
               </div>
-                
-              <div className="group relative">
-                <h3 className="mt-3 text-xl font-semibold leading-6 text-gray-900 group-hover:text-blue-600 transition-colors">
-                  <a href={`/posts/${post.id}`}>
-                    <span className="absolute inset-0" />
-                    {post.title}
-                  </a>
-                </h3>
-              </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </div>

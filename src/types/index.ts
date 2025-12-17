@@ -39,12 +39,13 @@ export type Work = {
 
 export type Post = {
   id: number;
+  slug: string;
   title: string;
   publishedAt: string;
   thumbnailUrl: string;
-  authorName: string;
-  readingTimeInMinutes: number;
   content: React.ReactNode;
+  description?: string;
+  tags?: string[];
 };
 
 export type Review = {
