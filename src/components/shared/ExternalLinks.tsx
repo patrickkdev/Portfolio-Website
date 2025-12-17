@@ -6,7 +6,7 @@ type props = {
 export default function ExternalLink({href, children}: props) {
   return (
     <a href={href} target="_blank" rel="noreferrer" className="
-        inline-flex items-center gap-0.5
+        items-center gap-0.5
         font-medium text-sky-700 dark:text-sky-400
         underline-offset-4
         transition-colors transition-transform
@@ -18,7 +18,7 @@ export default function ExternalLink({href, children}: props) {
       <svg
         aria-hidden
         viewBox="0 0 24 24"
-        className="h-3.5 w-3.5 opacity-70"
+        className="h-3.5 w-3.5 opacity-70 inline"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"

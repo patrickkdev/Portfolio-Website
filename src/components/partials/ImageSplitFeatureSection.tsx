@@ -28,7 +28,7 @@ export default function ImageSplitFeatureSection({
         lg:flex-row ${inverse ? 'lg:flex-row-reverse' : ''}`}
       >
         {/* Text */}
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 flex place-self-center">
           <div className="lg:max-w-lg">
             {eyebrow && (
               <h3 className="text-2xl sm:text-3xl font-semibold text-primary-500">
