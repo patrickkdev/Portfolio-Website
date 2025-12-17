@@ -14,18 +14,20 @@ export default function ExternalLink({href, children}: props) {
         focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50
         active:translate-y-px
       ">
-      {children}
-      <svg
-        aria-hidden
-        viewBox="0 0 24 24"
-        className="h-3.5 w-3.5 opacity-70 inline"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M7 17L17 7" />
-        <path d="M7 7h10v10" />
-      </svg>
+      <span className="inline-flex items-center gap-0.5">
+        {children}
+        <svg
+          aria-hidden
+          viewBox="0 0 24 24"
+          className="h-3.5 w-3.5 opacity-70"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
+          <path d="M7 17L17 7" />
+          <path d="M7 7h10v10" />
+        </svg>
+      </span>
     </a>
   );
 }
