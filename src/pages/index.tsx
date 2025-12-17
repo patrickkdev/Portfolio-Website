@@ -1,4 +1,5 @@
 import AboutSection from '@/components/partials/AboutSection';
+import BlogSection from '@/components/partials/BlogSection';
 import ContactSection from '@/components/partials/ContactSection';
 import ExperienceSection from '@/components/partials/ExperienceSection';
 import FaqSection from '@/components/partials/FaqSection';
@@ -14,31 +15,34 @@ const Home: NextPage = () => {
   return (
     <AppLayout title='Patrick Ferreira - Desenvolvedor Full-stack'>
       <HeroSection />
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <AboutSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <WorkStyleSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <SkillsSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <ExperienceSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <ServiceSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <RecentWorkSection />
       </section>
-      {/* <section className="container py-16">
+      {/* <section className="container py-12 lg:py-16">
         <TestimonialSection />
       </section> */}
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
+        <BlogSection />
+      </section>
+      <section className="container py-12 lg:py-16">
         <FaqSection />
       </section>
-      <section className="container py-16">
+      <section className="container py-12 lg:py-16">
         <ContactSection />
       </section>
     </AppLayout>

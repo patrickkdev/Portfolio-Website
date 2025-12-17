@@ -43,7 +43,7 @@ export type Post = {
   publishedAt: string;
   thumbnailUrl: string;
   authorName: string;
-  readingTime: number;
+  readingTimeInMinutes: number;
   content: React.ReactNode;
 };
 

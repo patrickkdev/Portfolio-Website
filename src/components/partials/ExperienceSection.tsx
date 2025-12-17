@@ -8,7 +8,7 @@ import SectionHeader from '../shared/SectionHeader';
 
 const ExperienceSection = () => {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12 lg:space-y-16">
       <SectionHeader eyebrow="Trajetória" title="Experiência e Estudos" />
       <div className="grid gap-8 md:grid-cols-2">
         {/* Experience */}

@@ -5,7 +5,7 @@ import ImageSplitFeatureSection from './ImageSplitFeatureSection';
 
 export default function SkillsSection() {  
   return (
-    <div className="space-y-16">
+    <div className="space-y-12 lg:space-y-16">
       <SectionHeader eyebrow="Habilidades" title="As tecnologias que escolho, por que escolho e o que consigo entregar com elas." />
       <ImageSplitFeatureSection
         title="Go e Echo"

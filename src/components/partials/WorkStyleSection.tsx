@@ -3,7 +3,7 @@ import ImageSplitFeatureSection from './ImageSplitFeatureSection';
 
 export default function WorkStyleSection() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12 lg:space-y-16">
       <SectionHeader 
         eyebrow="Como trabalho" 
         title="Uma visão clara do meu processo e abordagem" 

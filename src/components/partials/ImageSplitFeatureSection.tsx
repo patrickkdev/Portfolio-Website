@@ -8,6 +8,7 @@ interface ImageSplitFeatureSectionProps {
   inverse?: boolean;
   children?: React.ReactNode;
   imageClassName?: string;
+  hideImageOnMobile?: boolean;
 }
 
 export default function ImageSplitFeatureSection({
@@ -18,6 +19,7 @@ export default function ImageSplitFeatureSection({
   inverse = false,
   children,
   imageClassName,
+  hideImageOnMobile = true,
 }: ImageSplitFeatureSectionProps) {
   return (
     <>
@@ -53,7 +55,7 @@ export default function ImageSplitFeatureSection({
         <img
           alt={title}
           src={image}
-          className={'lg:w-1/2 w-full max-w-none rounded-xl shadow-xl ring-1 ring-white/10 object-cover' + (imageClassName ? ` ${imageClassName}` : '')}
+          className={'lg:w-1/2 w-full max-w-none rounded-xl shadow-xl ring-1 ring-white/10 object-cover' + (hideImageOnMobile ? ' hidden lg:block' : '') + (imageClassName ? ` ${imageClassName}` : '')}
         />
       </div>
     </>

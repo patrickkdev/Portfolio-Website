@@ -33,6 +33,6 @@ export const posts: Post[] = [
         blandit viverra. Nullam dictum felis eu pede mollis pretium. Curabitur vestibulum
       </p>
     </>,
-    readingTime: 0
+    readingTimeInMinutes: 0
   },
 ];

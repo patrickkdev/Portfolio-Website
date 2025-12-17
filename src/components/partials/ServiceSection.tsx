@@ -2,7 +2,7 @@ import SectionHeader from '../shared/SectionHeader';
 
 const ServiceSection = () => {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12 lg:space-y-16">
       <SectionHeader eyebrow="Escopo" title="O que ofereço" subtitle="E o que não ofereco." />
       <div className='grid gap-8 md:grid-cols-2'>
         <div className='bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg bg-white dark:bg-gray-700'>

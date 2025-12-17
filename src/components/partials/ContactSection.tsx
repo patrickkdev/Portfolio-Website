@@ -5,7 +5,7 @@ import ContactForm from './ContactForm';
 
 const ContactSection = () => {
   return (
-    <div className="space-y-16">
+    <div className="space-y-12 lg:space-y-16">
       <SectionHeader eyebrow="Contato" title="Fale comigo" subtitle={
         <>
           Não curte formulários? <br />
