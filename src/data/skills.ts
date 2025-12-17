@@ -13,7 +13,7 @@ export const skills: Skill[] = [
   },
   {
     name: 'Infra e Deploy',
-    description: 'Linux, Docker, Nginx, Git, VPS, DNS, SSL',
+    description: 'Linux, Docker, Nginx, Git, VPS, DNS, SSL, Netlify, Vercel, Dokploy',
     progress: 70
   },
   {
