@@ -4,13 +4,18 @@ import Link from 'next/link';
 import { BsDiscord, BsWhatsapp } from 'react-icons/bs';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { ReactTyped } from 'react-typed';
+import PulseIcon from '../icons/Pulse';
 import HeroBackground from './HeroBackground';
 
 const HeroSection = () => {
   return (
     <div className="hero relative flex items-center justify-center">
       <HeroBackground />
-      <div className="flex w-full flex-col items-center">
+      <div className="flex w-full flex-col items-center space-y-6">
+        <div className="rounded-full w-fit pl-2 pr-3 flex gap-[2px] text-center justify-center items-center">
+          <PulseIcon />
+          <small>Disponível</small>
+        </div>
         <div className="overflow-hidden">
           <Image
             loading='eager'
@@ -25,25 +30,25 @@ const HeroSection = () => {
             }}
           />
         </div>
-        <h1 className="mt-4 text-3xl font-bold text-center">Patrick Ferreira</h1>
-        <div className="mt-4 flex gap-1 text-center italic size text-sm h-[2rem] justify-center items-center w-[280px] text-balance">
+        <h1 className="text-3xl font-bold text-center">Patrick Ferreira</h1>
+        <div className="flex gap-1 text-center h-[2rem] opacity-80 justify-center items-center w-[300px] text-pretty">
           {' '}
           <ReactTyped
             strings={[
               'Desenvolvedor de software full-stack',
-              'Crio bots, APIs, sites, sistemas e aplicativos web do zero',
+              'Crio sites, sistemas, APIs, automações e aplicativos web do zero',
               'Usando Golang, Node, Typescript, HTML, CSS, React, SQL, etc',
-              'Conecto sistemas a praticamente qualquer API, incluindo pagamentos, IA e muito mais',
+              'Conecto sistemas a praticamente qualquer API, incluindo pagamentos, IA, etc',
               'Código limpo, testes e preocupação real com manutenção e boas práticas',
-              'Domino bem as tecnologias mais populares e aprendo o restante conforme a necessidade.'
+              'Domino as tecnologias mais populares do mercado'
             ]}
-            typeSpeed={40}
+            typeSpeed={20}
             backSpeed={20}
             backDelay={3000}
             loop
           />
         </div>
-        <div className="m-6 flex gap-5">
+        <div className="flex gap-5 pt-4">
           <Link
             href="https://www.github.com/patrickkdev"
             className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
