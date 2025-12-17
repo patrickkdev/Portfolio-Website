@@ -34,7 +34,7 @@ export const works: Work[] = [
   },
   {
     id: 3,
-    title: 'Site da Imobiliária Imoveis de Ubatuba',
+    title: 'Site da Imobiliária Imóveis de Ubatuba',
     category: 'Site institucional com catálogo de imóveis',
     thumbnailUrl: '/images/works/imoveis-de-ubatuba-website-2.png',
     description: `Site institucional moderno com catálogo de imóveis: apresenta os imóveis de forma atrativa, prioriza a experiência do usuário e reforça a identidade visual da marca.\n      Integra-se ao sistema imobiliário para exibir imóveis atualizados em tempo real, garantindo agilidade na gestão e consistência das informações.`,
