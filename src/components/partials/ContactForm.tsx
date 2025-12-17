@@ -1,8 +1,8 @@
 // components/contact/ContactForm.tsx
-import { useState } from 'react';
 import Input from '@/components/form/Input';
 import TextArea from '@/components/form/Textarea';
 import * as ContactAPI from '@/lib/api/contact';
+import { useState } from 'react';
 
 interface ContactFormProps {
   onSuccess?: () => void;
@@ -43,7 +43,7 @@ const ContactForm = ({ onSuccess, onError }: ContactFormProps) => {
 
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-2">
         <Input
           placeholder="Seu nome"
           value={formData.name}
@@ -77,7 +77,7 @@ const ContactForm = ({ onSuccess, onError }: ContactFormProps) => {
         />
       </div>
 
-      <div className="mt-8">
+      <div className="mt-4">
         <button
           type="submit"
           disabled={isSubmitting}

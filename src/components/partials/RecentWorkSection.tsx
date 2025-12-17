@@ -1,14 +1,13 @@
 import { works } from '@/data/works';
 import FeatureCard from '../shared/FeatureCard';
 import Grid from '../shared/Grid';
+import SectionHeader from '../shared/SectionHeader';
 
 const RecentWorkSection = () => {
   
   return (
-    <div className="space-y-20">
-      <header className="text-center space-y-4">
-        <h2 className="font-heading font-semibold text-5xl">Uma seleção de trabalhos recentes</h2>
-      </header>
+    <div className="space-y-16">
+      <SectionHeader eyebrow="Trabalhos" title="Projetos em destaque" />
       <Grid>
         {works.slice(0, 3).map((work) => (
           <FeatureCard

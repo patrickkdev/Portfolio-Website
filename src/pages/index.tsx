@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <AppLayout title='Patrick Ferreira - Desenvolvedor Full-stack'>
       <HeroSection />
-      <section className="container pt-8 pb-10">
+      <section className="container py-16">
         <AboutSection />
       </section>
       <section className="container py-16">

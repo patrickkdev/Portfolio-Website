@@ -1,16 +1,16 @@
 import ProgressBar from '@/components/shared/ProgressBar';
-import SectionTitle from '@/components/shared/SectionTitle';
 import { skills } from '@/data/skills';
 import { FiCoffee } from 'react-icons/fi';
 import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
+import SectionHeader from '../shared/SectionHeader';
 import GitHubStats from './GithubStats';
 
 const AboutSection = () => {
   return (
     <div className="mx-auto max-w-6xl space-y-6">
-      <SectionTitle>Sobre Mim</SectionTitle>
+      <SectionHeader title="Sobre mim" />
 
-      <div className="space-y-12">
+      <div className="space-y-12 lg:space-y-18">
         <div className="grid grid-cols-1 gap-8 lg:gap-6 lg:grid-cols-2 lg:gap-x-6">
           {/* Bio */}
           <div>

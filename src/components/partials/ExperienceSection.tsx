@@ -4,13 +4,12 @@ import { experiences } from '@/data/experiences';
 import styles from '@/styles/modules/ExperienceSection.module.scss';
 import classNames from 'classnames';
 import { FiBriefcase } from 'react-icons/fi';
+import SectionHeader from '../shared/SectionHeader';
 
 const ExperienceSection = () => {
   return (
-    <div className="space-y-20">
-      <header className="text-center space-y-4 max-w-3xl mx-auto">
-        <h2 className="font-heading font-semibold text-5xl">Experiência e Estudos</h2>
-      </header>
+    <div className="space-y-16">
+      <SectionHeader eyebrow="Trajetória" title="Experiência e Estudos" />
       <div className="grid gap-8 md:grid-cols-2">
         {/* Experience */}
         <div>

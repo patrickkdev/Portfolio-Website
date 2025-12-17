@@ -1,3 +1,4 @@
+import SectionHeader from '../shared/SectionHeader';
 
 export default function FaqSection() {
   const faqsList = [
@@ -19,22 +20,13 @@ export default function FaqSection() {
     },
     {
       q:'Qual é o seu nível de inglês? 🇬🇧🇺🇸',
-      a:'Minha proficiência em fala é limitada, mas em escuta, leitura e escrita é muito alta. Todo o meu código, documentação e mensagens de commit são escritos exclusivamente em inglês. Além disso, adoto o idioma como padrão em minha rotina de estudos e nas interações em comunidades globais de programação."'
+      a:'Inglês avançado para leitura, escrita e escuta. Adoto o idioma exclusivamente em código, commits, documentações, estudos e interações em comunidades de programação online.'
     },
   ];
 
   return (
     <div className="w-full mx-auto gap-12 md:flex">
-      <div className='flex-1 md:sticky md:top-24 md:self-start'>
-        <div className="max-w-lg">
-          <h3 className='font-semibold text-primary-500'>
-            Perguntas Frequentes
-          </h3>
-          <p className='mt-3 text-primary text-3xl font-bold sm:text-4xl'>
-            Tire suas dúvidas antes de começarmos.
-          </p>
-        </div>
-      </div>
+      <SectionHeader eyebrow="Perguntas Frequentes" title="Tire suas dúvidas antes de começarmos." className="md:sticky md:top-24 md:self-start max-w-lg" />
       <div className='flex-1 mt-12 md:mt-0'>
         <ul className='space-y-4 divide-y'>
           {faqsList.map((item, idx) => (

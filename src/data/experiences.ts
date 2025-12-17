@@ -14,8 +14,6 @@ Desenvolvi do zero e mantenho também a versão web do sistema utilizado por ess
 Os sites consomem uma API exposta pelo mesmo servidor do sistema, garantindo integração direta.
 
 Atuo diariamente em todas as camadas da solução, passando por frontend e backend, banco de dados, armazenamento de objetos, integrações com APIs de terceiros, gestão de domínios, DNS, SSL, deploy em servidores Linux, Nginx e Docker.
-
-Ver esses sistemas rodando de forma estável e gerando leads reais é o que me motiva.
       `,
   },
   {
