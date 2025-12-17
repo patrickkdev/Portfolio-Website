@@ -1,11 +1,11 @@
 import Post from '@/components/shared/Post';
 import { posts } from '@/data/posts';
-import SectionTitle from '@/components/shared/SectionTitle';
+import SectionHeader from '../shared/SectionHeader';
 
 const BlogSection = () => {
   return (
-    <>
-      <SectionTitle>Latest Posts</SectionTitle>
+    <div className="space-y-16">
+      <SectionHeader eyebrow="Blog" title="Artigos recentes" />
       <div className="mt-10 grid gap-8 sm:gap-4 md:grid-cols-3 lg:gap-8">
         {posts
           .filter((_, index) => index < 3)
@@ -19,7 +19,7 @@ const BlogSection = () => {
             />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -16,11 +16,11 @@ const AboutSection = () => {
           <div>
             <div className='space-y-4'>
               <p>
-                Desenvolvedor full-stack especializado na criação de sites, sistemas, bots, APIs e aplicações, sempre priorizando código legível, bem estruturado
+                Desenvolvedor full-stack especializado na criação de sites, sistemas, APIs, automações e aplicativos, sempre priorizando código legível, bem estruturado
                 e fácil de manter.
               </p>
               <p>
-                Tenho experiência entregando projetos de ponta a ponta — <strong>da arquitetura ao deploy</strong>.
+                Tenho experiência entregando projetos de ponta a ponta, <strong>da arquitetura ao deploy</strong>.
               </p>
               <p>
                 Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup,

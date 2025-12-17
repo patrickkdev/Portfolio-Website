@@ -13,7 +13,7 @@ export default function WorkStyleSection() {
         description={
           <p className='mt-6 text-lg text-primary opacity-80 whitespace-pre-line text-pretty leading-8'>
           
-            Você não precisa cobrar, insistir ou adivinhar o andamento do que está sendo feito. Meu foco é reduzir o atrito e facilitar sua vida. <br /><br />
+            Você não precisa cobrar, insistir ou adivinhar o andamento do que está sendo feito. <strong>Meu foco é reduzir o atrito e facilitar sua vida.</strong> <br /><br />
               
             Sempre explico decisões, compartilho o andamento, aviso quando algo muda, quando existe risco de atraso ou quando surge uma solução melhor no caminho. Não prometo o que não posso entregar, não escondo problemas e não deixo nada acumular. <br /><br />
             
@@ -28,7 +28,7 @@ export default function WorkStyleSection() {
         title="Inteligência Artificial"
         description={
           <p className='mt-6 text-lg text-primary opacity-80 whitespace-pre-line text-pretty leading-8'>
-            Uso ferramentas de IA como apoio técnico e criativo para acelerar tarefas, explorar alternativas, validar ideias e aumentar produtividade sempre com controle técnico e revisão humana. <br /><br />
+            Uso ferramentas de IA como apoio técnico e criativo para acelerar tarefas, explorar alternativas, validar ideias e aumentar produtividade, sempre com <strong>revisão humana em todas as etapas.</strong> <br /><br />
 
             Além do uso interno, integro recursos de IA diretamente em aplicações reais, como geração de descrições de produtos, síntese de voz, geração de imagens e moderação de conteúdo. <br /><br />
           </p>
