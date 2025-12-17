@@ -37,9 +37,8 @@ const HeroSection = () => {
               'Desenvolvedor de software full-stack',
               'Crio sites, sistemas, APIs, automações e aplicativos web do zero',
               'Usando Golang, Node, Typescript, HTML, CSS, React, SQL, etc',
-              'Conecto sistemas a praticamente qualquer API, incluindo pagamentos, IA, etc',
+              'Conecto sistemas a qualquer API, incluindo pagamentos, IA, etc',
               'Código limpo, testes e preocupação real com manutenção e boas práticas',
-              'Domino as tecnologias mais populares do mercado'
             ]}
             typeSpeed={20}
             backSpeed={20}
