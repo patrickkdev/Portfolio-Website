@@ -39,7 +39,7 @@ const AboutSection = () => {
                   <div className="mb-3 flex justify-between">
                     <div>
                       <h6 className="font-semibold">{skill.name}</h6>
-                      <small className="opacity-80">{skill.description}</small>
+                      <small className="opacity-80 line-clamp-1">{skill.description}</small>
                     </div>
                     <p>{skill.progress}%</p>
                   </div>
