@@ -3,9 +3,11 @@ import ExternalLink from '../shared/ExternalLinks';
 import SectionHeader from '../shared/SectionHeader';
 import ContactForm from './ContactForm';
 
+export const contactSectionID = 'contact-section';
+
 const ContactSection = () => {
   return (
-    <div className="space-y-12 lg:space-y-16">
+    <div id={contactSectionID} className="space-y-12 lg:space-y-16">
       <SectionHeader eyebrow="Contato" title="Fale comigo" subtitle={
         <>
           Não curte formulários? <br />

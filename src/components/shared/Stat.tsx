@@ -7,7 +7,7 @@ type StatProps = {
 export function Stat({ label, value, hint }: StatProps) {
   return (
     <div className="flex flex-col items-center justify-center px-4 py-6">
-      <div className="text-xl lg:text-2xl font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
+      <div className="text-center text-pretty text-xl lg:text-2xl font-semibold tabular-nums text-zinc-900 dark:text-zinc-100">
         {value ?? <StatSkeleton />}
       </div>
 

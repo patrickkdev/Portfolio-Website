@@ -1,5 +1,5 @@
 import { Theme, useTheme } from '@/hooks/use-theme';
-import { Dialog, Transition, TransitionChild } from '@headlessui/react';
+import { Dialog, DialogBackdrop, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,6 +7,8 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 import { HiMenuAlt3 } from 'react-icons/hi';
+import { contactSectionID } from './ContactSection';
+import { worksSectionID } from './RecentWorkSection';
 
 const Menu = () => {
   const { theme, toggleTheme } = useTheme();
@@ -16,6 +18,7 @@ const Menu = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [scrolledPastHero, setScrolledPastHero] = useState(false);
+
   React.useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -36,9 +39,18 @@ const Menu = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  function scrollToId(id: string, offset = 80) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const y =
+    el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
   return (
-    // eslint-disable-next-line quotes
-    <header className={classNames("mx-auto w-full md:max-w-7xl header fixed left-0 right-0 md:top-1 z-30")}>
+    <header className={classNames('mx-auto w-full md:max-w-7xl header fixed left-0 right-0 md:top-1 z-30')}>
       <div className={classNames('flex h-16 items-center p-2 md:pr-6 text-gray-700 dark:text-gray-200 md:rounded-lg transition-all duration-300 ease-out', { 'md:shadow-md backdrop-blur bg-white/80 dark:bg-gray-800/80 backdrop-opacity-70': scrolled })}>
         <Link href="/" className="flex items-center gap-3 overflow-hidden">
           <Image
@@ -66,43 +78,14 @@ const Menu = () => {
 
         <ul className="ml-auto hidden items-center md:flex">
           <li>
-            <Link
-              href="/works"
-              className={classNames(
-                'inline-block px-4 font-semibold  transition-colors duration-300 hover:text-primary-600 hover:underline',
-                {
-                  'text-primary-500': router.asPath == '/works',
-                }
-              )}
-            >
+            <div onClick={() => scrollToId(worksSectionID)} className={classNames('inline-block px-4 font-semibold transition-colors duration-300 hover:text-primary-600 hover:underline cursor-pointer')}>
               Trabalhos
-            </Link>
-          </li>
-          {/*<li>
-            <Link
-              href="/blog"
-              className={classNames(
-                'inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline',
-                {
-                  'text-primary-500': router.asPath == '/blog',
-                }
-              )}
-            >
-              Blog
-            </Link>
-          </li>*/}
+            </div>
+          </li>          
           <li>
-            <Link
-              href="/contact"
-              className={classNames(
-                'inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline',
-                {
-                  'text-primary-500': router.asPath == '/contact',
-                }
-              )}
-            >
+            <div onClick={() => scrollToId(contactSectionID)} className={classNames('inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline cursor-pointer')}>
               Contato
-            </Link>
+            </div>
           </li>
         </ul>
         <button
@@ -121,8 +104,19 @@ const Menu = () => {
         </button>
       </div>
       {/* Mobile menu */}
-      <Transition show={sidebarOpen} as={'div'}>
+      <Transition show={sidebarOpen} as={React.Fragment}>
         <Dialog as="div" className="fixed inset-0 z-40 flex md:hidden" onClose={setSidebarOpen}>
+          <TransitionChild
+            as={React.Fragment}
+            enter="transition-opacity duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-300"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <DialogBackdrop className="fixed inset-0 bg-black/40" aria-hidden="true" />
+          </TransitionChild>
           <TransitionChild
             as={'div'}
             enter="transition-opacity ease-linear duration-300"
@@ -141,58 +135,25 @@ const Menu = () => {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex h-full w-full min-w-[16rem] flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
-              <TransitionChild
-                as={'div'}
-                enter="ease-in-out duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="ease-in-out duration-300"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <div className="absolute right-0 top-0 -mr-12 pt-2">
-                  <button
-                    type="button"
-                    className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                    onClick={() => setSidebarOpen(false)}
-                  >
-                    <span className="text-white">&#10006;</span>
-                  </button>
-                </div>
-              </TransitionChild>
+            <DialogPanel className="relative flex h-full w-full min-w-[8rem] flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
               <div className="flex h-full flex-col overflow-y-auto">
                 <nav className="mt-4 space-y-1 px-2">
-                  <Link
-                    href="/works"
-                    className={classNames(
-                      'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600',
-                      { 'text-primary-500': router.asPath == '/works' }
-                    )}
+                  <div
+                    onClick={() => scrollToId(worksSectionID)}
+                    className={classNames('group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600',)}
                   >
                     Trabalhos
-                  </Link>
-                  {/*<Link
-                    href="/blog"
-                    className={classNames(
-                      { 'text-primary-500': router.asPath == '/blog' },
-                      'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600'
-                    )}
-                  >
-                    Blog
-                  </Link>*/}
-                  <Link
-                    href="/contact"
-                    className={classNames(
-                      { 'text-primary-500': router.asPath == '/contact' },
-                      'group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600 '
-                    )}
+                  </div>
+                  
+                  <div
+                    onClick={() => scrollToId(contactSectionID)}
+                    className={classNames('group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600')}
                   >
                     Contato
-                  </Link>
+                  </div>
                 </nav>
               </div>
-            </div>
+            </DialogPanel>
           </TransitionChild>
           <div className="w-14 flex-shrink-0" aria-hidden="true">
             {/* Dummy element to force sidebar to shrink to fit close icon */}

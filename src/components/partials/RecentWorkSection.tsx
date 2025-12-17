@@ -3,10 +3,11 @@ import FeatureCard from '../shared/FeatureCard';
 import Grid from '../shared/Grid';
 import SectionHeader from '../shared/SectionHeader';
 
+export const worksSectionID = 'works-section';
+
 const RecentWorkSection = () => {
-  
   return (
-    <div className="space-y-12 lg:space-y-16">
+    <div id={worksSectionID} className="space-y-12 lg:space-y-16">
       <SectionHeader eyebrow="Trabalhos" title="Projetos em destaque" />
       <Grid>
         {works.slice(0, 3).map((work) => (

@@ -10,7 +10,8 @@ export default function GitHubStats() {
   React.useEffect(() => {
     fetch('/api/github')
       .then(r => r.json())
-      .then(setStats);
+      .then(setStats)
+      .catch(console.error);
   }, []);
 
   return (
@@ -32,7 +33,8 @@ export default function GitHubStats() {
           label="Última atividade"
           value={
             stats?.lastPushedAt
-              ? new Date(stats.lastPushedAt).toLocaleDateString()
+              ? new Date(stats.lastPushedAt).toLocaleDateString('pt-BR', { timeZone: 'UTC', day: '2-digit', month: 'short', })
+
               : undefined
           }
         />
