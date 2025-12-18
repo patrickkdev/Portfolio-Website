@@ -15,37 +15,32 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ['Rubik', 'sans-sarif'],
+        sans: [
+          'DM Sans',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+        ],
       },
       colors: {
         primary: {
-          50: '#f0f5f9', // very light icy blue
-          100: '#d9e3ed', // soft cool gray-blue
-          200: '#b8c9da', // muted steel blue
-          300: '#97afc6', // soft slate blue
-          400: '#7896b2', // mid-tone dusty blue
-          500: '#5f7f9e', // medium sophisticated blue accent
-          600: '#4d6a85', // darker blue for dark mode/highlight
-          700: '#3c5469', // rich, muted navy
-          800: '#2b3f4f', // deep slate for dark backgrounds
-          900: '#192933', // near-black, elegant
-        },
-        // primary: {
-        //   "50": "#e8f9f1",
-        //   "100": "#77d9ab",
-        //   "200": "#61d29d",
-        //   "300": "#4acc8f",
-        //   "400": "#34c581",
-        //   "500": "#1dbf73",
-        //   "600": "#1aac68",
-        //   "700": "#17995c",
-        //   "800": "#148651",
-        //   "900": "#117345",
-        // },
-        indigo: {
-          overlay: 'rgba(99,102,241, 0.8)',
-        },
-      },
+          50:  '#EBEDF4',
+          100: '#D4D7E9',
+          200: '#A9AFD3',
+          300: '#7F88BD',
+          400: '#5A689F',
+          500: '#3A4F89',  // main midtone
+          600: '#2F3E6D',
+          700: '#232E52',
+          800: '#172036',
+          900: '#0B1020'   // your base
+        }
+      }
+      ,
       typography: (theme) => ({
         DEFAULT: {
           css: {

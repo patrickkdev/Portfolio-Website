@@ -25,9 +25,9 @@ export default function FaqSection() {
   ];
 
   return (
-    <div className="w-full mx-auto gap-12 md:flex">
+    <div className="w-full mx-auto gap-12 lg:flex">
       <SectionHeader eyebrow="Perguntas Frequentes" title="Tire suas dúvidas antes de começarmos." className="md:sticky md:top-24 md:self-start max-w-lg" />
-      <div className='flex-1 mt-12 md:mt-0'>
+      <div className='flex-1 mt-12 lg:mt-0'>
         <ul className='space-y-4 divide-y'>
           {faqsList.map((item, idx) => (
             <li
@@ -39,7 +39,7 @@ export default function FaqSection() {
               </summary>
               <p
                 dangerouslySetInnerHTML={{ __html: item.a }}
-                className='mt-3 text-primary opacity-80 leading-relaxed'>
+                className='mt-3 opacity-80 text-pretty text-lg'>
               </p>
             </li>
           ))}

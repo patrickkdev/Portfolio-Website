@@ -10,7 +10,7 @@ export default function ExternalLink({href, children}: props) {
       target="_blank"
       rel="noreferrer"
       className="
-    font-medium text-sky-700 dark:text-sky-400
+    font-medium text-sky-600 dark:text-sky-400
     underline-offset-4
     hover:text-sky-500 hover:underline
     focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50

@@ -1,6 +1,7 @@
 .btn {
-  @apply inline-flex items-center justify-center rounded-xl bg-primary-500 py-2.5 px-6 text-sm font-semibold tracking-wide text-white transition-colors duration-150 hover:bg-primary-600 focus:ring-2 focus:ring-primary-300;
+  @apply w-full inline-flex gap-2 justify-center items-center px-8 text-sm py-3 text-white rounded-full font-medium bg-gray-800
 }
+
 
 .input {
   @apply w-full rounded-xl px-6 py-4 shadow-lg outline-none focus:border focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:bg-gray-700 dark:placeholder:text-gray-400;
@@ -8,4 +9,30 @@
 
 .textarea {
   @apply w-full rounded-xl border border-transparent px-6 py-4 shadow-lg outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 dark:bg-gray-700 dark:placeholder:text-gray-400;
+}
+
+.card {
+  @apply rounded-xl p-6 lg:shadow-lg bg-white dark:bg-[#131A2E] ring-1 ring-black/5 dark:ring-white/5;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.rainbow::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 50% 30%;
+  filter: blur(6px);
+  background-image: linear-gradient(#FF0A7F, #780EFF);
+  animation: rotate 4s linear infinite;
 }

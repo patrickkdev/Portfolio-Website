@@ -2,6 +2,7 @@ import ProgressBar from '@/components/shared/ProgressBar';
 import { skills } from '@/data/skills';
 import { FiCoffee } from 'react-icons/fi';
 import { HiOutlineChartBar, HiOutlineFire, HiOutlineUsers } from 'react-icons/hi';
+import Button from '../form/Button';
 import SectionHeader from '../shared/SectionHeader';
 import GitHubStats from './GithubStats';
 
@@ -15,25 +16,22 @@ const AboutSection = () => {
           {/* Bio */}
           <div>
             <div className='space-y-4'>
-              <p>
+              <p className="opacity-90 text-pretty tracking-normal">
                 Desenvolvedor full-stack especializado na criação de sites, sistemas, APIs, automações e aplicativos, sempre priorizando código legível, bem estruturado
-                e de fácil manutenção.
-              </p>
-              <p>
-                Tenho experiência entregando projetos de ponta a ponta, da arquitetura ao deploy.
-              </p>
-              <p>
-                Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup,
-                troubleshooting e otimização.
+                e de fácil manutenção. <br /><br />
+              
+                Tenho experiência entregando projetos de ponta a ponta, da arquitetura ao deploy. <br /><br />
+              
+                Sou usuário avançado de <strong>Linux</strong>, com experiência prática em setup, troubleshooting e otimização.
               </p>
             </div>
           </div>
           {/* Skills */}
-          <div className="grid grid-cols-2 gap-6 rounded-xl lg:p-6 lg:shadow-lg lg:bg-white lg:dark:bg-gray-700">
+          <div className="grid grid-cols-2 gap-12 items-center card h-fit">
             {
               skills.map((skill, index) => ({
                 ...skill,
-                color: index == 0 ? 'blue' : index == 1 ? 'green' : index == 2 ? 'red' : 'yellow' as 'red' | 'blue' | 'green' | 'yellow'
+                color: index == 0 ? 'blue-500' : index == 1 ? 'fuchsia-500' : index == 2 ? 'indigo-700' : 'red-500'
               })).map((skill, index) => (
                 <div key={index}>
                   <div className="mb-3 flex justify-between">
@@ -43,12 +41,15 @@ const AboutSection = () => {
                     </div>
                     <p>{skill.progress}%</p>
                   </div>
-                  <ProgressBar color={skill.color} progress={skill.progress} />
+                  <ProgressBar progress={skill.progress} fillClassName={'bg-sky-600 dark:bg-sky-400'} />
                 </div>
               ))
             }
           </div>
-          <a download href="/Patrick_Ferreira.pdf" className="btn w-full max-w-none lg:max-w-xs">Baixar CV</a>
+          <Button download href="/Patrick_Ferreira.pdf" className="max-w-none justify-center lg:max-w-xs">
+            Baixar CV 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>
+          </Button>
         </div>
         {/* Overview */}
         <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">

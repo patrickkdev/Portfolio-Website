@@ -2,17 +2,36 @@ import classNames from 'classnames';
 import React from 'react';
 
 interface Props {
+  href?: string;
+  target?: string;
+  download?: boolean;
   type?: 'button' | 'submit';
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
 }
 
-const Button: React.FC<Props> = ({ type = 'submit', children, className, onClick }) => {
+const Button: React.FC<Props> = ({
+  href,
+  target,
+  download,
+  type = 'submit',
+  children,
+  className,
+  onClick,
+}) => {
   return (
-    <button onClick={onClick} type={type} className={classNames(['btn', className])}>
-      {children}
-    </button>
+    <div className={classNames('rainbow relative z-0 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100', className)}>
+      {href ? (
+        <a href={href} download={download} className={'btn'} onClick={onClick} target={target} rel="noreferrer">
+          {children}
+        </a>
+      ) : (
+        <button type={type} onClick={onClick} className={'btn'}>
+          {children}
+        </button>
+      )}
+    </div>
   );
 };
 

@@ -51,7 +51,7 @@ const Menu = () => {
 
   return (
     <header className={classNames('mx-auto w-full md:max-w-7xl header fixed left-0 right-0 md:top-1 z-30')}>
-      <div className={classNames('flex h-16 items-center p-2 md:pr-6 text-gray-700 dark:text-gray-200 md:rounded-lg transition-all duration-300 ease-out', { 'md:shadow-md backdrop-blur bg-white/80 dark:bg-gray-800/80 backdrop-opacity-70': scrolled })}>
+      <div className={classNames('flex h-16 items-center p-2 md:pr-6 md:rounded-lg transition-all duration-300 ease-out', { 'md:shadow-md backdrop-blur bg-white dark:bg-[#151A23] dark:ring-1 dark:ring-white/5 backdrop-opacity-70': scrolled })}>
         <Link href="/" className="flex items-center gap-3 overflow-hidden">
           <Image
             src="/images/avatar/me.png"

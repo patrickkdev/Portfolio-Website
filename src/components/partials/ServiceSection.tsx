@@ -2,35 +2,71 @@ import SectionHeader from '../shared/SectionHeader';
 
 const ServiceSection = () => {
   return (
-    <div className="space-y-12 lg:space-y-16">
-      <SectionHeader eyebrow="Escopo" title="O que ofereço" subtitle="E o que não ofereco." />
-      <div className='grid gap-8 md:grid-cols-2'>
-        <div className='bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg bg-white dark:bg-gray-700'>
-          <div className='space-y-4'>
-            <h4 className='font-semibold text-primary'>✅️ O que ofereço:</h4>
-            <ul className='text-primary text-balance space-y-2 list-disc list-outside ml-5'>
-              <li>Criação e manutenção de sites, sistemas web, APIs, bots e aplicações personalizadas</li>
-              <li>Implementação prática de recursos de Inteligência Artificial</li>
-              <li>Integração com plataformas de pagamento e serviços externos</li>
-              <li>Gestão de servidores Linux, bancos de dados e monitoramento de aplicações em produção</li>
-            </ul>
-          </div>
-        </div>
-        <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg bg-white dark:bg-gray-700">
-          <div className='space-y-4'>
-            <h4 className='font-semibold text-primary'>❌️ O que não ofereço:</h4>
-            <p className='text-primary'>
-              Para manter a qualidade, evito áreas onde não entrego meu melhor.
+    <section className="space-y-12 lg:space-y-16">
+      <SectionHeader
+        eyebrow="Escopo"
+        title="O que faço — e o que evito"
+        subtitle="Clareza desde o início evita fricção depois."
+      />
+
+      <div className="grid gap-6 md:grid-cols-2">
+        {/* OFFER */}
+        <div className="card p-6 space-y-6">
+          <header className="space-y-1">
+            <p className="text-sm font-medium uppercase tracking-wide opacity-60">
+              O que ofereço
             </p>
-            <ul className='text-balance space-y-2 list-disc list-outside ml-5 opacity-90'>
-              <li>Não trabalho com Wordpress ou PHP</li>
-              <li>Não desenvolvo apps mobile nativos</li>
-              <li>Não pego projetos sem escopo definido.</li>
-            </ul>
-          </div>
+            <h4 className="text-lg font-semibold">
+              Desenvolvimento focado em produto e performance
+            </h4>
+          </header>
+
+          <ul className="space-y-3 text-pretty">
+            {[
+              'Criação e manutenção de sites, sistemas, APIs, bots, automações e aplicativos',
+              'Implementação prática de recursos de Inteligência Artificial',
+              'Integração com meios de pagamento e serviços externos',
+              'Gestão de servidores Linux, bancos de dados e aplicações em produção',
+            ].map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-current opacity-40" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* NOT OFFER */}
+        <div className="rounded-xl bg-[var(--surface)] ring-1 ring-[var(--surface-border)] p-6 space-y-6">
+          <header className="space-y-1">
+            <p className="text-sm font-medium uppercase tracking-wide opacity-60">
+              O que não faço
+            </p>
+            <h4 className="text-lg font-semibold">
+              Limites claros para manter qualidade
+            </h4>
+          </header>
+
+          <p className="opacity-80 text-pretty">
+            Para garantir entregas sólidas, evito áreas onde não consigo manter
+            o mesmo nível técnico.
+          </p>
+
+          <ul className="space-y-3 opacity-90">
+            {[
+              'Projetos em Wordpress ou PHP',
+              'Aplicativos mobile nativos',
+              'Trabalhos sem escopo claro ou objetivos definidos',
+            ].map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-current opacity-30" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

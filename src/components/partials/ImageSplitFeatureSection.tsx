@@ -31,20 +31,22 @@ export default function ImageSplitFeatureSection({
         <div className="lg:w-1/2 flex place-self-center">
           <div className="lg:max-w-lg">
             {eyebrow && (
-              <h3 className="text-2xl sm:text-3xl font-semibold text-primary-500">
+              <h3 className="mb-3 text-xs font-medium uppercase tracking-wide md:text-sm">
                 {eyebrow}
               </h3>
             )}
 
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-pretty sm:text-5xl">
+            <h2 className="mt-2 text-2xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl text-pretty">
               {title}
             </h2>
 
-            {description}
+            <p className="mt-6 lg:mt-4 font-sans text-primary opacity-90 antialiased text-base md:text-lg lg:text-xl text-pretty leading-relaxed md:leading-7 tracking-normal">
+              {description}
+            </p>
 
             {/* Extra content such as feature lists */}
             {children && (
-              <div className="mt-10 max-w-xl text-base/7 text-primary lg:max-w-none">
+              <div className="mt-10 max-w-xl lg:max-w-none">
                 {children}
               </div>
             )}

@@ -6,6 +6,14 @@ import React from 'react';
 import { FiArrowUp } from 'react-icons/fi';
 import ScrollToTop from 'react-scroll-to-top';
 
+import { DM_Sans } from 'next/font/google';
+
+const font = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+});
+
 interface Props {
   title?: string;
   children: React.ReactNode;
@@ -15,7 +23,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
   const appName = 'Patrick Ferreira';
   const pageTitle = title ? title : appName;
   return (
-    <>
+    <html lang="pt-BR" className={font.className}>
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href="/images/avatar/me.png" />
@@ -31,6 +39,14 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
         <meta property="og:description" content="Patrick Ferreira - Desenvolvedor Full-stack" />
         <meta property="og:image" content="/images/open_graph.png" />
         <meta property="og:url" content="https://patrick.makztech.com" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        
         <meta property="og:type" content="website" />
       </Head>
       {/* Umami Analytics */}
@@ -40,7 +56,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
           smooth
-          className="fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg bg-primary-500 p-3 text-white transition-colors duration-150 hover:bg-primary-600 "
+          className="fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg bg-sky-600 dark:bg-sky-400 p-3 text-white transition-colors duration-150 hover:scale-110 transition-transform"
           component={
             <div className="flex justify-center">
               <FiArrowUp />
@@ -51,7 +67,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
         <div>{children}</div>
         <Footer />
       </div>
-    </>
+    </html>
   );
 };
 

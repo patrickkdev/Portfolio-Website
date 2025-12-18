@@ -35,10 +35,10 @@ const HeroSection = () => {
           <ReactTyped
             strings={[
               'Desenvolvedor de software full-stack',
-              'Crio sites, sistemas, APIs, automações e aplicativos web do zero',
-              'Usando Golang, Node, Typescript, HTML, CSS, React, SQL, etc',
-              'Conecto sistemas a qualquer API, incluindo pagamentos, IA, etc',
-              'Código limpo, testes e preocupação real com manutenção e boas práticas',
+              'Crio sites, sistemas, APIs, automações e aplicativos web',
+              'Usando Golang, Node, Typescript, HTML, CSS, React, SQL',
+              'Conecto sistemas a qualquer API, incluindo pagamentos e IA',
+              'Código limpo, testes e preocupação comboas práticas',
             ]}
             typeSpeed={20}
             backSpeed={20}
@@ -49,35 +49,47 @@ const HeroSection = () => {
         <div className="flex gap-5 pt-4">
           <Link
             href="https://www.github.com/patrickkdev"
-            className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
+            className="text-gray-900 dark:text-white transition-colors duration-150 hover:text-primary-500"
           >
             <FiGithub size={25} />
           </Link>
           <Link
             href="https://wa.me/5531996442788?text=Olá Patrick!"
-            className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
+            className="text-[#25A950] dark:text-[#25D366] transition-colors duration-150 hover:text-primary-500"
           >
             <BsWhatsapp size={25} />
           </Link>
           <Link
             href="https://discord.com/users/patrickkdev"
-            className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
+            className="text-[#5865F2] dark:text-[#5865F2] transition-colors duration-150 hover:text-primary-500"
           >
             <BsDiscord size={25} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/patrickkdev/"
-            className="text-primary-500 transition-colors duration-150 hover:text-primary-500"
+            className="text-[#0A66C2] dark:text-[#0A66C2] transition-colors duration-150 hover:text-primary-500"
           >
             <FiLinkedin size={25} />
           </Link>
         </div>
-        <Button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })} className="px-8">Vamos Conversar</Button>
+        <Button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
+          Vamos Conversar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="ml-2 h-4 w-4"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </Button>
       </div>
       <div className="absolute bottom-0 mb-10 flex flex-col items-center">
         <p className="mb-3 text-sm">Role para baixo</p>
-        <div className="relative flex h-7 w-5 justify-center rounded-full border-2 border-gray-600 dark:border-gray-100">
-          <div className="animate-scroll absolute h-1 w-1 bg-gray-600 dark:bg-gray-100" style={{ top: '6px' }}></div>
+        <div className="relative flex h-9 w-6 justify-center rounded-full border-2 border-gray-600 dark:border-gray-100">
+          <div className="animate-scroll absolute h-1.5 w-1 bg-gray-600 dark:bg-gray-100" style={{ top: '7px' }}></div>
         </div>
       </div>
     </div>

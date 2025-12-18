@@ -2,15 +2,30 @@
 @use '~tailwindcss/components';
 @use '~tailwindcss/utilities';
 
-@use 'partials/fonts';
 @use 'partials/header';
 @use 'partials/vendor';
 @use 'partials/utils';
 @use 'partials/components' as components2;
 
+html {
+  text-rendering: optimizeLegibility;
+}
+
 body {
-  @apply bg-gray-100 text-gray-700 dark:bg-gray-900 dark:text-gray-100;
+  @apply bg-gradient-to-r from-[#F5F7FB] to-[#E9EDF5] dark:from-[#0B1020] dark:to-[#0B0E13] text-[#0F1115] dark:text-[#F7F8FA] font-sans antialiased text-base leading-relaxed tracking-normal;
   overflow-x: hidden;
+}
+
+@screen md {
+  body {
+    @apply text-lg leading-7;
+  }
+}
+
+@screen lg {
+  body {
+    @apply text-xl;
+  }
 }
 
 .hero {
