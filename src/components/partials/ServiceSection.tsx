@@ -5,19 +5,15 @@ const ServiceSection = () => {
     <section className="space-y-12 lg:space-y-16">
       <SectionHeader
         eyebrow="Escopo"
-        title="O que faço — e o que evito"
-        subtitle="Clareza desde o início evita fricção depois."
+        title="O que ofereço — e o que evito"
       />
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* OFFER */}
         <div className="card p-6 space-y-6">
           <header className="space-y-1">
-            <p className="text-sm font-medium uppercase tracking-wide opacity-60">
-              O que ofereço
-            </p>
             <h4 className="text-lg font-semibold">
-              Desenvolvimento focado em produto e performance
+              O que ofereço
             </h4>
           </header>
 
@@ -39,11 +35,8 @@ const ServiceSection = () => {
         {/* NOT OFFER */}
         <div className="rounded-xl bg-[var(--surface)] ring-1 ring-[var(--surface-border)] p-6 space-y-6">
           <header className="space-y-1">
-            <p className="text-sm font-medium uppercase tracking-wide opacity-60">
-              O que não faço
-            </p>
             <h4 className="text-lg font-semibold">
-              Limites claros para manter qualidade
+              O que não faço
             </h4>
           </header>
 

@@ -33,7 +33,7 @@ export default function GitHubStats() {
           label="Última atividade"
           value={
             stats?.lastPushedAt
-              ? new Date(stats.lastPushedAt).toLocaleDateString('pt-BR', { timeZone: 'UTC', day: '2-digit', month: 'short', })
+              ? new Date(stats.lastPushedAt).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', })
 
               : undefined
           }

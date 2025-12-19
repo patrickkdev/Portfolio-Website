@@ -11,10 +11,6 @@ const HeroSection = () => {
     <div className="hero relative flex items-center justify-center">
       <HeroBackground />
       <div className="flex w-full flex-col items-center space-y-6">
-        {/* <div className="rounded-full w-fit pl-2 pr-3 flex gap-[2px] text-center justify-center items-center">
-          <PulseIcon />
-          <small>Disponível</small>
-        </div> */}
         <div className="overflow-hidden">
           <Image
             loading='eager'
