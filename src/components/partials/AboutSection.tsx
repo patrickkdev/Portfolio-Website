@@ -41,7 +41,7 @@ const AboutSection = () => {
                     </div>
                     <p>{skill.progress}%</p>
                   </div>
-                  <ProgressBar progress={skill.progress} fillClassName={'bg-sky-600 dark:bg-sky-400'} />
+                  <ProgressBar progress={skill.progress} fillClassName={'bg-primary-600 dark:bg-primary-400'} />
                 </div>
               ))
             }

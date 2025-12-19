@@ -56,7 +56,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
       <div className="flex min-h-screen flex-col">
         <ScrollToTop
           smooth
-          className="fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg bg-sky-600 dark:bg-sky-400 p-3 text-white transition-colors duration-150 hover:scale-110 transition-transform"
+          className="fixed bottom-16 right-8 z-10 cursor-pointer rounded-lg bg-primary-600 dark:bg-primary-400 p-3 text-white transition-colors duration-150 hover:scale-110 transition-transform"
           component={
             <div className="flex justify-center">
               <FiArrowUp />

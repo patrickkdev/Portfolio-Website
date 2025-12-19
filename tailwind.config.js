@@ -14,6 +14,9 @@ const config = {
       ...defaultTheme.screens,
     },
     extend: {
+      colors: {
+        primary: colors.sky,
+      },
       fontFamily: {
         sans: [
           'DM Sans',
@@ -31,14 +34,14 @@ const config = {
           css: {
             color: theme('colors.gray.700'),
             a: {
-              color: theme('colors.sky.500'),
+              color: theme('colors.primary.500'),
               '&:hover': {
-                color: theme('colors.sky.600'),
+                color: theme('colors.primary.600'),
               },
             },
             blockquote: {
               color: theme('colors.gray.800'),
-              borderLeftColor: theme('colors.sky.500'),
+              borderLeftColor: theme('colors.primary.500'),
               fontSize: theme('fontSize.xl'),
               fontStyle: 'not-italic',
             },

@@ -13,7 +13,7 @@ export default function SectionHeader({ eyebrow, title, subtitle, centered, clas
     <div className={classNames('max-w-3xl space-y-3', centered && 'mx-auto text-center', className)}>
       {
         eyebrow &&
-        <span className="text-sm font-semibold tracking-wide uppercase text-sky-600 dark:text-sky-400">
+        <span className="text-sm font-semibold tracking-wide uppercase text-primary-600 dark:text-primary-400">
           {eyebrow}
         </span>
       }
