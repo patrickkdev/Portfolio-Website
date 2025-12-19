@@ -39,7 +39,7 @@ export default function FaqSection() {
               </summary>
               <p
                 dangerouslySetInnerHTML={{ __html: item.a }}
-                className='mt-3 opacity-80 text-pretty text-lg'>
+                className='mt-3 opacity-80 text-pretty'>
               </p>
             </li>
           ))}

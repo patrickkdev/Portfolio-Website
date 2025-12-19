@@ -22,7 +22,7 @@ export default function SectionHeader({ eyebrow, title, subtitle, centered, clas
       </h2>
       {
         subtitle &&
-        <p className="mt-4 text-lg leading-8 opacity-80">
+        <p className="mt-4 opacity-80 text-pretty">
           {subtitle}
         </p>
       }
