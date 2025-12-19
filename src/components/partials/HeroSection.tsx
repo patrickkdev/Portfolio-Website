@@ -38,7 +38,7 @@ const HeroSection = () => {
               'Crio sites, sistemas, APIs, automações e aplicativos web',
               'Usando Golang, Node, Typescript, HTML, CSS, React, SQL',
               'Conecto sistemas a qualquer API, incluindo pagamentos e IA',
-              'Código limpo, testes e preocupação comboas práticas',
+              'Código limpo, testes e preocupação com boas práticas',
             ]}
             typeSpeed={20}
             backSpeed={20}
