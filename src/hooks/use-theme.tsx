@@ -18,17 +18,16 @@ const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = React.useState<Theme>(Theme.LIGHT);
+  const [manualOverride, setManualOverride] = React.useState<boolean>(false);
 
-  const applyTheme = (newTheme: Theme) => {
-    document.documentElement.classList.toggle(
-      Theme.DARK,
-      newTheme === Theme.DARK
-    );
+  const applyTheme = React.useCallback((newTheme: Theme) => {
+    document.documentElement.classList.toggle(Theme.DARK, newTheme === Theme.DARK);
     setTheme(newTheme);
-  };
+  }, []);
 
   const setUserTheme = (newTheme: Theme) => {
     localStorage.setItem('theme', newTheme);
+    setManualOverride(true);
     applyTheme(newTheme);
   };
 
@@ -42,21 +41,23 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     if (savedTheme) {
       applyTheme(savedTheme);
-      return;
+      setManualOverride(true);
+    } else {
+      applyTheme(mediaQuery.matches ? Theme.DARK : Theme.LIGHT);
     }
 
-    applyTheme(mediaQuery.matches ? Theme.DARK : Theme.LIGHT);
-
-    const handleChange = (event: MediaQueryListEvent) => {
-      applyTheme(event.matches ? Theme.DARK : Theme.LIGHT);
+    const handleSystemChange = (event: MediaQueryListEvent) => {
+      if (!manualOverride) {
+        applyTheme(event.matches ? Theme.DARK : Theme.LIGHT);
+      }
     };
 
-    mediaQuery.addEventListener('change', handleChange);
+    mediaQuery.addEventListener('change', handleSystemChange);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleChange);
+      mediaQuery.removeEventListener('change', handleSystemChange);
     };
-  }, []);
+  }, [applyTheme, manualOverride]);
 
 
   return (
