@@ -68,7 +68,7 @@ const HeroSection = () => {
             <FiLinkedin size={25} />
           </Link>
         </div>
-        <Button onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
+        <Button rainbow onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
           Vamos Conversar
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -20,7 +20,7 @@ export default function FaqSection() {
     },
     {
       q:'Qual é o seu nível de inglês? 🇬🇧🇺🇸',
-      a:'Meu nível de inglês avançado para leitura, escrita e escuta. Adoto o idioma exclusivamente em código, commits, estudos e interações em comunidades de programação online.'
+      a:'Meu nível de inglês para leitura, escrita e escuta é avançado. Adoto o idioma exclusivamente em código, commits, estudos e interações em comunidades de programação online.'
     },
   ];
 

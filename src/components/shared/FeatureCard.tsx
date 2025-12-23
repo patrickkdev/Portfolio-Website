@@ -21,7 +21,7 @@ export default function FeatureCard({ imageSrc, excerpt, title, description, cta
       <div className="flex flex-col gap-2">
         {
           excerpt &&
-          <small className="text-xs font-medium text-primary-600">{excerpt}</small>
+          <small className="text-xs font-medium text-primary-600 dark:text-primary-400">{excerpt}</small>
         }
         <h3 className="font-display text-xl font-semibold !leading-[1.25] max-sm:text-lg">{title}</h3>
         {
@@ -30,7 +30,7 @@ export default function FeatureCard({ imageSrc, excerpt, title, description, cta
         }
         {
           cta && 
-          <p className="link-hover-animation group-hover:link-hovered-animation w-fit text-sm text-primary-600 group-hover:underline">{cta}</p>
+          <p className="link-hover-animation group-hover:link-hovered-animation group-hover:underline w-fit text-sm text-primary-600 dark:text-primary-400">{cta}</p>
         }
       </div>
     </a>

@@ -35,7 +35,7 @@ const ExperienceSection = () => {
                         {experience.description}
                       </p>
 
-                      <span className="text-sm font-medium group-open:hidden group-hover:underline">
+                      <span className="text-sm font-medium group-open:hidden group-hover:underline text-primary text-primary-600 dark:text-primary-400">
                         Ler mais
                       </span>
                     </summary>

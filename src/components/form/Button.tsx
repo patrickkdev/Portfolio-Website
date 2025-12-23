@@ -9,6 +9,7 @@ interface Props {
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
+  rainbow?: boolean
 }
 
 const Button: React.FC<Props> = ({
@@ -19,9 +20,10 @@ const Button: React.FC<Props> = ({
   children,
   className,
   onClick,
+  rainbow
 }) => {
   return (
-    <div className={classNames('rainbow relative z-0 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100', className)}>
+    <div className={classNames(rainbow && 'rainbow relative z-0 overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100', className)}>
       {href ? (
         <a href={href} download={download} className={'btn'} onClick={onClick} target={target} rel="noreferrer">
           {children}

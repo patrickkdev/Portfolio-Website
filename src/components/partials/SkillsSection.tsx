@@ -59,7 +59,8 @@ export default function SkillsSection() {
         title="Node"
         description={
           <>
-            Tenho familiaridade com <ExternalLink href={ExternalLinks.node}>Node</ExternalLink> e seu ecossistema. Já desenvolvi alguns menos menores como chatbots, scrapers, apps desktop e APIs usando tecnologias como <ExternalLink href={ExternalLinks.puppeteer}>Puppeteer</ExternalLink>, <ExternalLink href={ExternalLinks.electron}>Electron</ExternalLink> e <ExternalLink href={ExternalLinks.express}>Express</ExternalLink>. <br /><br />
+            Tenho familiaridade com <ExternalLink href={ExternalLinks.node}>Node</ExternalLink> e seu ecossistema. <br /><br />
+            Já desenvolvi projetos menores como chatbots, scrapers, apps desktop e APIs usando tecnologias como <ExternalLink href={ExternalLinks.puppeteer}>Puppeteer</ExternalLink>, <ExternalLink href={ExternalLinks.electron}>Electron</ExternalLink> e <ExternalLink href={ExternalLinks.express}>Express</ExternalLink>. <br /><br />
           </>
         }
         image="/images/node.png"

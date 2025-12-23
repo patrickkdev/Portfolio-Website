@@ -34,6 +34,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     setTheme(stored === Theme.LIGHT || stored === Theme.DARK ? stored : getSystemTheme()); // Default to system preference if not
 
     // React to system preference changes
+    if (!window.matchMedia) return;
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handler = (e: MediaQueryListEvent) => {
       setTheme(e.matches ? Theme.DARK : Theme.LIGHT);
