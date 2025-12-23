@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
+
 import Footer from '@/components/partials/Footer';
 import Menu from '@/components/partials/Menu';
 import Head from 'next/head';
