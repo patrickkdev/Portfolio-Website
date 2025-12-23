@@ -6,7 +6,7 @@ import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
-    console.log('%c Olá, recrutador! Gostou do código? Me chama para um café: patrick8q@gmail.com', 'color: #00ff00; font-size: 20px; font-weight: bold;');
+    console.log('%c Olá, recrutador! Me chama para um café: patrick8q@gmail.com ou +55 31 99644-2788', 'color: #00ff00; font-size: 20px; font-weight: bold;');
   }, []);
 
   return (

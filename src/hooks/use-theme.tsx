@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export enum Theme {
   LIGHT = 'light',
@@ -17,48 +17,37 @@ type ThemeProviderProps = {
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = React.useState<Theme>(Theme.LIGHT);
-  const [manualOverride, setManualOverride] = React.useState<boolean>(false);
+  const [theme, setTheme] = useState<Theme>(Theme.DARK);
 
-  const applyTheme = React.useCallback((newTheme: Theme) => {
-    document.documentElement.classList.toggle(Theme.DARK, newTheme === Theme.DARK);
-    setTheme(newTheme);
-  }, []);
-
-  const setUserTheme = (newTheme: Theme) => {
-    localStorage.setItem('theme', newTheme);
-    setManualOverride(true);
-    applyTheme(newTheme);
+  const getSystemTheme = (): Theme => {
+    if (!window.matchMedia) return Theme.DARK; // Default to dark if no matchMedia
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? Theme.DARK : Theme.LIGHT;
   };
 
   const toggleTheme = () => {
-    setUserTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
+    setTheme(theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   };
+  
+  useEffect(() => {
+    // Check if there is a saved preference and use it if so
+    const stored = localStorage.getItem('theme');
+    setTheme(stored === Theme.LIGHT || stored === Theme.DARK ? stored : getSystemTheme()); // Default to system preference if not
+
+    // React to system preference changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handler = (e: MediaQueryListEvent) => {
+      setTheme(e.matches ? Theme.DARK : Theme.LIGHT);
+    };
+
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
+  }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const savedTheme = localStorage.getItem('theme') as Theme | null;
-
-    if (savedTheme) {
-      applyTheme(savedTheme);
-      setManualOverride(true);
-    } else {
-      applyTheme(mediaQuery.matches ? Theme.DARK : Theme.LIGHT);
-    }
-
-    const handleSystemChange = (event: MediaQueryListEvent) => {
-      if (!manualOverride) {
-        applyTheme(event.matches ? Theme.DARK : Theme.LIGHT);
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleSystemChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleSystemChange);
-    };
-  }, [applyTheme, manualOverride]);
-
+    // Apply the theme and save the preference to localStorage
+    document.documentElement.classList.toggle(Theme.DARK, theme === Theme.DARK);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -69,9 +58,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
 const useTheme = () => {
   const context = React.useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
+  if (!context) throw new Error('useTheme must be used within a ThemeProvider');
   return context;
 };
 

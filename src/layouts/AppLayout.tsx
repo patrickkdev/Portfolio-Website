@@ -23,7 +23,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
   const appName = 'Patrick Ferreira';
   const pageTitle = title ? title : appName;
   return (
-    <html lang="pt-BR" className={font.className}>
+    <div lang="pt-BR" className={font.className}>
       <Head>
         <title>{pageTitle}</title>
         <link rel="icon" href="/images/avatar/me.png" />
@@ -67,7 +67,7 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
         <div>{children}</div>
         <Footer />
       </div>
-    </html>
+    </div>
   );
 };
 
