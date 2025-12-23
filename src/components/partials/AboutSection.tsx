@@ -17,7 +17,7 @@ const AboutSection = () => {
           <div>
             <div className='space-y-4'>
               <p className="opacity-90 text-pretty tracking-normal">
-                Desenvolvedor de software especializado na criação de sites, sistemas, APIs, automações e aplicativos, sempre priorizando código legível, bem estruturado
+                Desenvolvedor de software especializado na criação de sites, sistemas, APIs, automações e aplicativos, sempre priorizando código limpo, seguro, bem estruturado
                 e de fácil manutenção. <br /><br />
               
                 Tenho experiência entregando projetos de ponta a ponta, da arquitetura ao deploy. <br /><br />

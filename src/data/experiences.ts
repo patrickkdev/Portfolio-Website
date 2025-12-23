@@ -11,8 +11,6 @@ Responsável pelo desenvolvimento e manutenção de mais de 20 sites de imobili�
 
 Desenvolvi do zero e mantenho também a versão web do sistema utilizado por essas imobiliárias para gerenciar imóveis, leads, clientes, blogs, landing pages e funcionários, com integração de IA e recursos avançados como pipeline de leads com drag-and-drop, reorganização de fotos e muito mais. Trata-se de um produto de alta performance, desenvolvido com uma stack moderna que combina Go, Fiber, Templ e HTMX.
 
-Os sites consomem uma API exposta pelo mesmo servidor do sistema, garantindo integração direta.
-
 Atuo diariamente em todas as camadas da solução, passando por frontend e backend, banco de dados, armazenamento de objetos, integrações com APIs de terceiros, gestão de domínios, DNS, SSL, deploy em servidores Linux, Nginx e Docker.
       `,
   },
