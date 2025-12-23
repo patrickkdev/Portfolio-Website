@@ -43,7 +43,7 @@ export type Post = {
   title: string;
   publishedAt: string;
   thumbnailUrl: string;
-  content: React.ReactNode;
+  content: string;
   description?: string;
   tags?: string[];
 };

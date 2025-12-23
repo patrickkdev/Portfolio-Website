@@ -16,11 +16,11 @@ export default function FaqSection() {
     },
     {
       q:'Você está aberto a propostas de emprego integral?',
-      a:'Sim. Estou sempre aberto a avaliar propostas de emprego integral (CLT ou PJ), desde que a posição seja 100% remota.'
+      a:'Sim. Estou aberto a avaliar propostas de emprego integral (CLT ou PJ), desde que a posição seja 100% remota.'
     },
     {
       q:'Qual é o seu nível de inglês? 🇬🇧🇺🇸',
-      a:'Inglês avançado para leitura, escrita e escuta. Adoto o idioma exclusivamente em código, commits, documentações, estudos e interações em comunidades de programação online.'
+      a:'Meu nível de inglês avançado para leitura, escrita e escuta. Adoto o idioma exclusivamente em código, commits, estudos e interações em comunidades de programação online.'
     },
   ];
 
@@ -33,13 +33,11 @@ export default function FaqSection() {
             <li
               className="py-5"
               key={idx}>
-              <summary
-                className="flex items-center justify-between font-semibold text-primary">
+              <summary className="flex items-center justify-between font-semibold text-primary">
                 {item.q}
               </summary>
-              <p
-                dangerouslySetInnerHTML={{ __html: item.a }}
-                className='mt-3 opacity-80 text-pretty'>
+              <p className='mt-3 opacity-80 text-pretty'>
+                {item.a}
               </p>
             </li>
           ))}

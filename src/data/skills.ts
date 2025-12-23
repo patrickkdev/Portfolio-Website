@@ -8,7 +8,7 @@ export const skills: Skill[] = [
   },
   {
     name: 'Front-end',
-    description: 'HTML/CSS/JS, React, Alpine.js',
+    description: 'HTML/CSS/JS, React, Next.js, Tailwind, HTMX',
     progress: 80
   },
   {

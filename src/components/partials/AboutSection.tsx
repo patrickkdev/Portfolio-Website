@@ -17,7 +17,7 @@ const AboutSection = () => {
           <div>
             <div className='space-y-4'>
               <p className="opacity-90 text-pretty tracking-normal">
-                Desenvolvedor full-stack especializado na criação de sites, sistemas, APIs, automações e aplicativos, sempre priorizando código legível, bem estruturado
+                Desenvolvedor de software especializado na criação de sites, sistemas, APIs, automações e aplicativos, sempre priorizando código legível, bem estruturado
                 e de fácil manutenção. <br /><br />
               
                 Tenho experiência entregando projetos de ponta a ponta, da arquitetura ao deploy. <br /><br />
@@ -29,15 +29,12 @@ const AboutSection = () => {
           {/* Skills */}
           <div className="grid grid-cols-2 gap-12 items-center card h-fit">
             {
-              skills.map((skill, index) => ({
-                ...skill,
-                color: index == 0 ? 'blue-500' : index == 1 ? 'fuchsia-500' : index == 2 ? 'indigo-700' : 'red-500'
-              })).map((skill, index) => (
+              skills.map((skill, index) => (
                 <div key={index}>
                   <div className="mb-3 flex justify-between">
                     <div>
                       <h6 className="font-semibold">{skill.name}</h6>
-                      <small className="opacity-80 line-clamp-1">{skill.description}</small>
+                      <small title={skill.description} className="opacity-80 line-clamp-1">{skill.description}</small>
                     </div>
                     <p>{skill.progress}%</p>
                   </div>
@@ -55,6 +52,15 @@ const AboutSection = () => {
         <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
           <div className="flex">
             <div className="mr-5 text-gray-300">
+              <HiOutlineChartBar size={50} />
+            </div>
+            <div>
+              <h2 className="text-2xl lg:text-3xl font-bold">4</h2>
+              <p className="mt-1">Anos de experiência</p>
+            </div>
+          </div>
+          <div className="flex">
+            <div className="mr-5 text-gray-300">
               <HiOutlineFire size={50} />
             </div>
             <div>
@@ -67,17 +73,8 @@ const AboutSection = () => {
               <HiOutlineUsers size={50} />
             </div>
             <div>
-              <h2 className="text-2xl lg:text-3xl font-bold">400+</h2>
-              <p className="mt-1">Clientes satisfeitos</p>
-            </div>
-          </div>
-          <div className="flex">
-            <div className="mr-5 text-gray-300">
-              <HiOutlineChartBar size={50} />
-            </div>
-            <div>
-              <h2 className="text-2xl lg:text-3xl font-bold">4+</h2>
-              <p className="mt-1">Anos de experiência</p>
+              <h2 className="text-2xl lg:text-3xl font-bold">5k+</h2>
+              <p className="mt-1">Usuários impactados</p>
             </div>
           </div>
           <div className="flex">

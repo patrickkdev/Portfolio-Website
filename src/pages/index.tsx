@@ -5,7 +5,7 @@ import ExperienceSection from '@/components/partials/ExperienceSection';
 import FaqSection from '@/components/partials/FaqSection';
 import HeroSection from '@/components/partials/HeroSection';
 import RecentWorkSection from '@/components/partials/RecentWorkSection';
-import ServiceSection from '@/components/partials/ServiceSection';
+import ScopeSection from '@/components/partials/ScopeSection';
 import SkillsSection from '@/components/partials/SkillsSection';
 import WorkStyleSection from '@/components/partials/WorkStyleSection';
 import AppLayout from '@/layouts/AppLayout';
@@ -13,7 +13,7 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <AppLayout title='Patrick Ferreira - Desenvolvedor Full-stack'>
+    <AppLayout title='Patrick Ferreira - Desenvolvedor de Software'>
       <HeroSection />
       <section className="container py-12 lg:py-16">
         <AboutSection />
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         <ExperienceSection />
       </section>
       <section className="container py-12 lg:py-16">
-        <ServiceSection />
+        <ScopeSection />
       </section>
       <section className="container py-12 lg:py-16">
         <RecentWorkSection />

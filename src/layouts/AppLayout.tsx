@@ -30,13 +30,13 @@ const AppLayout: React.FC<Props> = ({ children, title }) => {
         <link rel="canonical" href="https://patrick.makztech.com" />
 
         {/* Meta tags */}
-        <meta name="description" content="Patrick Ferreira - Desenvolvedor Full-stack" />
+        <meta name="description" content="Patrick Ferreira - Desenvolvedor de Software" />
         <meta name="keywords" content="Patrick Ferreira, Developer, Desenvolvedor, Web, Automação, Automation, Full-stack, Front-end, Back-end, Golang, Go, Node.js, TypeScript, React, Software, Engineer, Full-stack Developer" />
         <meta name="author" content="Patrick Ferreira" />
 
         {/* Open Graph */}
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content="Patrick Ferreira - Desenvolvedor Full-stack" />
+        <meta property="og:description" content="Patrick Ferreira - Desenvolvedor de Software" />
         <meta property="og:image" content="/images/open_graph.png" />
         <meta property="og:url" content="https://patrick.makztech.com" />
 

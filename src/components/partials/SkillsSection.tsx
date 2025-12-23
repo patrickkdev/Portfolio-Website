@@ -23,18 +23,17 @@ export default function SkillsSection() {
         imageClassName='object-left'
       >
       </ImageSplitFeatureSection>
-
       <ImageSplitFeatureSection
         title="React e Next.js"
         description={
           <>
             Tenho experiência sólida com <ExternalLink href={ExternalLinks.react}>React</ExternalLink> e <ExternalLink href={ExternalLinks.nextjs}>Next.js</ExternalLink>. <br /><br />
+
+            Escolho essa dupla quando o projeto exige interações ricas no navegador. <br /><br />
+
+            O Next.js traz vantagens nativas como <ExternalLink href={ExternalLinks.ssr}>SSR</ExternalLink> e otimizações automáticas de performance, que contribuem para melhorar o <ExternalLink href={ExternalLinks.seo}>SEO</ExternalLink>. <br /><br />
             
-            Escolho essa dupla quando o projeto precisa de interações ricas no navegador ou quando o time do cliente já trabalha nesse ecossistema.<br /><br />
-
-            O Next.js traz vantagens nativas como <ExternalLink href={ExternalLinks.ssr}>SSR</ExternalLink> e otimizações automáticas de performance, que ajudam a melhorar o <ExternalLink href={ExternalLinks.seo}>SEO</ExternalLink>. Além disso, o back-end integrado via rotas de API, permite centralizar a lógica de negócio e o fornecimento de dados em um único projeto de forma eficiente. <br /><br />
-
-            Como nem todo sistema precisa de um <ExternalLink href={ExternalLinks.spa}>SPA</ExternalLink> robusto. Para projetos onde a simplicidade reina, deixo o React de lado e escolho uma stack mais minimalista.
+            Além disso, ele permite criar <ExternalLink href={ExternalLinks.nextApiRoutes}>API Routes</ExternalLink> dentro do mesmo projeto, que funcionam como um back-end leve embutido. Isso reduz fricções comuns entre back-end e front-end, e simplifica a manutenção da aplicação.
           </>
         }
         image="/images/react-ts.png"
@@ -46,11 +45,9 @@ export default function SkillsSection() {
         title="Templ, HTMX e Alpine.js"
         description={
           <>
-            Esse é meu trio favorito para sistemas internos, painéis administrativos e projetos que precisam entregar valor rápido. <br /><br />
+            Para projetos onde a simplicidade é prioridade, opto por uma stack mais enxuta no front-end. Esse é meu trio favorito para sistemas internos, painéis administrativos e produtos que precisam entregar valor rapidamente. <br /><br />
 
-            O servidor renderiza tudo e o navegador atualiza só o que muda. Isso reduz a complexidade típica de frontends modernos e deixa o fluxo de desenvolvimento mais leve. <br /><br />
-
-            Evito usar SPA quando o projeto não ganha nada com isso. Em muitos casos, HTMX resolve mais rápido, com menos código e com performance excelente.
+            O servidor renderiza as páginas e o navegador atualiza apenas o que muda. Isso reduz a complexidade comum em front-ends modernos e o desenvolvimento fica mais rápido.
           </>
         }
         image="/images/templ-htmx-alpine.png"
@@ -59,12 +56,10 @@ export default function SkillsSection() {
       />
 
       <ImageSplitFeatureSection
-        title="Node, Express e Next"
+        title="Node"
         description={
           <>
-            Tenho familiaridade com <ExternalLink href={ExternalLinks.node}>Node</ExternalLink> e seu ecossistema. Já desenvolvi bots, scrapers simples com <ExternalLink href={ExternalLinks.puppeteer}>Puppeteer</ExternalLink>, apps desktop com <ExternalLink href={ExternalLinks.electron}>Electron</ExternalLink> e APIs com <ExternalLink href={ExternalLinks.express}>Express</ExternalLink>. <br /><br />
-      
-            Hoje estou mais mergulhado no ecossistema Go, então estou um pouco sem prática no desenvolvimento back-end com TS. Mesmo assim, consigo me virar com facilidade e entender projetos existentes.
+            Tenho familiaridade com <ExternalLink href={ExternalLinks.node}>Node</ExternalLink> e seu ecossistema. Já desenvolvi alguns menos menores como chatbots, scrapers, apps desktop e APIs usando tecnologias como <ExternalLink href={ExternalLinks.puppeteer}>Puppeteer</ExternalLink>, <ExternalLink href={ExternalLinks.electron}>Electron</ExternalLink> e <ExternalLink href={ExternalLinks.express}>Express</ExternalLink>. <br /><br />
           </>
         }
         image="/images/node.png"
@@ -93,11 +88,11 @@ export default function SkillsSection() {
         title="PostgreSQL e Cloudflare R2"
         description={
           <>
-            <ExternalLink href={ExternalLinks.postgresql}>PostgreSQL</ExternalLink> é meu banco principal para dados relacionais. Ele é confiável, poderoso e funciona muito bem com APIs em Go. <br /><br />
+            Trabalho diariamente com MySQL, mas o <ExternalLink href={ExternalLinks.postgresql}>PostgreSQL</ExternalLink> é minha escolha principal para dados relacionais. Ele é extensível, confiável e se integra muito bem com aplicações em Go, usando drivers maduros como o <ExternalLink href={ExternalLinks.pgx}>PGX</ExternalLink>. <br /><br />
 
-            Para armazenamento de arquivos, uso <ExternalLink href={ExternalLinks.cloudflareR2}>Cloudflare R2</ExternalLink>. Ele é rápido, compatível com <ExternalLink href={ExternalLinks.s3}>S3</ExternalLink> e tem custos previsíveis, ideal para projetos que precisam <strong>escalar sem susto</strong>. <br /><br />
+            Para armazenamento de arquivos na nuvem, utilizo o <ExternalLink href={ExternalLinks.cloudflareR2}>Cloudflare R2</ExternalLink>. A <ExternalLink href={ExternalLinks.r2s3Compatible}>compatibilidade com a API do S3</ExternalLink> facilita a integração com SDKs e ferramentas já consolidadas.
 
-            Evito soluções improvisadas para dados e mídia. Cada coisa deve estar no lugar certo — banco para dados estruturados, storage para arquivos.
+            A integração nativa com <ExternalLink href={ExternalLinks.cloudflareWorkers}>Workers</ExternalLink> permite, por exemplo, <ExternalLink href={ExternalLinks.cloudflareImageTransform}>processar imagens próximo ao storage</ExternalLink>, simplificando a arquitetura. <br /><br />
           </>
         }
         image="/images/cloudflare-postgres.jpg"
@@ -108,11 +103,11 @@ export default function SkillsSection() {
         title="Deploy e Infraestrutura"
         description={
           <>
-            Gosto de manter a infraestrutura limpa e previsível. Uso Linux, Docker e setups leves para deploys que não quebram do nada. <br /><br />
+            Tenho experiência administrando servidores Linux, gerenciando domínios e configurando <strong>DNS</strong> e <strong>SSL</strong> com <ExternalLink href={ExternalLinks.letsEncrypt}>Let’s Encrypt</ExternalLink>. <br /><br />
 
-            Configuro VPS, bancos, SSL e automações com naturalidade. Tudo com foco em estabilidade e em diagnósticos fáceis quando algo falha. <br /><br />
-
-            Evito ambientes caóticos, configurações manuais que ninguém entende e dependência de ferramentas que só aumentam atrito.
+            Utilizo plataformas como <ExternalLink href={ExternalLinks.netlify}>Netlify</ExternalLink> e <ExternalLink href={ExternalLinks.vercel}>Vercel</ExternalLink> para front-ends e projetos que se beneficiam de deploys rápidos e infraestrutura gerenciada. <br /><br />
+            
+            Para hospedagens próprias, uso <ExternalLink href={ExternalLinks.dokploy}>Dokploy</ExternalLink> e <ExternalLink href={ExternalLinks.docker}>Docker</ExternalLink>, mas também trabalho com setups mais diretos, utilizando <strong>systemd</strong> e <ExternalLink href={ExternalLinks.nginx}>Nginx</ExternalLink> quando faz mais sentido. <br /><br />
           </>
         }
         image="/images/devops6.png"

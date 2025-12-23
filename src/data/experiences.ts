@@ -2,7 +2,7 @@ import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
-    jobTitle: 'Desenvolvedor Full-stack',
+    jobTitle: 'Desenvolvedor de Software',
     company: 'Sinaionline Sistemas - Remoto - Tempo Integral',
     startDate: 'Fev 2024',
     endDate: 'Presente',
@@ -19,12 +19,12 @@ Atuo diariamente em todas as camadas da solução, passando por frontend e backe
   {
     jobTitle: 'Programador de Sistemas',
     company: 'MyCore Tecnologia - Presencial - Tempo Integral',
-    startDate: 'Ago 2021',
+    startDate: 'Ago 2022',
     endDate: 'Dez 2023',
     description: `
 Desenvolvi de forma independente todo o site institucional da empresa, atualmente em produção, além de produzir a documentação completa de código e conteúdo, utilizando tecnologias modernas como Next.js, React e MUI.
 
-Também contribuí para o desenvolvimento de plataformas de agendamento, gestão de mandatos, cameras de segurança, e outros sistemas dinâmicos, sempre com foco em interfaces intuitivas e uma experiência de uso fluida.
+Também contribuí para o desenvolvimento de plataformas de agendamento, gestão de mandatos, cameras de segurança, e outros sistemas dinâmicos, sempre buscando entregar interfaces intuitivas e uma experiência de uso fluida.
 
 Desenvolvi e mantive aplicativos mobile para Android e iOS utilizando React Native, publicados tanto na Play Store quanto na App Store e utilizados em ambiente de produção.
 
