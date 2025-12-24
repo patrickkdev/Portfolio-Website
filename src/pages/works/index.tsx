@@ -1,6 +1,6 @@
 import Button from '@/components/form/Button';
+import FeatureCard from '@/components/shared/FeatureCard';
 import PageTitle from '@/components/shared/PageTitle';
-import Portfolio from '@/components/shared/Portfolio';
 import { works } from '@/data/works';
 import AppLayout from '@/pages/AppLayout';
 
@@ -19,12 +19,14 @@ const work = () => {
       <div className="container py-10">
         <div className="grid gap-4 xs:grid-cols-2 md:grid-cols-3 md:gap-8">
           {works.map((work) => (
-            <Portfolio
+            <FeatureCard
               key={work.id}
-              imageUrl={work.thumbnailUrl}
-              category={work.category}
               title={work.title}
+              excerpt={work.publishedAt}
+              description={work.subtitle}
               href={`/works/${work.id}`}
+              imageSrc={work.thumbnailUrl}
+              cta='Leia mais'
             />
           ))}
         </div>
