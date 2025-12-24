@@ -7,7 +7,7 @@ import RecentWorkSection from '@/components/partials/RecentWorkSection';
 import ScopeSection from '@/components/partials/ScopeSection';
 import SkillsSection from '@/components/partials/SkillsSection';
 import WorkStyleSection from '@/components/partials/WorkStyleSection';
-import AppLayout from '@/layouts/AppLayout';
+import AppLayout from '@/pages/AppLayout';
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {

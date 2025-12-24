@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { contactSectionID } from './ContactSection';
@@ -13,6 +13,7 @@ import { worksSectionID } from './RecentWorkSection';
 const Menu = () => {
   const { theme, toggleTheme } = useTheme();
   const router = useRouter();
+  const isIndexPage = useMemo(() => router.pathname === '/', [router.pathname]);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -35,22 +36,13 @@ const Menu = () => {
       }
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  function scrollToId(id: string, offset = 80) {
-    const el = document.getElementById(id);
-    if (!el) return;
-
-    const y =
-    el.getBoundingClientRect().top + window.pageYOffset - offset;
-
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
-
   return (
-    <header className={classNames('mx-auto w-full md:max-w-7xl header fixed left-0 right-0 md:top-1 z-30')}>
+    <header id="navbar" className={classNames('mx-auto w-full md:max-w-7xl header fixed left-0 right-0 md:top-1 z-30')}>
       <div className={classNames('flex h-16 items-center p-2 md:pr-6 md:rounded-lg transition-all duration-300 ease-out', { 'md:shadow-md backdrop-blur bg-white dark:bg-[#151A23] dark:ring-1 dark:ring-white/5 backdrop-opacity-70': scrolled })}>
         <Link href="/" className="flex items-center gap-3 overflow-hidden">
           <Image
@@ -59,16 +51,16 @@ const Menu = () => {
             height={50}
             alt="avatar"
             className={classNames(
-              'aspect-square rounded object-cover transition-all duration-300 ease-out',
+              'aspect-square rounded object-cover transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]',
               {
                 '-translate-x-6 opacity-0 w-0': !scrolledPastHero,
-                'translate-x-0 opacity-100 w-[50px]': scrolledPastHero
+                'translate-x-0 opacity-100 w-[50px]': scrolledPastHero || (!isIndexPage && scrolled),
               }
             )}
           />
           <span
             className={classNames(
-              'transition-all duration-300 ease-out text-2xl font-bold',
+              'transition-all duration-300 text-2xl font-bold ease-[cubic-bezier(0.22,1,0.36,1)]',
               { 'translate-x-0': scrolledPastHero }
             )}
           >
@@ -78,14 +70,14 @@ const Menu = () => {
 
         <ul className="ml-auto hidden items-center md:flex">
           <li>
-            <div onClick={() => scrollToId(worksSectionID)} className={classNames('inline-block px-4 font-semibold transition-colors duration-300 hover:text-primary-600 hover:underline cursor-pointer')}>
+            <a href={`/#${worksSectionID}`} className={classNames('inline-block px-4 font-semibold transition-colors duration-300 hover:text-primary-600 hover:underline cursor-pointer')}>
               Trabalhos
-            </div>
+            </a>
           </li>          
           <li>
-            <div onClick={() => scrollToId(contactSectionID)} className={classNames('inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline cursor-pointer')}>
+            <a href={`/#${contactSectionID}`} className={classNames('inline-block px-4 font-semibold  transition-colors duration-150 hover:text-primary-600 hover:underline cursor-pointer')}>
               Contato
-            </div>
+            </a>
           </li>
         </ul>
         <button
@@ -135,22 +127,24 @@ const Menu = () => {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <DialogPanel className="relative flex h-full w-full min-w-[8rem] flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
+            <DialogPanel className="relative flex h-full w-full min-w-[12rem] flex-1 flex-col bg-[#f9f9ff] pt-5 dark:bg-gray-800">
               <div className="flex h-full flex-col overflow-y-auto">
-                <nav className="mt-4 space-y-1 px-2">
-                  <div
-                    onClick={() => scrollToId(worksSectionID)}
-                    className={classNames('group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600',)}
+                <nav className="mt-2 space-y-1 px-2">
+                  <a
+                    href={`/#${worksSectionID}`}
+                    onClick={() => setSidebarOpen(false)}
+                    className={classNames('group flex items-center px-2 py-2 text-2xl font-medium transition-colors duration-150 hover:text-primary-600',)}
                   >
                     Trabalhos
-                  </div>
+                  </a>
                   
-                  <div
-                    onClick={() => scrollToId(contactSectionID)}
-                    className={classNames('group flex items-center px-2 py-2 text-base font-medium transition-colors duration-150 hover:text-primary-600')}
+                  <a
+                    href={`/#${contactSectionID}`}
+                    onClick={() => setSidebarOpen(false)}
+                    className={classNames('group flex items-center px-2 py-2 text-2xl font-medium transition-colors duration-150 hover:text-primary-600')}
                   >
                     Contato
-                  </div>
+                  </a>
                 </nav>
               </div>
             </DialogPanel>

@@ -15,7 +15,7 @@ export default function FeatureCard({ imageSrc, excerpt, title, description, cta
       {
         imageSrc && 
         <div className="overflow-hidden rounded-lg aspect-video relative bg-black">
-          <Image src={imageSrc} alt={title || ''} fill className="object-contain" />
+          <Image src={imageSrc} alt={title || ''} fill className="object-cover" />
         </div>
       }
       <div className="flex flex-col gap-2">

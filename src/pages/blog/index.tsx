@@ -2,7 +2,7 @@ import PageTitle from '@/components/shared/PageTitle';
 import Pagination from '@/components/shared/Pagination';
 import Post from '@/components/shared/Post';
 import { posts } from '@/data/posts';
-import AppLayout from '@/layouts/AppLayout';
+import AppLayout from '@/pages/AppLayout';
 
 const Blog = () => {
   return (

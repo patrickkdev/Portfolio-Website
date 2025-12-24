@@ -9,6 +9,11 @@
 
 html {
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+html:has(#navbar) {
+  scroll-padding-top: 90px;
 }
 
 body {

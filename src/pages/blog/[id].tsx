@@ -1,7 +1,7 @@
 import CommentBox from '@/components/partials/CommentBox';
 import RecentComment from '@/components/partials/RecentComment';
 import { posts } from '@/data/posts';
-import AppLayout from '@/layouts/AppLayout';
+import AppLayout from '@/pages/AppLayout';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';

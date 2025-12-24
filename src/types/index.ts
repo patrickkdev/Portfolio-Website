@@ -25,7 +25,6 @@ export type Work = {
   id: number;
   title: string;
   subtitle?: string;
-  tags: string[];
   thumbnailUrl: string;
   description?: string;
   previewUrl?: string;

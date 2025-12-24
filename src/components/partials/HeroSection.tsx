@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BsDiscord, BsWhatsapp } from 'react-icons/bs';
 import { FiGithub, FiLinkedin } from 'react-icons/fi';
 import { ReactTyped } from 'react-typed';
+import { contactSectionID } from './ContactSection';
 import HeroBackground from './HeroBackground';
 
 const HeroSection = () => {
@@ -68,7 +69,7 @@ const HeroSection = () => {
             <FiLinkedin size={25} />
           </Link>
         </div>
-        <Button rainbow onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}>
+        <Button rainbow href={`/#${contactSectionID}`}>
           Vamos Conversar
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 type props = {
-  href: string
+  href?: string
   children?: React.ReactNode
 }
 
