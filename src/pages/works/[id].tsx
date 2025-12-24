@@ -1,13 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import Button from '@/components/form/Button';
 import { works } from '@/data/works';
 import AppLayout from '@/layouts/AppLayout';
 import { Work } from '@/types';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { Dot } from 'lucide-react';
 import { GetServerSideProps } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import Markdown from 'react-markdown';
-import Slider, { Settings } from 'react-slick';
+import { Settings } from 'react-slick';
+import rehypeRaw from 'rehype-raw';
 
 const settings: Settings = {
   dots: true,
@@ -31,32 +32,28 @@ type Props = {
 const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
   return (
     <AppLayout title="Detalhes do trabalho">
-      <div className="container">
-        <div className="mt-24 flex flex-col items-center justify-center">
+      <div className="container max-w-5xl">
+        <div className="mt-24 space-y-4 flex flex-col items-center justify-center">
           <h1 className="text-center text-2xl font-semibold sm:text-3xl md:text-4xl">{work.title}</h1>
-          <p className="mt-4 flex items-center opacity-80">
+          <p className="flex items-center opacity-80">
             <span>{work.publishedAt}</span>
-            <span className="mx-2 h-1.5 w-1.5 rounded-full bg-primary-500"></span>
-            <span>{work.category}</span>
           </p>
+          {
+            work.tags.length > 0 && (
+              <div className="flex items-center gap-2 flex-wrap justify-center items-center">
+                {
+                  work.tags.map((tag, index) => (
+                    <div className='flex items-center gap-2' key={tag}>
+                      <small className="bg-primary-400 dark:bg-primary-600 px-2 py-0.25 rounded font-bold">{tag}</small>
+                      {index !== work.tags.length - 1 && <Dot />}
+                    </div>
+                  ))
+                }
+              </div>
+            )
+          }
         </div>
         <div className="mt-10">
-          <Slider {...settings} nextArrow={<button><ArrowRight /></button>} prevArrow={<button><ArrowLeft className='text-sky-500' /></button>}>
-            {work.images.map((image, index) => (
-              <div className="overflow-hidden rounded-xl" key={index}>
-                <Image
-                  src={image}
-                  height={720}
-                  width={1280}
-                  alt={work.title}
-                  sizes="100vw"
-                  style={{
-                    width: '100%',
-                    height: 'auto'
-                  }} />
-              </div>
-            ))}
-          </Slider>
           {
             work.previewUrl && (
               <div className="mt-6 flex justify-center">
@@ -69,22 +66,24 @@ const WorkDetail: React.FunctionComponent<Props> = ({ work }) => {
         </div>
 
         <div className="my-10 whitespace-pre-line">
-          <h3 className="text-xl font-semibold">Descrição</h3>
           <Markdown
+            rehypePlugins={[rehypeRaw]}
             components={{
+              h1: ({node, ...props}) => <h1 className="text-2xl font-semibold" {...props} />,
+              h2: ({node, ...props}) => <h2 className="text-xl font-semibold" {...props} />,
+              h3: ({node, ...props}) => <h3 className="text-lg font-semibold" {...props} />,
+              h4: ({node, ...props}) => <h4 className="text-md font-semibold" {...props} />,
+              h5: ({node, ...props}) => <h5 className="text-sm font-semibold" {...props} />,
+              h6: ({node, ...props}) => <h6 className="text-xs font-semibold" {...props} />,
               a: ({node, ...props}) => <a className="text-blue-500 hover:underline" {...props} />,
               ul: ({node, ...props}) => <ul className="list-disc list-inside whitespace-normal" {...props} />,
               li: ({node, ...props}) => <li {...props} />,
+              video: ({node, ...props}) => <video controls className="w-full aspect-video bg-black" {...props} />,
+              img: ({node, ...props}) => <div className="w-full p-2"><img alt={props.alt || ''} className="w-full rounded-xl shadow-xl hover:scale-[1.02]" {...props} /></div>
             }}
           >
             {work.description}
           </Markdown>
-          <h3 className="mt-10 text-xl font-semibold">Recursos</h3>
-          <ul className="mt-4 list-disc pl-4">
-            {work.featureList.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
         </div>
 
         <div className="my-10 rounded-lg bg-gray-50 py-3 shadow-md dark:bg-gray-700">

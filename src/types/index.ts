@@ -24,13 +24,12 @@ export type Service = {
 export type Work = {
   id: number;
   title: string;
-  category: string;
+  subtitle?: string;
+  tags: string[];
   thumbnailUrl: string;
   description?: string;
-  images: string[];
   previewUrl?: string;
   publishedAt: string;
-  featureList: string[];
   attributes: {
     name: string;
     value: string | number;

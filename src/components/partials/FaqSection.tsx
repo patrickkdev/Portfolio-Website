@@ -8,7 +8,7 @@ export default function FaqSection() {
     },
     {
       q:'Quanto tempo leva para entregar um site institucional simples?',
-      a:'Com escopo e design definidos, normalmente entre duas e três semanas.'
+      a:'Com conteúdo e design definidos, normalmente entre duas e quatro semanas.'
     },
     {
       q:'Qual é sua política para retrabalho?',

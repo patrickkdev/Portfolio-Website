@@ -14,8 +14,8 @@ export default function FeatureCard({ imageSrc, excerpt, title, description, cta
     <a href={href} className="group space-y-4">
       {
         imageSrc && 
-        <div className="overflow-hidden rounded-lg aspect-video relative">
-          <Image src={imageSrc} alt={title || ''} fill />
+        <div className="overflow-hidden rounded-lg aspect-video relative bg-black">
+          <Image src={imageSrc} alt={title || ''} fill className="object-contain" />
         </div>
       }
       <div className="flex flex-col gap-2">

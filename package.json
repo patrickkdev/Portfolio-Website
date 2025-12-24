@@ -25,6 +25,7 @@
     "react-scroll-to-top": "^3.0.0",
     "react-slick": "^0.31.0",
     "react-typed": "^2.0.8",
+    "rehype-raw": "^7.0.0",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^3.4.0",
     "tailwindcss-animate": "^1.0.7"
