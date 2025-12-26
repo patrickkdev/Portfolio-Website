@@ -6,9 +6,7 @@ export const works: Work[] = [
     title: 'Sistema Imobiliário Web',
     subtitle: 'Versão web do sistema Sinaionline para imobiliárias',
     thumbnailUrl: '/images/works/sistema-sinaionline-property-page.png',
-    description: `Sistema completo para imobiliárias desenvolvido do zero em Go, seguindo arquitetura DDD e princípios de software escalável. A plataforma permite a gestão centralizada de imóveis, fotos, leads, clientes, métricas, funcionários, contratos, landing page de imóveis, artigos, além de integrações com IA e sistemas externos do mercado imobiliário.
-
-Inclui uma API para consulta externa de imóveis, recebimento de leads, envio de e-mails em massa e integrações com parceiros.
+    description: `Sistema para imobiliárias desenvolvido do zero em Go, seguindo arquitetura DDD e princípios de software escalável. Ele permite a gestão centralizada de imóveis, fotos, leads, clientes, métricas, funcionários, contratos, landing page de imóveis e artigos. Conta com integrações de IA, API pública para consulta de imóveis, recebimento de leads e conexão com parceiros.
     
 ![Sistema Imobiliário Web – Página do imóvel](/images/works/sistema-sinaionline-property-page.png)
 
