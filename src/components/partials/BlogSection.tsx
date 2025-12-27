@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { posts } from '@/data/posts';
+import { BlogMeta } from '@/lib/api/blog';
 import { ArrowRight } from 'lucide-react';
 import SectionHeader from '../shared/SectionHeader';
 
-const BlogSection = () => {
+const BlogSection = ({ posts }: { posts: BlogMeta[] }) => {
   return (
     <section className="space-y-12 lg:space-y-16">
       <SectionHeader
@@ -17,15 +17,15 @@ const BlogSection = () => {
       <div className="grid gap-12">
         {posts.slice(0, 3).map((post) => (
           <Link
-            key={post.id}
-            href={`/blog/${post.id}`}
+            key={post.slug}
+            href={`/blog/${post.slug}`}
             className="group transition hover:translate-y-[-1px]"
           >
             <div className="flex gap-6 max-md:flex-col">
               <Image
                 height={384}
                 width={512}
-                src={post.thumbnailUrl}
+                src={post.thumbnail}
                 alt={post.title}
                 className="aspect-video w-72 shrink-0 rounded-lg object-cover max-md:w-full"
               />
@@ -33,10 +33,10 @@ const BlogSection = () => {
               <div className="flex flex-col justify-between">
                 <div>
                   <time
-                    dateTime={post.publishedAt}
+                    dateTime={post.date}
                     className="text-sm opacity-60"
                   >
-                    {post.publishedAt}
+                    {post.date}
                   </time>
 
                   <h3 className="mt-3 text-lg font-semibold leading-snug transition-colors group-hover:opacity-90">

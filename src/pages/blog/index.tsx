@@ -1,10 +1,15 @@
+import FeatureCard from '@/components/shared/FeatureCard';
 import PageTitle from '@/components/shared/PageTitle';
 import Pagination from '@/components/shared/Pagination';
-import Post from '@/components/shared/Post';
-import { posts } from '@/data/posts';
+import { BlogMeta, getAllPosts } from '@/lib/api/blog';
 import AppLayout from '@/pages/AppLayout';
+import { GetStaticProps } from 'next/types';
 
-const Blog = () => {
+type Props = {
+  posts: BlogMeta[];
+};
+
+const Blog = ({ posts }: Props) => {
   return (
     <AppLayout title="Blog">
       <PageTitle
@@ -18,12 +23,12 @@ const Blog = () => {
       <div className="container py-10">
         <div className="grid gap-8 sm:gap-4 md:grid-cols-3 lg:gap-8">
           {posts.map((post) => (
-            <Post
-              key={post.id}
-              href={`/blog/${post.id}`}
-              thumbnailUrl={post.thumbnailUrl}
+            <FeatureCard
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              imageSrc={post.thumbnail}
               title={post.title}
-              publishedAt={post.publishedAt}
+              excerpt={post.date}
             />
           ))}
         </div>
@@ -36,3 +41,11 @@ const Blog = () => {
 };
 
 export default Blog;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  return {
+    props: {
+      posts: getAllPosts(),
+    },
+  };
+};

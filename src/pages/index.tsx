@@ -1,4 +1,5 @@
 import AboutSection from '@/components/partials/AboutSection';
+import BlogSection from '@/components/partials/BlogSection';
 import ContactSection from '@/components/partials/ContactSection';
 import ExperienceSection from '@/components/partials/ExperienceSection';
 import FaqSection from '@/components/partials/FaqSection';
@@ -7,10 +8,15 @@ import RecentWorkSection from '@/components/partials/RecentWorkSection';
 import ScopeSection from '@/components/partials/ScopeSection';
 import SkillsSection from '@/components/partials/SkillsSection';
 import WorkStyleSection from '@/components/partials/WorkStyleSection';
+import { BlogMeta, getLatestPosts } from '@/lib/api/blog';
 import AppLayout from '@/pages/AppLayout';
-import type { NextPage } from 'next';
+import type { GetStaticProps } from 'next';
 
-const Home: NextPage = () => {
+type Props = {
+  posts: BlogMeta[];
+};
+
+function Home(props: Props) {
   return (
     <AppLayout title='Patrick Ferreira - Desenvolvedor de Software'>
       <HeroSection />
@@ -35,17 +41,25 @@ const Home: NextPage = () => {
       {/* <section className="container py-12 lg:py-16">
         <TestimonialSection />
       </section> */}
-      {/* <section className="container py-12 lg:py-16">
-        <BlogSection />
-      </section> */}
+      <section className="container py-12 lg:py-16">
+        <BlogSection posts={props.posts} />
+      </section>
       <section className="container py-12 lg:py-16">
         <FaqSection />
       </section>
       <section className="container py-12 lg:py-16">
-        <ContactSection />
+        <ContactSection />a
       </section>
     </AppLayout>
   );
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  return {
+    props: {
+      posts: getLatestPosts(6),
+    }
+  };
+};

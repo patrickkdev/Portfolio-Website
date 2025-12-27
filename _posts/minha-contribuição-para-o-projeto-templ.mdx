@@ -1,7 +1,13 @@
-## Contexto
+---
+title: "Adicionando `--ignore-pattern` ao watch do templ"
+thumbnail: https://templ.guide/img/logo.svg
+description: "Um estudo de caso sobre a adição da flag --ignore-pattern ao modo watch do templ, abordando limitações do RE2, decisões de usabilidade e o processo completo de contribuição open source."
+date: "2025-01-10"
+tags: [templ, go, open-source, cli, github]
+---
 
-Durante o uso do `templ generate -watch` no meu fluxo diário, notei um problema recorrente:  
-arquivos **gerados automaticamente** (como `mage_output_file.go`) disparavam o modo watch, causando **regenerações e reloads desnecessários**.
+Durante o uso do `templ generate -watch`, tive um problema recorrente:
+arquivos **gerados automaticamente** (como `mage_output_file.go`) despertavam o modo watch, causando **regenerações e reloads desnecessários**.
 
 O comportamento padrão do `templ` utiliza o seguinte `--watch-pattern`:
 
@@ -11,14 +17,8 @@ O comportamento padrão do `templ` utiliza o seguinte `--watch-pattern`:
 
 Na prática, isso significa: *qualquer arquivo com essas extensões dispara o watcher* — sem uma forma clara de **excluir casos específicos**.
 
-Foi aí que o problema ficou evidente.
-
----
-
-## O problema real
-
 À primeira vista, pode parecer que o problema poderia ser resolvido “ajustando a regex”.
-Mas isso **não é verdade no contexto do Go**.
+Mas isso **não é verdade nesse contexto.**
 
 O `templ` utiliza o pacote `regexp` da standard library, que segue a especificação **RE2**.
 Essa engine **não suporta lookaheads**, em especial *negative lookaheads* como:
@@ -55,16 +55,14 @@ Por isso, a solução correta não era “consertar a regex”, mas sim **introd
 
 Com isso em mente, abri a issue:
 
-* **Issue:** Can we have a `--ignore-pattern` flag for watch mode?
-  [https://github.com/a-h/templ/issues/1279](https://github.com/a-h/templ/issues/1279)
+* **Issue:** [Can we have a `--ignore-pattern` flag for watch mode?](https://github.com/a-h/templ/issues/1279)
 
 A proposta era direta:
 
-* manter o comportamento atual **100% compatível**
 * adicionar uma flag opcional para **subtrair arquivos do watch**
-* priorizar clareza e previsibilidade
+* manter o comportamento atual **100% compatível**
 
-O maintainer concordou rapidamente com a abordagem, o que validou que o problema era real e não apenas um caso isolado.
+O autor e mantenedor do projeto [a-h](https://github.com/a-h) concordou rapidamente.
 
 ---
 
@@ -74,7 +72,7 @@ Meu fluxo foi intencionalmente conservador:
 
 1. Identificar o problema real (não apenas o sintoma)
 2. Abrir uma issue bem delimitada
-3. Esperar validação do maintainer
+3. Esperar validação do mantenedor do projeto
 4. Implementar a solução com testes
 5. Enviar o PR com descrição clara e objetiva
 
@@ -94,7 +92,6 @@ Principais pontos técnicos:
 * Introdução do campo `IgnorePattern` no `RecursiveWatcher`
 * Atualização do `WalkFiles` e do loop de eventos
 * Garantia de que o `--ignore-pattern` **tem precedência** sobre o `--watch-pattern`
-* Nenhuma mudança de comportamento quando a flag não é usada
 
 O resultado: uma funcionalidade nova, **sem breaking changes**.
 
@@ -113,10 +110,7 @@ Isso cobre tanto o caminho feliz quanto o caso onde padrões entram em conflito.
 
 ## Resultado
 
-* PR **mergeado**
-* Issue **fechada**
 * Feature lançada em **v0.3.960**
-* Código enxuto, legível e testado
 
 Mais importante do que a feature em si foi o processo:
 identificar corretamente o problema, respeitar o fluxo do projeto e entregar uma solução que melhora a experiência de todos.
@@ -133,21 +127,8 @@ identificar corretamente o problema, respeitar o fluxo do projeto e entregar uma
 
 ## Conclusão
 
-Esse é um bom exemplo do tipo de trabalho que eu valorizo:
+O `--ignore-pattern` resolve um problema concreto do modo watch sem alterar o comportamento existente. A solução é explícita, previsível e fácil de entender, tanto para quem usa quanto para quem mantém o código.
 
-* resolver a **causa**, não o sintoma
-* melhorar **usabilidade**, não apenas código
-* manter compatibilidade e previsibilidade
-* entregar com testes e documentação implícita
+Os testes adicionados garantem que a flag funcione corretamente e que tenha precedência sobre o `--watch-pattern`, evitando regressões. Isso deixa a mudança segura de evoluir e simples de manter.
 
-Pequena feature, impacto real.
-
-```
-
----
-
-Se quiser, no próximo passo posso:
-- ajustar o texto para ficar ainda mais **enxuto**
-- revisar o vocabulário para alinhar 100% com o restante do site
-- escrever a `description` curta do post no mesmo tom do conteúdo
-```
+Todo o fluxo — issue, validação, implementação e PR — foi feito com comunicação clara e foco em qualidade. É o tipo de contribuição pequena em superfície, mas sólida em impacto.
